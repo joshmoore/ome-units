@@ -24,7 +24,7 @@ import ome.util.Filterable;
 import ome.util.ModelMapper;
 import ome.util.ReverseModelMapper;
 
-import omero.model.enums.${name};
+import omero.model.enums.Units${name};
 
 /**
  * Blitz wrapper around the {@link ome.model.util.${name}} class.
@@ -69,8 +69,8 @@ public class ${name}I extends ${name} implements ModelBased {
         return this.value;
     }
 
-    public void setValue(double length, Ice.Current current) {
-        this.value = length;
+    public void setValue(double value , Ice.Current current) {
+        this.value = value;
     }
 
     public Units${name} getUnit(Ice.Current current) {
@@ -82,7 +82,7 @@ public class ${name}I extends ${name} implements ModelBased {
     }
 
     public ${name} copy(Ice.Current ignore) {
-        ${name} copy = new ${name}I();
+        ${name}I copy = new ${name}I();
         copy.setValue(getValue());
         copy.setUnit(getUnit());
         return copy;
@@ -93,19 +93,18 @@ public class ${name}I extends ${name} implements ModelBased {
         if (model instanceof ome.model.units.${name}) {
             ome.model.units.${name} t = (ome.model.units.${name}) model;
             this.value = t.getValue();
-            this.unit = (omero.model.Units${name}) mapper.findTarget(t.getUnit());
+            this.unit = Units${name}.valueOf(t.getUnit().toString());
         } else {
             throw new IllegalArgumentException(
-              "${name}cannot copy from " +
+              "${name} cannot copy from " +
               (model==null ? "null" : model.getClass().getName()));
         }
     }
 
     @Override
     public Filterable fillObject(ReverseModelMapper mapper) {
-        ome.model.enums.Units${name} ut = (ome.model.enums.Units${name})
-                mapper.reverse((Units${name}) getUnit());
-        ome.model.units.${name}t = new ome.model.units.${name}();
+        ome.model.enums.Units${name} ut = ome.model.enums.Units${name}.valueOf(getUnit().toString());
+        ome.model.units.${name} t = new ome.model.units.${name}();
         t.setValue(getValue());
         t.setUnit(ut);
         return t;
