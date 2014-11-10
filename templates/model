@@ -10,7 +10,7 @@ public enum $name {
 
     protected String value;
 
-    private $name(String value) {
+    private Units$name(String value) {
         this.value = value;
     }
 

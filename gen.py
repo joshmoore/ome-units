@@ -24,29 +24,77 @@ Generator for Genshi templates of the Units
 """
 
 import os
-import sys
 import fileinput
 
 from collections import namedtuple
 from genshi.template import NewTextTemplate
+from argparse import ArgumentParser
 
-data = []
 Unit = namedtuple('Unit', ['CODE', 'SYMBOL', 'SYSTEM'])
-data_filename = sys.argv[1]
-template_name = sys.argv[2]
 
-with open(template_name) as f:
-    template = f.read()
-    basename = os.path.basename(data_filename)
-    basename = basename[:-4]  # Remove ".txt"
 
-    for line in fileinput.input([data_filename]):
-        line = line.strip()
-        if line:
-            line = line.decode("utf-8")
-            items = tuple(line.strip().split("\t"))
-            units = Unit(*items)
-            data.append(units)
-    tmpl = NewTextTemplate(template, encoding="utf-8")
-    content = tmpl.generate(name=basename, items=data)
-    print content.render(encoding="utf-8")
+class Engine(object):
+
+    def __init__(self, template_name):
+        self.template_name = template_name
+        with open(self.template_name) as f:
+            self.template_text = f.read()
+
+    def basename(self, data_filename):
+        basename = os.path.basename(data_filename)
+        basename = basename[:-4]  # Remove ".txt"
+        return basename
+
+    def parse(self, data_filename):
+        data = []
+        for line in fileinput.input([data_filename]):
+            line = line.strip()
+            if line:
+                line = line.decode("utf-8")
+                items = tuple(line.strip().split("\t"))
+                try:
+                    units = Unit(*items)
+                except:
+                    raise Exception(items)
+                data.append(units)
+        return data
+
+    def render(self, **kwargs):
+        tmpl = NewTextTemplate(self.template_text,
+                               encoding="utf-8")
+        content = tmpl.generate(**kwargs)
+        print content.render(encoding="utf-8")
+
+    def combined_template(self, data_filenames):
+        items = dict()
+        for data_filename in data_filenames:
+            basename = self.basename(data_filename)
+            data = self.parse(data_filename)
+            items[basename] = data
+        self.render(items=items)
+
+    def individual_templates(self, data_filename):
+        basename = self.basename(data_filename)
+        data = self.parse(data_filename)
+        self.render(name=basename, items=data)
+
+
+if __name__ == "__main__":
+    parser = ArgumentParser()
+    parser.add_argument(
+        "--combine",
+        action="store_true",
+        help="Combine all files into a single call")
+    parser.add_argument(
+        "template_name")
+    parser.add_argument(
+        "data_filenames",
+        nargs="+")
+    ns = parser.parse_args()
+    if ns.combine:
+        engine = Engine(ns.template_name)
+        engine.combined_template(ns.data_filenames)
+    else:
+        for data_filename in ns.data_filenames:
+            engine = Engine(ns.template_name)
+            engine.individual_templates(data_filename)
