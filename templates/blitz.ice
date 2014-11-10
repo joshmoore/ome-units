@@ -16,9 +16,31 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
+{% python
+def example(name):
+    if name == "ElectricPotential":
+        return ("detectorSettings", "volatage")
+    elif name == "Frequency":
+        return ("detectorSettings", "readOutRate")
+    elif name == "Length":
+        return ("pixels", "physicalSizeX")
+    elif name == "Power":
+        return ("lightSource", "power")
+    elif name == "Pressure":
+        return ("imagingEnvironment", "pressure")
+    elif name == "Temperature":
+        return ("imagingEnvironment", "temperature")
+    elif name == "Time":
+        return ("planeInfo", "exposureTime")
+    else:
+        raise Exception("Unknown: %s" % name)
 
-#ifndef CLASS_{$name.upper()}
-#define CLASS_{$name.upper()}
+def dotexample(name):
+    return ".".join(example(name))
+%}
+
+#ifndef CLASS_${name.upper()}
+#define CLASS_${name.upper()}
 
 #include <omero/model/Units.ice>
 
@@ -31,8 +53,8 @@ module omero {
        * an [omero::model::IObject] implementation and as such does
        * not have an ID value. Instead, the entire object is embedded
        * into the containing class, so that the value and unit rows
-       * can be found on the table itself (e.g. detectorSettings.voltage
-       * and detectorSettings.voltageUnit).
+       * can be found on the table itself (e.g. ${dotexample(name)}
+       * and ${dotexample(name)}Unit).
        **/
     ["protected"] class ${name}
     {
@@ -42,7 +64,7 @@ module omero {
        */
       double value;
 
-      omero::model::units::Units${name} unit;
+      omero::model::enums::Units${name} unit;
 
       /**
        * Actual value for this unit-based field. The interpretation of
@@ -59,7 +81,7 @@ module omero {
        **/
       omero::model::enums::Units${name} getUnit();
 
-      void setUnit(omero::model::enums::${name} unit);
+      void setUnit(omero::model::enums::Units${name} unit);
 
       ${name} copy();
 

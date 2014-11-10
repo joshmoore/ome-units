@@ -32,11 +32,11 @@ module omero {
 
     module model {
 
-        module units {
+        module enums {
 
-{% for basename in sorted(items) %}\
-            enum ${basename} {
-                ${blitz(items[basename])}
+{% for name in sorted(items) %}\
+            enum Units${name} {
+                ${blitz(items[name])}
             };
 
 {% end %}\

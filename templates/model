@@ -27,22 +27,22 @@ package ome.model.enums;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum $name {
+public enum Units$name {
 
     ${java(items)};
 
-    private static final Map<String, $name> bySymbol
-        = new HashMap<String, $name>();
+    private static final Map<String, Units$name> bySymbol
+        = new HashMap<String, Units$name>();
 
     static {
-        for ($name t : ${name}.values()) {
+        for (Units$name t : Units${name}.values()) {
             bySymbol.put(t.value, t);
         }
     }
 
     protected String value;
 
-    private $name(String value) {
+    private Units$name(String value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public enum $name {
         return value;
     }
 
-    public static $name bySymbol(String symbol) {
+    public static Units$name bySymbol(String symbol) {
         return bySymbol.get(symbol);
     }
 
