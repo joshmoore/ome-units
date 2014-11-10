@@ -4,6 +4,6 @@ def sql(items):
     codes = ["'%s'" % x for x in codes]
     return ",".join(codes)
 %}
-CREATE TYPE ${name} AS ENUM {
+CREATE TYPE Units${name} AS ENUM {
     ${sql(items)}
 };
