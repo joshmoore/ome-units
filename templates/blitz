@@ -35,7 +35,7 @@ module omero {
         module units {
 
 {% for basename in sorted(items) %}\
-            enum ${basename.upper()} {
+            enum ${basename} {
                 ${blitz(items[basename])}
             };
 
