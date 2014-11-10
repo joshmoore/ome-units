@@ -1,9 +1,6 @@
 {% python
 def sql(items):
-    codes = [x.CODE for x in items]
+    codes = [x.SYMBOL for x in items]
     codes = ["'%s'" % x for x in codes]
     return ",".join(codes)
-%}
-CREATE TYPE Units${name} AS ENUM {
-    ${sql(items)}
-};
+%}CREATE TYPE Units${name} AS ENUM (${sql(items)});

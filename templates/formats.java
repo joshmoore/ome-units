@@ -84,7 +84,9 @@ public class UnitsFactory {
     public static ${name} convert${name}(ome.units.quantity.${name} value) {
         if (value == null)
             return null;
-        Units${name} ul = Units${name}.valueOf(value.unit().getSymbol());
+        ome.model.enums.Units${name} internal =
+            ome.model.enums.Units${name}.bySymbol(value.unit().getSymbol());
+        Units${name} ul = Units${name}.valueOf(internal.toString());
         omero.model.${name} l = new omero.model.${name}I();
         l.setValue(value.value().doubleValue());
         l.setUnit(ul);
