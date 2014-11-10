@@ -1,16 +1,16 @@
 {% python
 def java(items):
     fields = ['%s("%s")' % (x.CODE, x.SYMBOL) for x in items]
-    return ",".join(fields)
+    return ",\n    ".join(fields)
 %}
 package ome.model.units;
 
-public enum Units$name {
+public enum $name {
     ${java(items)};
 
     protected String value;
 
-    private Units$name(String value) {
+    private $name(String value) {
         this.value = value;
     }
 

@@ -1,6 +1,7 @@
-files: Angle.txt ElectricPotential.txt Frequency.txt Length.txt Pressure.txt Power.txt Temperature.txt Time.txt
-model: model/Angle.java model/ElectricPotential.java model/Frequency.java model/Length.java model/Pressure.java model/Power.java model/Temperature.java model/Time.java
-sql: sql/Angle.sql sql/ElectricPotential.sql sql/Frequency.sql sql/Length.sql sql/Pressure.sql sql/Power.sql sql/Temperature.sql sql/Time.sql
+# exclude Angle
+files: units/UnitsElectricPotential.units UnitsFrequency.units units/UnitsLength.units units/UnitsPressure.units units/UnitsPower.units units/UnitsTemperature.units units/UnitsTime.units
+model: model/UnitsElectricPotential.java model/UnitsFrequency.java model/UnitsLength.java model/UnitsPressure.java model/UnitsPower.java model/UnitsTemperature.java model/UnitsTime.java
+sql: sql/UnitsElectricPotential.sql sql/UnitsFrequency.sql sql/UnitsLength.sql sql/UnitsPressure.sql sql/UnitsPower.sql sql/UnitsTemperature.sql sql/UnitsTime.sql
 
 model/%.java: units/%.txt
 	mkdir -p model

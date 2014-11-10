@@ -38,6 +38,7 @@ template_name = sys.argv[2]
 with open(template_name) as f:
     template = f.read()
     basename = os.path.basename(data_filename)
+    basename = basename[:-4]  # Remove ".txt"
 
     for line in fileinput.input([data_filename]):
         line = line.strip()
