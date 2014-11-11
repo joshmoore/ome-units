@@ -104,9 +104,7 @@ public class ${name}I extends ${name} implements ModelBased {
     @Override
     public Filterable fillObject(ReverseModelMapper mapper) {
         ome.model.enums.Units${name} ut = ome.model.enums.Units${name}.valueOf(getUnit().toString());
-        ome.model.units.${name} t = new ome.model.units.${name}();
-        t.setValue(getValue());
-        t.setUnit(ut);
+        ome.model.units.${name} t = new ome.model.units.${name}(getValue(), ut);
         return t;
     }
 

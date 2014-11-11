@@ -1,10 +1,11 @@
-all: blitz/Units.ice blitz2 blitz3 formats/UnitsFactory.java model sql
+all: blitz/Units.ice blitz2 blitz3 formats/UnitsFactory.java model model2 sql
 
 # exclude Angle
 units ?= units/ElectricPotential.txt units/Frequency.txt  units/Length.txt  units/Pressure.txt  units/Power.txt  units/Temperature.txt  units/Time.txt
 files: $(units)
 
 model:  model/UnitsElectricPotential.java model/UnitsFrequency.java model/UnitsLength.java model/UnitsPressure.java model/UnitsPower.java model/UnitsTemperature.java model/UnitsTime.java
+model2: model2/ElectricPotential.java     model2/Frequency.java     model2/Length.java     model2/Pressure.java     model2/Power.java     model2/Temperature.java     model2/Time.java
 sql:    sql/UnitsElectricPotential.sql    sql/UnitsFrequency.sql    sql/UnitsLength.sql    sql/UnitsPressure.sql    sql/UnitsPower.sql    sql/UnitsTemperature.sql    sql/UnitsTime.sql
 blitz2: blitz/ElectricPotential.ice       blitz/Frequency.ice       blitz/Length.ice       blitz/Pressure.ice       blitz/Power.ice       blitz/Temperature.ice       blitz/Time.ice
 blitz3: blitz/ElectricPotentialI.java     blitz/FrequencyI.java     blitz/LengthI.java     blitz/PressureI.java     blitz/PowerI.java     blitz/TemperatureI.java     blitz/TimeI.java
@@ -29,11 +30,15 @@ model/Units%.java: units/%.txt
 	mkdir -p model
 	./gen.py templates/model $< > $@
 
+model2/%.java: units/%.txt
+	mkdir -p model2
+	./gen.py templates/model.java $< > $@
+
 sql/Units%.sql: units/%.txt
 	mkdir -p sql
 	./gen.py templates/sql $< > $@
 
 clean:
-	rm -rf blitz formats model sql
+	rm -rf blitz formats model model2 sql
 
 .PHONY: sql files model clean
