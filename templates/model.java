@@ -133,6 +133,14 @@ public class ${name} implements Serializable, Filterable {
     // ~ Constructors
     // =========================================================================
 
+    /**
+     * no-arg constructor to keep Hibernate happy.
+     */
+    @Deprecated
+    public ${name}() {
+        // no-op
+    }
+
     public ${name}(double d, String u) {
         this.value = d;
         this.unit = Units${name}.valueOf(u);
