@@ -59,7 +59,7 @@ public class ${name}I extends ${name} implements ModelBased {
     // CONVERSIONS
     //
 
-    public static ome.xml.model.enums.Units${name} make${name}UnitXML(String unit) {
+    public static ome.xml.model.enums.Units${name} makeXMLUnit(String unit) {
         try {
             return ome.xml.model.enums.Units${name}
                     .fromString((String) unit);
@@ -68,7 +68,7 @@ public class ${name}I extends ${name} implements ModelBased {
         }
     }
 
-    public static ome.units.quantity.${name} make${name}XML(double d, String unit) {
+    public static ome.units.quantity.${name} makeXMLQuantity(double d, String unit) {
         ome.units.unit.Unit<ome.units.quantity.${name}> units =
                 ome.xml.model.enums.handlers.Units${name}EnumHandler
                         .getBaseUnit(make${name}UnitXML(unit));
@@ -84,7 +84,7 @@ public class ${name}I extends ${name} implements ModelBased {
     *
     * or similar.
     */
-   public static ome.units.quantity.${name} convert${name}(${name} t) {
+   public static ome.units.quantity.${name} convert(${name} t) {
        if (t == null) {
            return null;
        }

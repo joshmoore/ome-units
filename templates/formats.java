@@ -19,10 +19,7 @@
 
 package ome.formats.model;
 
-import static omero.rtypes.rstring;
-import static omero.rtypes.unwrap;
 import ome.units.unit.Unit;
-import ome.xml.model.enums.EnumerationException;
 {% for name in sorted(items) %}\
 import omero.model.${name};
 import omero.model.${name}I;
@@ -33,6 +30,10 @@ import omero.model.enums.Units${name};
 
 /**
  * Utility class to generate and convert unit objects.
+ *
+ * Be especially careful when using methods which take a string
+ * since there are 2 types of enumerations, CODE-based and
+ * SYMBOL-based.
  */
 public class UnitsFactory {
 
@@ -41,40 +42,21 @@ public class UnitsFactory {
     // ${name}
     //
 
-    public static ${name} make${name}(double d, String unit) {
-        Units${name} ul = Units${name}.valueOf(unit);
-        ${name} copy = new ${name}I();
-        copy.setUnit(ul);
-        copy.setValue(d);
-        return copy;
-    }
-
     public static ome.xml.model.enums.Units${name} make${name}UnitXML(String unit) {
-        try {
-            return ome.xml.model.enums.Units${name}
-                    .fromString((String) unit);
-        } catch (EnumerationException e) {
-            throw new RuntimeException("Bad ${name} unit: " + unit, e);
-        }
+        return ${name}I.makeXMLUnit(unit);
     }
 
     public static ome.units.quantity.${name} make${name}XML(double d, String unit) {
-        ome.units.unit.Unit<ome.units.quantity.${name}> units =
-                ome.xml.model.enums.handlers.Units${name}EnumHandler
-                        .getBaseUnit(make${name}UnitXML(unit));
-        return new ome.units.quantity.${name}(d, units);
+        return ${name}I.makeXMLQuantity(d, unit);
     }
 
     public static ${name} make${name}(double d,
             Unit<ome.units.quantity.${name}> unit) {
-        return make${name}(d, unit.getSymbol());
+        return new ${name}I(d, unit);
     }
 
     public static ${name} make${name}(double d, Units${name} unit) {
-        ${name} copy = new ${name}I();
-        copy.setUnit(unit);
-        copy.setValue(d);
-        return copy;
+        return new ${name}I(d, unit);
     }
 
     /**
@@ -84,51 +66,27 @@ public class UnitsFactory {
     public static ${name} convert${name}(ome.units.quantity.${name} value) {
         if (value == null)
             return null;
-        ome.model.enums.Units${name} internal =
-            ome.model.enums.Units${name}.bySymbol(value.unit().getSymbol());
-        Units${name} ul = Units${name}.valueOf(internal.toString());
-        omero.model.${name} l = new omero.model.${name}I();
-        l.setValue(value.value().doubleValue());
-        l.setUnit(ul);
-        return l;
+        String internal = xml${name}EnumToOMERO(value.unit().getSymbol());
+        Units${name} ul = Units${name}.valueOf(internal);
+        return new omero.model.${name}I(value.value().doubleValue(), ul);
     }
 
-   /**
-    * FIXME: this should likely take a default so that locations which don't
-    * want an exception can have
-    *
-    * log.warn("Using new PositiveFloat(1.0)!", e); return new
-    * PositiveFloat(1.0);
-    *
-    * or similar.
-    */
-   public static ome.units.quantity.${name} convert${name}(${name} t) {
-       if (t == null) {
-           return null;
-       }
+    public static ome.units.quantity.${name} convert${name}(${name} t) {
+        return ${name}I.convert(t);
+    }
 
-       Double v = t.getValue();
-       String u = t.getUnit().toString();
-       ome.xml.model.enums.Units${name} units = make${name}UnitXML(u);
-       ome.units.unit.Unit<ome.units.quantity.${name}> units2 =
-               ome.xml.model.enums.handlers.Units${name}EnumHandler
-                       .getBaseUnit(units);
+    public static ${name} convert${name}(${name} value, Unit<ome.units.quantity.${name}> ul) {
+        return convert${name}XML(value, ul.getSymbol());
+    }
 
-       return new ome.units.quantity.${name}(v, units2);
-   }
+    public static ${name} convert${name}XML(${name} value, String xml) {
+        String omero = xml${name}EnumToOMERO(xml);
+        return new ${name}I(value, omero);
+    }
 
-   public static ${name} convert${name}(${name} value, Unit<ome.units.quantity.${name}> ul) {
-       return convert${name}(value, ul.getSymbol());
-   }
-
-   public static ${name} convert${name}(${name} value, String target) {
-       String source = value.getUnit().toString();
-       if (target.equals(source)) {
-           return value;
-       }
-       throw new RuntimeException(String.format(
-               "%d %s cannot be converted to %s", value.getValue(), source));
-   }
+    public static String xml${name}EnumToOMERO(String xml) {
+        return ome.model.enums.Units${name}.bySymbol(xml).toString();
+    }
 
 {% end %}
 
