@@ -31,6 +31,7 @@ from genshi.template import NewTextTemplate
 from argparse import ArgumentParser
 
 Unit = namedtuple('Unit', ['CODE', 'SYMBOL', 'SYSTEM'])
+Field = namedtuple('Field', ['CLASS', 'NAME', 'TYPE'])
 
 
 class Engine(object):
@@ -39,13 +40,14 @@ class Engine(object):
         self.template_name = template_name
         with open(self.template_name) as f:
             self.template_text = f.read()
+        self.fields = self.parse("units/Fields.txt", Type=Field)
 
     def basename(self, data_filename):
         basename = os.path.basename(data_filename)
         basename = basename[:-4]  # Remove ".txt"
         return basename
 
-    def parse(self, data_filename):
+    def parse(self, data_filename, Type=Unit):
         data = []
         for line in fileinput.input([data_filename]):
             line = line.strip()
@@ -53,10 +55,10 @@ class Engine(object):
                 line = line.decode("utf-8")
                 items = tuple(line.strip().split("\t"))
                 try:
-                    units = Unit(*items)
+                    i = Type(*items)
                 except:
                     raise Exception(items)
-                data.append(units)
+                data.append(i)
         return data
 
     def render(self, **kwargs):
@@ -71,12 +73,12 @@ class Engine(object):
             basename = self.basename(data_filename)
             data = self.parse(data_filename)
             items[basename] = data
-        self.render(items=items)
+        self.render(items=items, fields=self.fields)
 
     def individual_templates(self, data_filename):
         basename = self.basename(data_filename)
         data = self.parse(data_filename)
-        self.render(name=basename, items=data)
+        self.render(name=basename, items=data, fields=self.fields)
 
 
 if __name__ == "__main__":

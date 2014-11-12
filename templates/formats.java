@@ -90,4 +90,7 @@ public class UnitsFactory {
 
 {% end %}
 
+{% for field in fields %}\
+    public static Units${field.TYPE} ${field.CLASS}_${field.NAME} = Units${field.TYPE}.valueOf(xml${field.TYPE}EnumToOMERO(ome.xml.model.${field.CLASS}.get${field.NAME}UnitXsdDefault()));
+{% end %}
 }
