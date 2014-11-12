@@ -36,18 +36,18 @@ public enum Units$name {
 
     static {
         for (Units$name t : Units${name}.values()) {
-            bySymbol.put(t.value, t);
+            bySymbol.put(t.symbol, t);
         }
     }
 
-    protected String value;
+    protected String symbol;
 
-    private Units$name(String value) {
-        this.value = value;
+    private Units$name(String symbol) {
+        this.symbol = symbol;
     }
 
-    public String getValue() {
-        return value;
+    public String getSymbol() {
+        return symbol;
     }
 
     public static Units$name bySymbol(String symbol) {

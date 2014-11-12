@@ -69,7 +69,7 @@ import org.hibernate.annotations.Type;
  * persisted on their own.
  */
 @Embeddable
-public class ${name} implements Serializable, Filterable {
+public class ${name} implements Serializable, Filterable, ome.model.units.Unit {
 
     private static final long serialVersionUID = 1L;
 
@@ -108,7 +108,7 @@ public class ${name} implements Serializable, Filterable {
         }
 
         Double length = t.getValue();
-        String u = t.getUnit().getValue();
+        String u = t.getUnit().getSymbol();
         ome.xml.model.enums.Units${name} units = make${name}UnitXML(u);
         ome.units.unit.Unit<ome.units.quantity.${name}> units2 =
                 ome.xml.model.enums.handlers.Units${name}EnumHandler
@@ -122,12 +122,13 @@ public class ${name} implements Serializable, Filterable {
     }
 
     public static ${name} convert${name}(${name} value, String target) {
-        String source = value.getUnit().getValue();
+        String source = value.getUnit().getSymbol();
         if (target.equals(source)) {
             return value;
         }
         throw new RuntimeException(String.format(
-                "%d %s cannot be converted to %s", value.getValue(), source));
+                "%f %s cannot be converted to %s",
+                value.getValue(), value.getUnit().getSymbol(), source));
     }
 
     // ~ Constructors
