@@ -30,5 +30,5 @@ FT	ft	Imperial.INCH
 YD	yd	Imperial.INCH
 MI	mi	Imperial.INCH
 PT	pt	Imperial.INCH
-PIXEL	Pixel	pixel
-REFERENCEFRAME	ReferenceFrame	reference frame
+PIXEL	pixel	Pixel
+REFERENCEFRAME	reference frame	ReferenceFrame
