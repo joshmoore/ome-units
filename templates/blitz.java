@@ -71,7 +71,7 @@ public class ${name}I extends ${name} implements ModelBased {
     public static ome.units.quantity.${name} makeXMLQuantity(double d, String unit) {
         ome.units.unit.Unit<ome.units.quantity.${name}> units =
                 ome.xml.model.enums.handlers.Units${name}EnumHandler
-                        .getBaseUnit(make${name}UnitXML(unit));
+                        .getBaseUnit(makeXMLUnit(unit));
         return new ome.units.quantity.${name}(d, units);
     }
 
@@ -94,7 +94,7 @@ public class ${name}I extends ${name} implements ModelBased {
        // to convert to the specification value.
        String u = ome.model.enums.Units${name}.valueOf(
                t.getUnit().toString()).getSymbol();
-       ome.xml.model.enums.Units${name} units = make${name}UnitXML(u);
+       ome.xml.model.enums.Units${name} units = makeXMLUnit(u);
        ome.units.unit.Unit<ome.units.quantity.${name}> units2 =
                ome.xml.model.enums.handlers.Units${name}EnumHandler
                        .getBaseUnit(units);
@@ -152,6 +152,15 @@ public class ${name}I extends ${name} implements ModelBased {
        }
        setValue(value.getValue());
        setUnit(value.getUnit());
+    }
+
+   /**
+    * Copy constructor that converts between units if possible.
+    *
+    * @param target unit that is desired. non-null.
+    */
+    public ${name}I(${name} value, Units${name} target) {
+        this(value, target.toString());
     }
 
     /**

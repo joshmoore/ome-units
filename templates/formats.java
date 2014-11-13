@@ -84,6 +84,10 @@ public class UnitsFactory {
         return new ${name}I(value, omero);
     }
 
+    public static String xml${name}EnumToOMERO(Unit<ome.units.quantity.${name}> xml) {
+        return ome.model.enums.Units${name}.bySymbol(xml.getSymbol()).toString();
+    }
+
     public static String xml${name}EnumToOMERO(String xml) {
         return ome.model.enums.Units${name}.bySymbol(xml).toString();
     }
