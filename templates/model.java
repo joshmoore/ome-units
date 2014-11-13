@@ -219,4 +219,40 @@ public class ${name} implements Serializable, Filterable, ome.model.units.Unit {
         return true;
     }
 
+    // ~ Java overrides
+    // =========================================================================
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((unit == null) ? 0 : unit.hashCode());
+        long temp;
+        temp = Double.doubleToLongBits(value);
+        result = prime * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "${name}(" + value + " " + unit + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ${name} other = (${name}) obj;
+        if (unit != other.unit)
+            return false;
+        if (Double.doubleToLongBits(value) != Double
+                .doubleToLongBits(other.value))
+            return false;
+        return true;
+    }
+
 }
