@@ -61,7 +61,7 @@ def coefficients(name, items2, items3):
                 power = sign(power, val)
                 found += 1
                 break
-            elif code in ("S", "V", "W", "HZ"):
+            elif code == ending:
                 # This is the prefixless case
                 found += 1
                 break
