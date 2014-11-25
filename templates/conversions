@@ -48,19 +48,26 @@ def coefficients(name, items2, items3):
     regularly named units in the SI system.
     """
 
+    strict = False
+    invalid = "None"
+    identity = ""
+
 
     if items2 == items3:
-        return ","
+        return identity
 
     ending = endings.get(name)
     if not ending:
-        return "UNKNOWN"
+        if strict:
+            return "UNKNOWN"
+        else:
+            return invalid
 
     power = 0
     found = 0
 
     if items2.SYSTEM in blacklist or items3.SYSTEM in blacklist:
-        return "None"
+        return invalid
 
     for code, sign in ((items2.CODE, add), (items3.CODE, sub)):
         for sym, val in powers:
@@ -78,9 +85,12 @@ def coefficients(name, items2, items3):
     if found == 2:  # Found both
         return "(%s, %s), (%s, %s)" % (0, 1, 10, power)
     elif found < 2:
-        return "(X, Y), (Z, W) <==== FIXME"
+        if strict:
+            return "(X, Y), (Z, W) <==== FIXME"
+        else:
+            return invalid
     else:
-        return "(X, Y), (Z, W) <====== TOOMANY:%s" % found
+        raise Exception("TOO MANY FOUND! (%s)" % found)
 
 items = sorted(items.items())
 items = [x for x in items if x[0] != "Fields"]
