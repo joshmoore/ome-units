@@ -35,6 +35,11 @@ endings = {
     "Time": "S",
 }
 
+blacklist = (
+    "ReferenceFrame",
+    "Pixel",
+)
+
 def coefficients(name, items2, items3):
     """
     Method which attempts to choose the best
@@ -43,15 +48,19 @@ def coefficients(name, items2, items3):
     regularly named units in the SI system.
     """
 
-    if items2 == items3 and False: # FIXME
-        return ","
 
-    power = 0
-    found = 0
+    if items2 == items3:
+        return ","
 
     ending = endings.get(name)
     if not ending:
         return "UNKNOWN"
+
+    power = 0
+    found = 0
+
+    if items2.SYSTEM in blacklist or items3.SYSTEM in blacklist:
+        return "None"
 
     for code, sign in ((items2.CODE, add), (items3.CODE, sub)):
         for sym, val in powers:
