@@ -1,27 +1,6 @@
 
 
 Conversions = {
-  "Angle": {
-    "DEG": {
-        "DEG": (UNKNOWN),
-        "GON": (UNKNOWN),
-        "RAD": (UNKNOWN),
-
-    },
-    "GON": {
-        "DEG": (UNKNOWN),
-        "GON": (UNKNOWN),
-        "RAD": (UNKNOWN),
-
-    },
-    "RAD": {
-        "DEG": (UNKNOWN),
-        "GON": (UNKNOWN),
-        "RAD": (UNKNOWN),
-
-    },
-
-  },
   "ElectricPotential": {
     "AV": {
         "AV": ((0, 1), (10, 0)),
