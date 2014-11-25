@@ -49,7 +49,7 @@ def coefficients(name, items2, items3):
     """
 
     strict = False
-    invalid = "None"
+    invalid = "None,"
     identity = ""
 
 

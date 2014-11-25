@@ -30,6 +30,13 @@ from collections import namedtuple
 from genshi.template import NewTextTemplate
 from argparse import ArgumentParser
 
+conversion_file = "units/conversions.py"
+if os.path.exists(conversion_file):
+    execfile("units/conversions.py")  # Sets "Conversions"
+try:
+    Conversions.get("test")
+except:
+    Conversions = {}
 Unit = namedtuple('Unit', ['CODE', 'SYMBOL', 'SYSTEM'])
 Field = namedtuple('Field', ['CLASS', 'NAME', 'TYPE'])
 
@@ -73,12 +80,14 @@ class Engine(object):
             basename = self.basename(data_filename)
             data = self.parse(data_filename)
             items[basename] = data
-        self.render(items=items, fields=self.fields)
+        self.render(items=items, fields=self.fields,
+                    conversions=Conversions)
 
     def individual_templates(self, data_filename):
         basename = self.basename(data_filename)
         data = self.parse(data_filename)
-        self.render(name=basename, items=data, fields=self.fields)
+        self.render(name=basename, items=data, fields=self.fields,
+                    conversions=Conversions.get(basename))
 
 
 if __name__ == "__main__":
