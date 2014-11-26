@@ -133,6 +133,10 @@ public class ${name}I extends ${name} implements ModelBased {
             ome.model.enums.Units${name}.bySymbol(ul.getSymbol()).toString());
    }
 
+   /**
+    * Copy constructor that converts the given {@link omero.model.${name}}
+    * based on the given ome.model enum
+    */
    public ${name}I(double d, ome.model.enums.Units${name} ul) {
         this(d, Units${name}.valueOf(ul.toString()));
     }
@@ -146,6 +150,48 @@ public class ${name}I extends ${name} implements ModelBased {
     public ${name}I(${name} value, String target) {
        String source = value.getUnit().toString();
        if (!target.equals(source)) {
+           // no-op
+{% python
+def calculate(coffecients):
+
+    if not coefficients:
+        return "// no-op"
+    elif coefficients == (None,):
+        return 'throw new RuntimeException(String.format("Unsupported conversion: %s %s", source, target));'
+
+    sb = []
+    for idx, coeffs in enumerate(coefficients):
+
+        k, p = coeffs
+
+        if k == 0:
+            continue
+
+        if p == 1:
+            lhs = k
+        else:
+            lhs = "Math.pow(%s, %s)" % (k, p)
+
+        if idx == 0:
+            rhs = ""
+        elif idx <= 1:
+            rhs = " * value"
+        else:
+            rhs = " * Math.pow(value, %s)" % idx
+
+        sb += ["%s%s" % (lhs, rhs)]
+    return "value = " + "+".join(sb)
+
+%}
+{% for cfrom in sorted(conversions) %}\
+       } else if ("${cfrom}".equals(source)) {
+{% for cto, coefficients in sorted(conversions.get(cfrom, {}).items()) %}\
+           if ("${cto}".equals(target)) {
+               ${calculate(coefficients)}
+           }
+{% end %}\
+{% end %}\
+       } else {
             throw new RuntimeException(String.format(
                "%f %s cannot be converted to %s",
                value.getValue(), value.getUnit(), target));
