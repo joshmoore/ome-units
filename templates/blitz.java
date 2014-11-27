@@ -1,3 +1,36 @@
+{% python
+
+def calculate(cfrom, cto, coffecients):
+    if not coefficients:
+        return "retur value;"
+    elif coefficients == (None,):
+        return ('throw new RuntimeException(String.format("'
+                'Unsupported conversion: %%s", "%s:%s"));') % (cfrom, cto)
+
+    sb = []
+    for idx, coeffs in enumerate(coefficients):
+
+        k, p = coeffs
+
+        if k == 0:
+            continue
+
+        if p == 1:
+            lhs = k
+        else:
+            lhs = "Math.pow(%s, %s)" % (k, p)
+
+        if idx == 0:
+            rhs = ""
+        elif idx <= 1:
+            rhs = " * value"
+        else:
+            rhs = " * Math.pow(value, %s)" % idx
+
+        sb += ["%s%s" % (lhs, rhs)]
+    return "return %s;" % "+".join(sb)
+
+%}\
 /*
  * Copyright (C) 2014 University of Dundee & Open Microscopy Environment.
  * All rights reserved.
@@ -19,6 +52,12 @@
 
 package omero.model;
 
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
+
+import com.google.common.base.Function;
+
 import ome.model.ModelBased;
 import ome.units.unit.Unit;
 import ome.util.Filterable;
@@ -39,6 +78,23 @@ import omero.model.enums.Units${name};
 public class ${name}I extends ${name} implements ModelBased {
 
     private static final long serialVersionUID = 1L;
+
+    private static final Map<String, Function<Double, Double>> conversions;
+    static {
+        Map<String, Function<Double, Double>> c = new HashMap<String, Function<Double, Double>>();
+{% for cfrom in sorted(conversions) %}\
+{% for cto, coefficients in sorted(conversions.get(cfrom, {}).items()) %}\
+{% if cfrom != cto %}\
+
+        c.put("${cfrom}:${cto}", new Function<Double, Double>() {
+              public Double apply(Double value) {
+                  ${calculate(cfrom, cto, coefficients)}
+              }});
+{% end %}\
+{% end %}\
+{% end %}\
+        conversions = Collections.unmodifiableMap(c);
+    }
 
     public static final Ice.ObjectFactory makeFactory(final omero.client client) {
 
@@ -149,54 +205,17 @@ public class ${name}I extends ${name} implements ModelBased {
     */
     public ${name}I(${name} value, String target) {
        String source = value.getUnit().toString();
-       if (!target.equals(source)) {
-           // no-op
-{% python
-def calculate(coffecients):
-
-    if not coefficients:
-        return "// no-op"
-    elif coefficients == (None,):
-        return 'throw new RuntimeException(String.format("Unsupported conversion: %s %s", source, target));'
-
-    sb = []
-    for idx, coeffs in enumerate(coefficients):
-
-        k, p = coeffs
-
-        if k == 0:
-            continue
-
-        if p == 1:
-            lhs = k
-        else:
-            lhs = "Math.pow(%s, %s)" % (k, p)
-
-        if idx == 0:
-            rhs = ""
-        elif idx <= 1:
-            rhs = " * value"
-        else:
-            rhs = " * Math.pow(value, %s)" % idx
-
-        sb += ["%s%s" % (lhs, rhs)]
-    return "value = " + "+".join(sb)
-
-%}
-{% for cfrom in sorted(conversions) %}\
-       } else if ("${cfrom}".equals(source)) {
-{% for cto, coefficients in sorted(conversions.get(cfrom, {}).items()) %}\
-           if ("${cto}".equals(target)) {
-               ${calculate(coefficients)}
-           }
-{% end %}\
-{% end %}\
-       } else {
-            throw new RuntimeException(String.format(
-               "%f %s cannot be converted to %s",
-               value.getValue(), value.getUnit(), target));
+       if (target.equals(source)) {
+           setValue(value.getValue());
+        } else {
+            Function<Double, Double> c = conversions.get(source + ":" + target);
+            if (c == null) {
+                throw new RuntimeException(String.format(
+                    "%f %s cannot be converted to %s",
+                        value.getValue(), value.getUnit(), target));
+            }
+            setValue(c.apply(value.getValue()));
        }
-       setValue(value.getValue());
        setUnit(value.getUnit());
     }
 
