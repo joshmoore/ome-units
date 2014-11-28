@@ -215,8 +215,8 @@ public class ${name}I extends ${name} implements ModelBased {
                         value.getValue(), value.getUnit(), target));
             }
             setValue(c.apply(value.getValue()));
+            setUnit(Units${name}.valueOf(target));
        }
-       setUnit(value.getUnit());
     }
 
    /**
