@@ -101,7 +101,7 @@ class ${name}I(_omero_model.${name}, UnitBase):
                     msg = "%s %s cannot be converted to %s" % t
                     raise Exception(msg)
                 self.setValue(c(value.getValue()))
-                self.setUnit(Units${name}.valueOf(target))
+                self.setUnit(getattr(Units${name}, str(target)))
         else:
             self.setValue(value)
             self.setUnit(unit)
