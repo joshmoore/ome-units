@@ -107,14 +107,14 @@ public class ${name} implements Serializable, Filterable, ome.model.units.Unit {
             return null;
         }
 
-        Double length = t.getValue();
+        Double v = t.getValue();
         String u = t.getUnit().getSymbol();
         ome.xml.model.enums.Units${name} units = make${name}UnitXML(u);
         ome.units.unit.Unit<ome.units.quantity.${name}> units2 =
                 ome.xml.model.enums.handlers.Units${name}EnumHandler
                         .getBaseUnit(units);
 
-        return new ome.units.quantity.${name}(length, units2);
+        return new ome.units.quantity.${name}(v, units2);
     }
 
     public static ${name} convert${name}(${name} value, Unit<ome.units.quantity.${name}> ul) {

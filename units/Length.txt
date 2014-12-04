@@ -24,11 +24,11 @@ UA	ua	SI.METRE
 LY	ly	SI.METRE
 PC	pc	SI.METRE
 THOU	thou	Imperial.INCH
-LI	li	Imperial.INCH
-IN	in	Imperial.INCH
-FT	ft	Imperial.INCH
-YD	yd	Imperial.INCH
-MI	mi	Imperial.INCH
-PT	pt	Imperial.INCH
+LINE	li	Imperial.INCH
+INCH	in	Imperial.INCH
+FOOT	ft	Imperial.INCH
+YARD	yd	Imperial.INCH
+MILE	mi	Imperial.INCH
+POINT	pt	Imperial.INCH
 PIXEL	pixel	Pixel
 REFERENCEFRAME	reference frame	ReferenceFrame

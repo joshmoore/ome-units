@@ -96,6 +96,15 @@ public class ${name}I extends ${name} implements ModelBased {
         conversions = Collections.unmodifiableMap(c);
     }
 
+    private static final Map<Units${name}, String> SYMBOLS;
+    static {
+        Map<Units${name}, String> s = new HashMap<Units${name}, String>();
+{% for x in sorted(items) %}\
+        s.put(Units${name}.${x.CODE}, "${x.SYMBOL}");
+{% end %}\
+        SYMBOLS = s;
+    }
+
     public static final Ice.ObjectFactory makeFactory(final omero.client client) {
 
         return new Ice.ObjectFactory() {
@@ -254,6 +263,10 @@ public class ${name}I extends ${name} implements ModelBased {
 
     public void setUnit(Units${name} unit, Ice.Current current) {
         this.unit = unit;
+    }
+
+    public String getSymbol() {
+        return SYMBOLS.get(this.unit);
     }
 
     public ${name} copy(Ice.Current ignore) {

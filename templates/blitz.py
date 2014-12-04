@@ -85,6 +85,11 @@ class ${name}I(_omero_model.${name}, UnitBase):
 {% end %}\
 {% end %}\
 
+    SYMBOLS = dict()
+{% for x in sorted(items) %}\
+    SYMBOLS["${x.CODE}"] = "${x.SYMBOL}"
+{% end %}\
+
     def __init__(self, value=None, unit=None):
         _omero_model.${name}.__init__(self)
         if isinstance(value, _omero_model.${name}I):
@@ -111,6 +116,9 @@ class ${name}I(_omero_model.${name}, UnitBase):
 
     def getValue(self, current=None):
         return self._value
+
+    def getSymbol(self):
+        return self.SYMBOLS.get(str(self.getUnit()))
 
     def setUnit(self, unit, current=None):
         self._unit = unit
