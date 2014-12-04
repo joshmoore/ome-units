@@ -1,36 +1,3 @@
-{% python
-
-def calculate(cfrom, cto, coffecients):
-    if not coefficients:
-        return "retur value;"
-    elif coefficients == (None,):
-        return ('throw new RuntimeException(String.format("'
-                'Unsupported conversion: %%s", "%s:%s"));') % (cfrom, cto)
-
-    sb = []
-    for idx, coeffs in enumerate(coefficients):
-
-        k, p = coeffs
-
-        if k == 0:
-            continue
-
-        if p == 1:
-            lhs = k
-        else:
-            lhs = "Math.pow(%s, %s)" % (k, p)
-
-        if idx == 0:
-            rhs = ""
-        elif idx <= 1:
-            rhs = " * value"
-        else:
-            rhs = " * Math.pow(value, %s)" % idx
-
-        sb += ["%s%s" % (lhs, rhs)]
-    return "return %s;" % "+".join(sb)
-
-%}\
 /*
  * Copyright (C) 2014 University of Dundee & Open Microscopy Environment.
  * All rights reserved.
@@ -56,8 +23,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.google.common.base.Function;
-
 import ome.model.ModelBased;
 import ome.units.unit.Unit;
 import ome.util.Filterable;
@@ -79,18 +44,31 @@ public class ${name}I extends ${name} implements ModelBased {
 
     private static final long serialVersionUID = 1L;
 
-    private static final Map<String, Function<Double, Double>> conversions;
+    private static final Map<String, double[][]> conversions;
     static {
-        Map<String, Function<Double, Double>> c = new HashMap<String, Function<Double, Double>>();
+        Map<String, double[][]> c = new HashMap<String, double[][]>();
+{% python
+def asarray(cfrom, cto, coefficients):
+    if coefficients is None or coefficients == (None,):
+        return ""
+
+    terms = []
+    sb = "new double[][]{"
+    for term in coefficients:
+        if term is None:
+            terms.append("null")
+        else:
+            sb2 = "new double[]{"
+            sb2 += ", ".join(map(str, term))
+            sb2 += "}"
+            terms.append(sb2)
+    sb += ", ".join(terms)
+    sb += "}"
+    return """        c.put("%s:%s", %s);\n""" % (cfrom, cto, sb)
+%}
 {% for cfrom in sorted(conversions) %}\
 {% for cto, coefficients in sorted(conversions.get(cfrom, {}).items()) %}\
-{% if cfrom != cto %}\
-
-        c.put("${cfrom}:${cto}", new Function<Double, Double>() {
-              public Double apply(Double value) {
-                  ${calculate(cfrom, cto, coefficients)}
-              }});
-{% end %}\
+{% if cfrom != cto %}${asarray(cfrom, cto, coefficients)}{% end %}\
 {% end %}\
 {% end %}\
         conversions = Collections.unmodifiableMap(c);
@@ -103,6 +81,10 @@ public class ${name}I extends ${name} implements ModelBased {
         s.put(Units${name}.${x.CODE}, "${x.SYMBOL}");
 {% end %}\
         SYMBOLS = s;
+    }
+
+    public static String lookupSymbol(Units${name} unit) {
+        return SYMBOLS.get(unit);
     }
 
     public static final Ice.ObjectFactory makeFactory(final omero.client client) {
@@ -218,13 +200,29 @@ public class ${name}I extends ${name} implements ModelBased {
            setValue(value.getValue());
            setUnit(value.getUnit());
         } else {
-            Function<Double, Double> c = conversions.get(source + ":" + target);
-            if (c == null) {
+            double[][] coeffs = conversions.get(source + ":" + target);
+            if (coeffs == null) {
                 throw new RuntimeException(String.format(
                     "%f %s cannot be converted to %s",
                         value.getValue(), value.getUnit(), target));
             }
-            setValue(c.apply(value.getValue()));
+            double orig = value.getValue();
+            double k, p, v;
+            if (coeffs.length == 0) {
+                v = orig;
+            } else if (coeffs.length == 2){
+                k = coeffs[0][0];
+                p = coeffs[0][1];
+                v = Math.pow(k, p);
+
+                k = coeffs[1][0];
+                p = coeffs[1][1];
+                v += Math.pow(k, p) * orig;
+            } else {
+                throw new RuntimeException("coefficients of unknown length: " +  coeffs.length);
+            }
+
+            setValue(v);
             setUnit(Units${name}.valueOf(target));
        }
     }

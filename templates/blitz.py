@@ -120,6 +120,10 @@ class ${name}I(_omero_model.${name}, UnitBase):
     def getSymbol(self, current=None):
         return self.SYMBOLS.get(str(self.getUnit()))
 
+    @staticmethod
+    def lookupSymbol(unit):
+        return ${name}I.SYMBOLS.get(str(unit))
+
     def setUnit(self, unit, current=None):
         self._unit = unit
 

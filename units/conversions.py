@@ -3929,13 +3929,13 @@ Conversions = {
   "Temperature": {
     "DEGREEC": {
         "DEGREEC": (),
-        "DEGREEF": (None,),
+        "DEGREEF": ((32, 1), (1.8, 1)),
         "DEGREER": (None,),
-        "K": (None,),
+        "K": ((273.15, 1), (0, 1)),
 
     },
     "DEGREEF": {
-        "DEGREEC": (None,),
+        "DEGREEC": ((-17.777777777, 1), (0.55555555555, 1)),
         "DEGREEF": (),
         "DEGREER": (None,),
         "K": (None,),
@@ -3949,7 +3949,7 @@ Conversions = {
 
     },
     "K": {
-        "DEGREEC": (None,),
+        "DEGREEC": ((-273.15, 1), (0, 1)),
         "DEGREEF": (None,),
         "DEGREER": (None,),
         "K": (),
