@@ -25,6 +25,12 @@ namespace omero {
 
     namespace model {
 
+        std::map<omero::model::enums::Units${name}, std::string> ${name}I::SYMBOLS= {
+{% for x in sorted(items) %}\
+            {omero::model::enums::Units${name}::${x.CODE}, "${x.SYMBOL}"},
+{% end %}\
+        };
+
         ${name}I::~${name}I() {}
 
         ${name}I::${name}I() : ${name}() {
@@ -44,6 +50,10 @@ namespace omero {
 
         void ${name}I::setUnit(omero::model::enums::Units${name} _unit, const Ice::Current& /* current */) {
             unit = _unit;
+        }
+
+        std::string ${name}I::getSymbol(const Ice::Current& /* current */) {
+            return SYMBOLS[unit];
         }
 
         ${name}Ptr ${name}I::copy(const Ice::Current& /* current */) {

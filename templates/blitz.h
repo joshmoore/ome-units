@@ -52,6 +52,7 @@ namespace omero {
 
     protected:
         virtual ~${name}I(); // protected as outlined in Ice docs.
+        static std::map<omero::model::enums::Units${name}, std::string> SYMBOLS;
 
     public:
         ${name}I();
@@ -68,6 +69,9 @@ namespace omero {
 
         virtual void setUnit(
                 omero::model::enums::Units${name} unit,
+                const Ice::Current& current = Ice::Current());
+
+        virtual std::string getSymbol(
                 const Ice::Current& current = Ice::Current());
 
         virtual ${name}Ptr copy(

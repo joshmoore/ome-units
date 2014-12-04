@@ -83,6 +83,12 @@ module omero {
 
       void setUnit(omero::model::enums::Units${name} unit);
 
+      /**
+       * Returns the possibly unicode representation of the "unit"
+       * value for display.
+       **/
+      string getSymbol();
+
       ${name} copy();
 
     };
