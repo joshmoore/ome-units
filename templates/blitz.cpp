@@ -25,11 +25,16 @@ namespace omero {
 
     namespace model {
 
-        std::map<omero::model::enums::Units${name}, std::string> ${name}I::SYMBOLS= {
+
+        static std::map<omero::model::enums::Units${name}, std::string> makeSymbols(){
+            std::map<omero::model::enums::Units${name}, std::string> s;
 {% for x in sorted(items) %}\
-            {omero::model::enums::Units${name}::${x.CODE}, "${x.SYMBOL}"},
+            s[omero::model::enums::${x.CODE}] = "${x.SYMBOL}";
 {% end %}\
+            return s;
         };
+
+        std::map<omero::model::enums::Units${name}, std::string> ${name}I::SYMBOLS = makeSymbols();
 
         ${name}I::~${name}I() {}
 
