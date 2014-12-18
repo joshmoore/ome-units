@@ -1,4 +1,8 @@
 .*un~
-sql/
+blitz/
+formats/
 model/
-blitz
+model2/
+sql/
+xsd/
+.ropeproject

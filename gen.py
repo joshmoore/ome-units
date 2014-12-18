@@ -38,7 +38,7 @@ try:
 except:
     Conversions = {}
 Unit = namedtuple('Unit', ['CODE', 'SYMBOL', 'SYSTEM'])
-Field = namedtuple('Field', ['CLASS', 'NAME', 'TYPE'])
+Field = namedtuple('Field', ['CLASS', 'NAME', 'TYPE', 'DEFAULT'])
 
 
 class Engine(object):

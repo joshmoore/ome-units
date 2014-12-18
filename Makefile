@@ -1,6 +1,6 @@
 DIR ?= /tmp/
 
-all: blitz/Units.ice blitz2 blitz3 blitz4 blitz5 formats/UnitsFactory.java model model2 sql
+all: blitz/Units.ice blitz2 blitz3 blitz4 blitz5 formats/UnitsFactory.java model model2 sql xsd
 
 # exclude Angle
 units ?= units/ElectricPotential.txt units/Frequency.txt  units/Length.txt  units/Pressure.txt  units/Power.txt  units/Temperature.txt  units/Time.txt
@@ -21,6 +21,7 @@ blitz2: $(blitz_ice)
 blitz3: $(blitz_java)
 blitz4: $(blitz_py)
 blitz5: $(blitz_cpp) $(blitz_h)
+xsd:    xsd/units-conversion.xsl
 
 blitz/Units.ice: $(units)
 	mkdir -p blitz
@@ -62,6 +63,10 @@ sql/Units%.sql: units/%.txt
 	mkdir -p sql
 	./gen.py templates/sql $< > $@
 
+xsd/units-conversion.xsl: $(units)
+	mkdir -p xsd
+	./gen.py --combine templates/xsd $(units) > $@
+
 move:
 	/bin/mv $(model_enums) $(DIR)/components/model/src/ome/model/enums
 	/bin/mv $(model_objs) $(DIR)/components/model/src/ome/model/units
@@ -72,8 +77,11 @@ move:
 	/bin/mv $(blitz_cpp) $(DIR)/components/tools/OmeroCpp/src/omero/model
 	/bin/mv $(blitz_h) $(DIR)/components/tools/OmeroCpp/src/omero/model
 
+bfmove:
+	/bin/mv xsd/units-conversion.xsl $(BFDIR)/components/specification/transforms
+
 
 clean:
-	rm -rf blitz formats model model2 sql
+	rm -rf blitz formats model model2 sql xsd
 
 .PHONY: sql files model clean mov
