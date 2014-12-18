@@ -65,7 +65,7 @@ sql/Units%.sql: units/%.txt
 
 xsd/units-conversion.xsl: $(units)
 	mkdir -p xsd
-	./gen.py --combine templates/xsd $(units) > $@
+	./gen.py --markup --combine templates/xsd $(units) > $@
 
 move:
 	/bin/mv $(model_enums) $(DIR)/components/model/src/ome/model/enums

@@ -27,6 +27,7 @@ import os
 import fileinput
 
 from collections import namedtuple
+from genshi.template import MarkupTemplate
 from genshi.template import NewTextTemplate
 from argparse import ArgumentParser
 
@@ -43,8 +44,9 @@ Field = namedtuple('Field', ['CLASS', 'NAME', 'TYPE', 'DEFAULT'])
 
 class Engine(object):
 
-    def __init__(self, template_name):
+    def __init__(self, template_name, markup):
         self.template_name = template_name
+        self.markup = markup
         with open(self.template_name) as f:
             self.template_text = f.read()
         self.fields = self.parse("units/Fields.txt", Type=Field)
@@ -69,8 +71,13 @@ class Engine(object):
         return data
 
     def render(self, **kwargs):
-        tmpl = NewTextTemplate(self.template_text,
-                               encoding="utf-8")
+        markup = kwargs.pop("markup")
+        if markup:
+            tmpl = MarkupTemplate(
+                self.template_text, encoding="utf-8")
+        else:
+            tmpl = NewTextTemplate(
+                self.template_text, encoding="utf-8")
         content = tmpl.generate(**kwargs)
         print content.render(encoding="utf-8")
 
@@ -80,13 +87,15 @@ class Engine(object):
             basename = self.basename(data_filename)
             data = self.parse(data_filename)
             items[basename] = data
-        self.render(items=items, fields=self.fields,
+        self.render(markup=self.markup,
+                    items=items, fields=self.fields,
                     conversions=Conversions)
 
     def individual_templates(self, data_filename):
         basename = self.basename(data_filename)
         data = self.parse(data_filename)
-        self.render(name=basename, items=data, fields=self.fields,
+        self.render(markup=self.markup,
+                    name=basename, items=data, fields=self.fields,
                     conversions=Conversions.get(basename))
 
 
@@ -97,15 +106,19 @@ if __name__ == "__main__":
         action="store_true",
         help="Combine all files into a single call")
     parser.add_argument(
+        "--markup",
+        action="store_true",
+        help="Use XML markup rather than the text template")
+    parser.add_argument(
         "template_name")
     parser.add_argument(
         "data_filenames",
         nargs="+")
     ns = parser.parse_args()
     if ns.combine:
-        engine = Engine(ns.template_name)
+        engine = Engine(ns.template_name, markup=ns.markup)
         engine.combined_template(ns.data_filenames)
     else:
         for data_filename in ns.data_filenames:
-            engine = Engine(ns.template_name)
+            engine = Engine(ns.template_name, markup=ns.markup)
             engine.individual_templates(data_filename)
