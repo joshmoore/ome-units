@@ -34,6 +34,7 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:math="http://exslt.org/math"
 	exclude-result-prefixes="xs"
 	version="2.0"
 	xmlns:py="http://genshi.edgewall.org/">
@@ -97,7 +98,7 @@
 def conversion(cfrom, cto, coefficients):
     import math
     if cfrom == cto or len(coefficients) == 0:
-        return "EQUALS"
+        return "$theValue"
     elif len(coefficients) == 2:
         k0 = coefficients[0][0]
         p0 = coefficients[0][1]
@@ -106,13 +107,13 @@ def conversion(cfrom, cto, coefficients):
         if k0 == 0:
             a0 = 0
         else:
-            a0 = k0 ** p0
+            a0 = "math:power(%s, %s)" % (k0, p0)
 
         if k1 == 0:
             a1 = 0
         else:
-            a1 = k1 ** p1
-        return "$theValue * %s + %s" % (a0, a1)
+            a1 = "math:power(%s, %s)" % (k1, p1)
+        return "$theValue * %s + %s" % (a1, a0)
     else:
         raise Exception("coefficients of unknown length: %s",
             coefficients)
