@@ -3,28 +3,28 @@
 Conversions = {
   "Angle": {
     "DEGREE": {
-        "DEGREE": (),
-        "GRADIAN": (None,),
-        "RADIAN": (None,),
+        "DEGREE": (), # Same
+        "GRADIAN": (None,),  # Undefined
+        "RADIAN": (None,),  # Undefined
 
     },
     "GRADIAN": {
-        "DEGREE": (None,),
-        "GRADIAN": (),
-        "RADIAN": (None,),
+        "DEGREE": (None,),  # Undefined
+        "GRADIAN": (), # Same
+        "RADIAN": (None,),  # Undefined
 
     },
     "RADIAN": {
-        "DEGREE": (None,),
-        "GRADIAN": (None,),
-        "RADIAN": (),
+        "DEGREE": (None,),  # Undefined
+        "GRADIAN": (None,),  # Undefined
+        "RADIAN": (), # Same
 
     },
 
   },
   "ElectricPotential": {
     "ATTOVOLT": {
-        "ATTOVOLT": (),
+        "ATTOVOLT": (), # Same
         "CENTIVOLT": ((0, 1), (10, -16)),
         "DECAVOLT": ((0, 1), (10, -19)),
         "DECIVOLT": ((0, 1), (10, -17)),
@@ -49,7 +49,7 @@ Conversions = {
     },
     "CENTIVOLT": {
         "ATTOVOLT": ((0, 1), (10, 16)),
-        "CENTIVOLT": (),
+        "CENTIVOLT": (), # Same
         "DECAVOLT": ((0, 1), (10, -3)),
         "DECIVOLT": ((0, 1), (10, -1)),
         "EXAVOLT": ((0, 1), (10, -20)),
@@ -74,7 +74,7 @@ Conversions = {
     "DECAVOLT": {
         "ATTOVOLT": ((0, 1), (10, 19)),
         "CENTIVOLT": ((0, 1), (10, 3)),
-        "DECAVOLT": (),
+        "DECAVOLT": (), # Same
         "DECIVOLT": ((0, 1), (10, 2)),
         "EXAVOLT": ((0, 1), (10, -17)),
         "FEMTOVOLT": ((0, 1), (10, 16)),
@@ -99,7 +99,7 @@ Conversions = {
         "ATTOVOLT": ((0, 1), (10, 17)),
         "CENTIVOLT": ((0, 1), (10, 1)),
         "DECAVOLT": ((0, 1), (10, -2)),
-        "DECIVOLT": (),
+        "DECIVOLT": (), # Same
         "EXAVOLT": ((0, 1), (10, -19)),
         "FEMTOVOLT": ((0, 1), (10, 14)),
         "GIGAVOLT": ((0, 1), (10, -10)),
@@ -124,7 +124,7 @@ Conversions = {
         "CENTIVOLT": ((0, 1), (10, 20)),
         "DECAVOLT": ((0, 1), (10, 17)),
         "DECIVOLT": ((0, 1), (10, 19)),
-        "EXAVOLT": (),
+        "EXAVOLT": (), # Same
         "FEMTOVOLT": ((0, 1), (10, 33)),
         "GIGAVOLT": ((0, 1), (10, 9)),
         "HECTOVOLT": ((0, 1), (10, 16)),
@@ -149,7 +149,7 @@ Conversions = {
         "DECAVOLT": ((0, 1), (10, -16)),
         "DECIVOLT": ((0, 1), (10, -14)),
         "EXAVOLT": ((0, 1), (10, -33)),
-        "FEMTOVOLT": (),
+        "FEMTOVOLT": (), # Same
         "GIGAVOLT": ((0, 1), (10, -24)),
         "HECTOVOLT": ((0, 1), (10, -17)),
         "KILOVOLT": ((0, 1), (10, -18)),
@@ -174,7 +174,7 @@ Conversions = {
         "DECIVOLT": ((0, 1), (10, 10)),
         "EXAVOLT": ((0, 1), (10, -9)),
         "FEMTOVOLT": ((0, 1), (10, 24)),
-        "GIGAVOLT": (),
+        "GIGAVOLT": (), # Same
         "HECTOVOLT": ((0, 1), (10, 7)),
         "KILOVOLT": ((0, 1), (10, 6)),
         "MEGAVOLT": ((0, 1), (10, 3)),
@@ -199,7 +199,7 @@ Conversions = {
         "EXAVOLT": ((0, 1), (10, -16)),
         "FEMTOVOLT": ((0, 1), (10, 17)),
         "GIGAVOLT": ((0, 1), (10, -7)),
-        "HECTOVOLT": (),
+        "HECTOVOLT": (), # Same
         "KILOVOLT": ((0, 1), (10, -1)),
         "MEGAVOLT": ((0, 1), (10, -4)),
         "MICROVOLT": ((0, 1), (10, 8)),
@@ -224,7 +224,7 @@ Conversions = {
         "FEMTOVOLT": ((0, 1), (10, 18)),
         "GIGAVOLT": ((0, 1), (10, -6)),
         "HECTOVOLT": ((0, 1), (10, 1)),
-        "KILOVOLT": (),
+        "KILOVOLT": (), # Same
         "MEGAVOLT": ((0, 1), (10, -3)),
         "MICROVOLT": ((0, 1), (10, 9)),
         "MILLIVOLT": ((0, 1), (10, 6)),
@@ -249,7 +249,7 @@ Conversions = {
         "GIGAVOLT": ((0, 1), (10, -3)),
         "HECTOVOLT": ((0, 1), (10, 4)),
         "KILOVOLT": ((0, 1), (10, 3)),
-        "MEGAVOLT": (),
+        "MEGAVOLT": (), # Same
         "MICROVOLT": ((0, 1), (10, 12)),
         "MILLIVOLT": ((0, 1), (10, 9)),
         "NANOVOLT": ((0, 1), (10, 15)),
@@ -274,7 +274,7 @@ Conversions = {
         "HECTOVOLT": ((0, 1), (10, -8)),
         "KILOVOLT": ((0, 1), (10, -9)),
         "MEGAVOLT": ((0, 1), (10, -12)),
-        "MICROVOLT": (),
+        "MICROVOLT": (), # Same
         "MILLIVOLT": ((0, 1), (10, -3)),
         "NANOVOLT": ((0, 1), (10, 3)),
         "PETAVOLT": ((0, 1), (10, -21)),
@@ -299,7 +299,7 @@ Conversions = {
         "KILOVOLT": ((0, 1), (10, -6)),
         "MEGAVOLT": ((0, 1), (10, -9)),
         "MICROVOLT": ((0, 1), (10, 3)),
-        "MILLIVOLT": (),
+        "MILLIVOLT": (), # Same
         "NANOVOLT": ((0, 1), (10, 6)),
         "PETAVOLT": ((0, 1), (10, -18)),
         "PICOVOLT": ((0, 1), (10, 9)),
@@ -324,7 +324,7 @@ Conversions = {
         "MEGAVOLT": ((0, 1), (10, -15)),
         "MICROVOLT": ((0, 1), (10, -3)),
         "MILLIVOLT": ((0, 1), (10, -6)),
-        "NANOVOLT": (),
+        "NANOVOLT": (), # Same
         "PETAVOLT": ((0, 1), (10, -24)),
         "PICOVOLT": ((0, 1), (10, 3)),
         "TERAVOLT": ((0, 1), (10, -21)),
@@ -349,7 +349,7 @@ Conversions = {
         "MICROVOLT": ((0, 1), (10, 21)),
         "MILLIVOLT": ((0, 1), (10, 18)),
         "NANOVOLT": ((0, 1), (10, 24)),
-        "PETAVOLT": (),
+        "PETAVOLT": (), # Same
         "PICOVOLT": ((0, 1), (10, 27)),
         "TERAVOLT": ((0, 1), (10, 3)),
         "VOLT": ((0, 1), (10, 15)),
@@ -374,7 +374,7 @@ Conversions = {
         "MILLIVOLT": ((0, 1), (10, -9)),
         "NANOVOLT": ((0, 1), (10, -3)),
         "PETAVOLT": ((0, 1), (10, -27)),
-        "PICOVOLT": (),
+        "PICOVOLT": (), # Same
         "TERAVOLT": ((0, 1), (10, -24)),
         "VOLT": ((0, 1), (10, -12)),
         "YOTTAVOLT": ((0, 1), (10, -36)),
@@ -399,7 +399,7 @@ Conversions = {
         "NANOVOLT": ((0, 1), (10, 21)),
         "PETAVOLT": ((0, 1), (10, -3)),
         "PICOVOLT": ((0, 1), (10, 24)),
-        "TERAVOLT": (),
+        "TERAVOLT": (), # Same
         "VOLT": ((0, 1), (10, 12)),
         "YOTTAVOLT": ((0, 1), (10, -12)),
         "YOCTOVOLT": ((0, 1), (10, 36)),
@@ -424,7 +424,7 @@ Conversions = {
         "PETAVOLT": ((0, 1), (10, -15)),
         "PICOVOLT": ((0, 1), (10, 12)),
         "TERAVOLT": ((0, 1), (10, -12)),
-        "VOLT": (),
+        "VOLT": (), # Same
         "YOTTAVOLT": ((0, 1), (10, -24)),
         "YOCTOVOLT": ((0, 1), (10, 24)),
         "ZETTAVOLT": ((0, 1), (10, -21)),
@@ -449,7 +449,7 @@ Conversions = {
         "PICOVOLT": ((0, 1), (10, 36)),
         "TERAVOLT": ((0, 1), (10, 12)),
         "VOLT": ((0, 1), (10, 24)),
-        "YOTTAVOLT": (),
+        "YOTTAVOLT": (), # Same
         "YOCTOVOLT": ((0, 1), (10, 48)),
         "ZETTAVOLT": ((0, 1), (10, 3)),
         "ZEPTOVOLT": ((0, 1), (10, 45)),
@@ -474,7 +474,7 @@ Conversions = {
         "TERAVOLT": ((0, 1), (10, -36)),
         "VOLT": ((0, 1), (10, -24)),
         "YOTTAVOLT": ((0, 1), (10, -48)),
-        "YOCTOVOLT": (),
+        "YOCTOVOLT": (), # Same
         "ZETTAVOLT": ((0, 1), (10, -45)),
         "ZEPTOVOLT": ((0, 1), (10, -3)),
 
@@ -499,7 +499,7 @@ Conversions = {
         "VOLT": ((0, 1), (10, 21)),
         "YOTTAVOLT": ((0, 1), (10, -3)),
         "YOCTOVOLT": ((0, 1), (10, 45)),
-        "ZETTAVOLT": (),
+        "ZETTAVOLT": (), # Same
         "ZEPTOVOLT": ((0, 1), (10, 42)),
 
     },
@@ -524,14 +524,14 @@ Conversions = {
         "YOTTAVOLT": ((0, 1), (10, -45)),
         "YOCTOVOLT": ((0, 1), (10, 3)),
         "ZETTAVOLT": ((0, 1), (10, -42)),
-        "ZEPTOVOLT": (),
+        "ZEPTOVOLT": (), # Same
 
     },
 
   },
   "Frequency": {
     "ATTOHERTZ": {
-        "ATTOHERTZ": (),
+        "ATTOHERTZ": (), # Same
         "CENTIHERTZ": ((0, 1), (10, -16)),
         "DECAHERTZ": ((0, 1), (10, -19)),
         "DECIHERTZ": ((0, 1), (10, -17)),
@@ -556,7 +556,7 @@ Conversions = {
     },
     "CENTIHERTZ": {
         "ATTOHERTZ": ((0, 1), (10, 16)),
-        "CENTIHERTZ": (),
+        "CENTIHERTZ": (), # Same
         "DECAHERTZ": ((0, 1), (10, -3)),
         "DECIHERTZ": ((0, 1), (10, -1)),
         "EXAHERTZ": ((0, 1), (10, -20)),
@@ -581,7 +581,7 @@ Conversions = {
     "DECAHERTZ": {
         "ATTOHERTZ": ((0, 1), (10, 19)),
         "CENTIHERTZ": ((0, 1), (10, 3)),
-        "DECAHERTZ": (),
+        "DECAHERTZ": (), # Same
         "DECIHERTZ": ((0, 1), (10, 2)),
         "EXAHERTZ": ((0, 1), (10, -17)),
         "FEMTOHERTZ": ((0, 1), (10, 16)),
@@ -606,7 +606,7 @@ Conversions = {
         "ATTOHERTZ": ((0, 1), (10, 17)),
         "CENTIHERTZ": ((0, 1), (10, 1)),
         "DECAHERTZ": ((0, 1), (10, -2)),
-        "DECIHERTZ": (),
+        "DECIHERTZ": (), # Same
         "EXAHERTZ": ((0, 1), (10, -19)),
         "FEMTOHERTZ": ((0, 1), (10, 14)),
         "GIGAHERTZ": ((0, 1), (10, -10)),
@@ -631,7 +631,7 @@ Conversions = {
         "CENTIHERTZ": ((0, 1), (10, 20)),
         "DECAHERTZ": ((0, 1), (10, 17)),
         "DECIHERTZ": ((0, 1), (10, 19)),
-        "EXAHERTZ": (),
+        "EXAHERTZ": (), # Same
         "FEMTOHERTZ": ((0, 1), (10, 33)),
         "GIGAHERTZ": ((0, 1), (10, 9)),
         "HECTOHERTZ": ((0, 1), (10, 16)),
@@ -656,7 +656,7 @@ Conversions = {
         "DECAHERTZ": ((0, 1), (10, -16)),
         "DECIHERTZ": ((0, 1), (10, -14)),
         "EXAHERTZ": ((0, 1), (10, -33)),
-        "FEMTOHERTZ": (),
+        "FEMTOHERTZ": (), # Same
         "GIGAHERTZ": ((0, 1), (10, -24)),
         "HECTOHERTZ": ((0, 1), (10, -17)),
         "HERTZ": ((0, 1), (10, -15)),
@@ -681,7 +681,7 @@ Conversions = {
         "DECIHERTZ": ((0, 1), (10, 10)),
         "EXAHERTZ": ((0, 1), (10, -9)),
         "FEMTOHERTZ": ((0, 1), (10, 24)),
-        "GIGAHERTZ": (),
+        "GIGAHERTZ": (), # Same
         "HECTOHERTZ": ((0, 1), (10, 7)),
         "HERTZ": ((0, 1), (10, 9)),
         "KILOHERTZ": ((0, 1), (10, 6)),
@@ -706,7 +706,7 @@ Conversions = {
         "EXAHERTZ": ((0, 1), (10, -16)),
         "FEMTOHERTZ": ((0, 1), (10, 17)),
         "GIGAHERTZ": ((0, 1), (10, -7)),
-        "HECTOHERTZ": (),
+        "HECTOHERTZ": (), # Same
         "HERTZ": ((0, 1), (10, 2)),
         "KILOHERTZ": ((0, 1), (10, -1)),
         "MEGAHERTZ": ((0, 1), (10, -4)),
@@ -731,7 +731,7 @@ Conversions = {
         "FEMTOHERTZ": ((0, 1), (10, 15)),
         "GIGAHERTZ": ((0, 1), (10, -9)),
         "HECTOHERTZ": ((0, 1), (10, -2)),
-        "HERTZ": (),
+        "HERTZ": (), # Same
         "KILOHERTZ": ((0, 1), (10, -3)),
         "MEGAHERTZ": ((0, 1), (10, -6)),
         "MILLIHERTZ": ((0, 1), (10, 3)),
@@ -756,7 +756,7 @@ Conversions = {
         "GIGAHERTZ": ((0, 1), (10, -6)),
         "HECTOHERTZ": ((0, 1), (10, 1)),
         "HERTZ": ((0, 1), (10, 3)),
-        "KILOHERTZ": (),
+        "KILOHERTZ": (), # Same
         "MEGAHERTZ": ((0, 1), (10, -3)),
         "MILLIHERTZ": ((0, 1), (10, 6)),
         "MICROHERTZ": ((0, 1), (10, 9)),
@@ -781,7 +781,7 @@ Conversions = {
         "HECTOHERTZ": ((0, 1), (10, 4)),
         "HERTZ": ((0, 1), (10, 6)),
         "KILOHERTZ": ((0, 1), (10, 3)),
-        "MEGAHERTZ": (),
+        "MEGAHERTZ": (), # Same
         "MILLIHERTZ": ((0, 1), (10, 9)),
         "MICROHERTZ": ((0, 1), (10, 12)),
         "NANOHERTZ": ((0, 1), (10, 15)),
@@ -806,7 +806,7 @@ Conversions = {
         "HERTZ": ((0, 1), (10, -3)),
         "KILOHERTZ": ((0, 1), (10, -6)),
         "MEGAHERTZ": ((0, 1), (10, -9)),
-        "MILLIHERTZ": (),
+        "MILLIHERTZ": (), # Same
         "MICROHERTZ": ((0, 1), (10, 3)),
         "NANOHERTZ": ((0, 1), (10, 6)),
         "PETAHERTZ": ((0, 1), (10, -18)),
@@ -831,7 +831,7 @@ Conversions = {
         "KILOHERTZ": ((0, 1), (10, -9)),
         "MEGAHERTZ": ((0, 1), (10, -12)),
         "MILLIHERTZ": ((0, 1), (10, -3)),
-        "MICROHERTZ": (),
+        "MICROHERTZ": (), # Same
         "NANOHERTZ": ((0, 1), (10, 3)),
         "PETAHERTZ": ((0, 1), (10, -21)),
         "PICOHERTZ": ((0, 1), (10, 6)),
@@ -856,7 +856,7 @@ Conversions = {
         "MEGAHERTZ": ((0, 1), (10, -15)),
         "MILLIHERTZ": ((0, 1), (10, -6)),
         "MICROHERTZ": ((0, 1), (10, -3)),
-        "NANOHERTZ": (),
+        "NANOHERTZ": (), # Same
         "PETAHERTZ": ((0, 1), (10, -24)),
         "PICOHERTZ": ((0, 1), (10, 3)),
         "TERAHERTZ": ((0, 1), (10, -21)),
@@ -881,7 +881,7 @@ Conversions = {
         "MILLIHERTZ": ((0, 1), (10, 18)),
         "MICROHERTZ": ((0, 1), (10, 21)),
         "NANOHERTZ": ((0, 1), (10, 24)),
-        "PETAHERTZ": (),
+        "PETAHERTZ": (), # Same
         "PICOHERTZ": ((0, 1), (10, 27)),
         "TERAHERTZ": ((0, 1), (10, 3)),
         "YOCTOHERTZ": ((0, 1), (10, 39)),
@@ -906,7 +906,7 @@ Conversions = {
         "MICROHERTZ": ((0, 1), (10, -6)),
         "NANOHERTZ": ((0, 1), (10, -3)),
         "PETAHERTZ": ((0, 1), (10, -27)),
-        "PICOHERTZ": (),
+        "PICOHERTZ": (), # Same
         "TERAHERTZ": ((0, 1), (10, -24)),
         "YOCTOHERTZ": ((0, 1), (10, 12)),
         "YOTTAHERTZ": ((0, 1), (10, -36)),
@@ -931,7 +931,7 @@ Conversions = {
         "NANOHERTZ": ((0, 1), (10, 21)),
         "PETAHERTZ": ((0, 1), (10, -3)),
         "PICOHERTZ": ((0, 1), (10, 24)),
-        "TERAHERTZ": (),
+        "TERAHERTZ": (), # Same
         "YOCTOHERTZ": ((0, 1), (10, 36)),
         "YOTTAHERTZ": ((0, 1), (10, -12)),
         "ZETTAHERTZ": ((0, 1), (10, -9)),
@@ -956,7 +956,7 @@ Conversions = {
         "PETAHERTZ": ((0, 1), (10, -39)),
         "PICOHERTZ": ((0, 1), (10, -12)),
         "TERAHERTZ": ((0, 1), (10, -36)),
-        "YOCTOHERTZ": (),
+        "YOCTOHERTZ": (), # Same
         "YOTTAHERTZ": ((0, 1), (10, -48)),
         "ZETTAHERTZ": ((0, 1), (10, -45)),
         "ZEPTOHERTZ": ((0, 1), (10, -3)),
@@ -981,7 +981,7 @@ Conversions = {
         "PICOHERTZ": ((0, 1), (10, 36)),
         "TERAHERTZ": ((0, 1), (10, 12)),
         "YOCTOHERTZ": ((0, 1), (10, 48)),
-        "YOTTAHERTZ": (),
+        "YOTTAHERTZ": (), # Same
         "ZETTAHERTZ": ((0, 1), (10, 3)),
         "ZEPTOHERTZ": ((0, 1), (10, 45)),
 
@@ -1006,7 +1006,7 @@ Conversions = {
         "TERAHERTZ": ((0, 1), (10, 9)),
         "YOCTOHERTZ": ((0, 1), (10, 45)),
         "YOTTAHERTZ": ((0, 1), (10, -3)),
-        "ZETTAHERTZ": (),
+        "ZETTAHERTZ": (), # Same
         "ZEPTOHERTZ": ((0, 1), (10, 42)),
 
     },
@@ -1031,43 +1031,43 @@ Conversions = {
         "YOCTOHERTZ": ((0, 1), (10, 3)),
         "YOTTAHERTZ": ((0, 1), (10, -45)),
         "ZETTAHERTZ": ((0, 1), (10, -42)),
-        "ZEPTOHERTZ": (),
+        "ZEPTOHERTZ": (), # Same
 
     },
 
   },
   "Length": {
     "ATTOMETER": {
-        "ATTOMETER": (),
+        "ATTOMETER": (), # Same
         "ANGSTROM": ((0, 1), (10, -8)),
         "CENTIMETER": ((0, 1), (10, -16)),
         "DECAMETER": ((0, 1), (10, -19)),
         "DECIMETER": ((0, 1), (10, -17)),
         "EXAMETER": ((0, 1), (10, -36)),
         "FEMTOMETER": ((0, 1), (10, -3)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -27)),
         "HECTOMETER": ((0, 1), (10, -20)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -21)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -18)),
         "MEGAMETER": ((0, 1), (10, -24)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -12)),
         "MILLIMETER": ((0, 1), (10, -15)),
         "NANOMETER": ((0, 1), (10, -9)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -33)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, -6)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -30)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 6)),
         "YOTTAMETER": ((0, 1), (10, -42)),
         "ZETTAMETER": ((0, 1), (10, -39)),
@@ -1076,35 +1076,35 @@ Conversions = {
     },
     "ANGSTROM": {
         "ATTOMETER": ((0, 1), (10, 8)),
-        "ANGSTROM": (),
+        "ANGSTROM": (), # Same
         "CENTIMETER": ((0, 1), (10, -8)),
         "DECAMETER": ((0, 1), (10, -11)),
         "DECIMETER": ((0, 1), (10, -9)),
         "EXAMETER": ((0, 1), (10, -28)),
         "FEMTOMETER": ((0, 1), (10, 5)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -19)),
         "HECTOMETER": ((0, 1), (10, -12)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -13)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -10)),
         "MEGAMETER": ((0, 1), (10, -16)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -4)),
         "MILLIMETER": ((0, 1), (10, -7)),
         "NANOMETER": ((0, 1), (10, -1)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -25)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 2)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -22)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 14)),
         "YOTTAMETER": ((0, 1), (10, -34)),
         "ZETTAMETER": ((0, 1), (10, -31)),
@@ -1113,34 +1113,34 @@ Conversions = {
     "CENTIMETER": {
         "ATTOMETER": ((0, 1), (10, 16)),
         "ANGSTROM": ((0, 1), (10, 8)),
-        "CENTIMETER": (),
+        "CENTIMETER": (), # Same
         "DECAMETER": ((0, 1), (10, -3)),
         "DECIMETER": ((0, 1), (10, -1)),
         "EXAMETER": ((0, 1), (10, -20)),
         "FEMTOMETER": ((0, 1), (10, 13)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -11)),
         "HECTOMETER": ((0, 1), (10, -4)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -5)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -2)),
         "MEGAMETER": ((0, 1), (10, -8)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 4)),
         "MILLIMETER": ((0, 1), (10, 1)),
         "NANOMETER": ((0, 1), (10, 7)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -17)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 10)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -14)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 22)),
         "YOTTAMETER": ((0, 1), (10, -26)),
         "ZETTAMETER": ((0, 1), (10, -23)),
@@ -1151,33 +1151,33 @@ Conversions = {
         "ATTOMETER": ((0, 1), (10, 19)),
         "ANGSTROM": ((0, 1), (10, 11)),
         "CENTIMETER": ((0, 1), (10, 3)),
-        "DECAMETER": (),
+        "DECAMETER": (), # Same
         "DECIMETER": ((0, 1), (10, 2)),
         "EXAMETER": ((0, 1), (10, -17)),
         "FEMTOMETER": ((0, 1), (10, 16)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -8)),
         "HECTOMETER": ((0, 1), (10, -1)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -2)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 1)),
         "MEGAMETER": ((0, 1), (10, -5)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 7)),
         "MILLIMETER": ((0, 1), (10, 4)),
         "NANOMETER": ((0, 1), (10, 10)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -14)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 13)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -11)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 25)),
         "YOTTAMETER": ((0, 1), (10, -23)),
         "ZETTAMETER": ((0, 1), (10, -20)),
@@ -1189,32 +1189,32 @@ Conversions = {
         "ANGSTROM": ((0, 1), (10, 9)),
         "CENTIMETER": ((0, 1), (10, 1)),
         "DECAMETER": ((0, 1), (10, -2)),
-        "DECIMETER": (),
+        "DECIMETER": (), # Same
         "EXAMETER": ((0, 1), (10, -19)),
         "FEMTOMETER": ((0, 1), (10, 14)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -10)),
         "HECTOMETER": ((0, 1), (10, -3)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -4)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -1)),
         "MEGAMETER": ((0, 1), (10, -7)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 5)),
         "MILLIMETER": ((0, 1), (10, 2)),
         "NANOMETER": ((0, 1), (10, 8)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -16)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 11)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -13)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 23)),
         "YOTTAMETER": ((0, 1), (10, -25)),
         "ZETTAMETER": ((0, 1), (10, -22)),
@@ -1227,31 +1227,31 @@ Conversions = {
         "CENTIMETER": ((0, 1), (10, 20)),
         "DECAMETER": ((0, 1), (10, 17)),
         "DECIMETER": ((0, 1), (10, 19)),
-        "EXAMETER": (),
+        "EXAMETER": (), # Same
         "FEMTOMETER": ((0, 1), (10, 33)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, 9)),
         "HECTOMETER": ((0, 1), (10, 16)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 15)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 18)),
         "MEGAMETER": ((0, 1), (10, 12)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 24)),
         "MILLIMETER": ((0, 1), (10, 21)),
         "NANOMETER": ((0, 1), (10, 27)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, 3)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 30)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, 6)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 42)),
         "YOTTAMETER": ((0, 1), (10, -6)),
         "ZETTAMETER": ((0, 1), (10, -3)),
@@ -1265,30 +1265,30 @@ Conversions = {
         "DECAMETER": ((0, 1), (10, -16)),
         "DECIMETER": ((0, 1), (10, -14)),
         "EXAMETER": ((0, 1), (10, -33)),
-        "FEMTOMETER": (),
-        "FT": (None,),
+        "FEMTOMETER": (), # Same
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -24)),
         "HECTOMETER": ((0, 1), (10, -17)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -18)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -15)),
         "MEGAMETER": ((0, 1), (10, -21)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -9)),
         "MILLIMETER": ((0, 1), (10, -12)),
         "NANOMETER": ((0, 1), (10, -6)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -30)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, -3)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -27)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 9)),
         "YOTTAMETER": ((0, 1), (10, -39)),
         "ZETTAMETER": ((0, 1), (10, -36)),
@@ -1296,40 +1296,40 @@ Conversions = {
 
     },
     "FT": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (), # Same
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "GIGAMETER": {
@@ -1340,29 +1340,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 10)),
         "EXAMETER": ((0, 1), (10, -9)),
         "FEMTOMETER": ((0, 1), (10, 24)),
-        "FT": (None,),
-        "GIGAMETER": (),
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (), # Same
         "HECTOMETER": ((0, 1), (10, 7)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 6)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 9)),
         "MEGAMETER": ((0, 1), (10, 3)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 15)),
         "MILLIMETER": ((0, 1), (10, 12)),
         "NANOMETER": ((0, 1), (10, 18)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -6)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 21)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -3)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 33)),
         "YOTTAMETER": ((0, 1), (10, -15)),
         "ZETTAMETER": ((0, 1), (10, -12)),
@@ -1377,29 +1377,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 3)),
         "EXAMETER": ((0, 1), (10, -16)),
         "FEMTOMETER": ((0, 1), (10, 17)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -7)),
-        "HECTOMETER": (),
-        "IN": (None,),
+        "HECTOMETER": (), # Same
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -1)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 2)),
         "MEGAMETER": ((0, 1), (10, -4)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 8)),
         "MILLIMETER": ((0, 1), (10, 5)),
         "NANOMETER": ((0, 1), (10, 11)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -13)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 14)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -10)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 26)),
         "YOTTAMETER": ((0, 1), (10, -22)),
         "ZETTAMETER": ((0, 1), (10, -19)),
@@ -1407,40 +1407,40 @@ Conversions = {
 
     },
     "IN": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (), # Same
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "KILOMETER": {
@@ -1451,29 +1451,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 4)),
         "EXAMETER": ((0, 1), (10, -15)),
         "FEMTOMETER": ((0, 1), (10, 18)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -6)),
         "HECTOMETER": ((0, 1), (10, 1)),
-        "IN": (None,),
-        "KILOMETER": (),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "IN": (None,),  # Undefined
+        "KILOMETER": (), # Same
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 3)),
         "MEGAMETER": ((0, 1), (10, -3)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 9)),
         "MILLIMETER": ((0, 1), (10, 6)),
         "NANOMETER": ((0, 1), (10, 12)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -12)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 15)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -9)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 27)),
         "YOTTAMETER": ((0, 1), (10, -21)),
         "ZETTAMETER": ((0, 1), (10, -18)),
@@ -1481,77 +1481,77 @@ Conversions = {
 
     },
     "LI": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (), # Same
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "LIGHTYEAR": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (), # Same
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "METER": {
@@ -1562,29 +1562,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 1)),
         "EXAMETER": ((0, 1), (10, -18)),
         "FEMTOMETER": ((0, 1), (10, 15)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -9)),
         "HECTOMETER": ((0, 1), (10, -2)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -3)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (), # Same
         "MEGAMETER": ((0, 1), (10, -6)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 6)),
         "MILLIMETER": ((0, 1), (10, 3)),
         "NANOMETER": ((0, 1), (10, 9)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -15)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 12)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -12)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 24)),
         "YOTTAMETER": ((0, 1), (10, -24)),
         "ZETTAMETER": ((0, 1), (10, -21)),
@@ -1599,29 +1599,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 7)),
         "EXAMETER": ((0, 1), (10, -12)),
         "FEMTOMETER": ((0, 1), (10, 21)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -3)),
         "HECTOMETER": ((0, 1), (10, 4)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 3)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 6)),
-        "MEGAMETER": (),
-        "MI": (None,),
+        "MEGAMETER": (), # Same
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 12)),
         "MILLIMETER": ((0, 1), (10, 9)),
         "NANOMETER": ((0, 1), (10, 15)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -9)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 18)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -6)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 30)),
         "YOTTAMETER": ((0, 1), (10, -18)),
         "ZETTAMETER": ((0, 1), (10, -15)),
@@ -1629,40 +1629,40 @@ Conversions = {
 
     },
     "MI": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (), # Same
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "MICROMETER": {
@@ -1673,29 +1673,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, -5)),
         "EXAMETER": ((0, 1), (10, -24)),
         "FEMTOMETER": ((0, 1), (10, 9)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -15)),
         "HECTOMETER": ((0, 1), (10, -8)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -9)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -6)),
         "MEGAMETER": ((0, 1), (10, -12)),
-        "MI": (None,),
-        "MICROMETER": (),
+        "MI": (None,),  # Undefined
+        "MICROMETER": (), # Same
         "MILLIMETER": ((0, 1), (10, -3)),
         "NANOMETER": ((0, 1), (10, 3)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -21)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 6)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -18)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 18)),
         "YOTTAMETER": ((0, 1), (10, -30)),
         "ZETTAMETER": ((0, 1), (10, -27)),
@@ -1710,29 +1710,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, -2)),
         "EXAMETER": ((0, 1), (10, -21)),
         "FEMTOMETER": ((0, 1), (10, 12)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -12)),
         "HECTOMETER": ((0, 1), (10, -5)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -6)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -3)),
         "MEGAMETER": ((0, 1), (10, -9)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 3)),
-        "MILLIMETER": (),
+        "MILLIMETER": (), # Same
         "NANOMETER": ((0, 1), (10, 6)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -18)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 9)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -15)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 21)),
         "YOTTAMETER": ((0, 1), (10, -27)),
         "ZETTAMETER": ((0, 1), (10, -24)),
@@ -1747,29 +1747,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, -8)),
         "EXAMETER": ((0, 1), (10, -27)),
         "FEMTOMETER": ((0, 1), (10, 6)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -18)),
         "HECTOMETER": ((0, 1), (10, -11)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -12)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -9)),
         "MEGAMETER": ((0, 1), (10, -15)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -3)),
         "MILLIMETER": ((0, 1), (10, -6)),
-        "NANOMETER": (),
-        "PARSEC": (None,),
+        "NANOMETER": (), # Same
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -24)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 3)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -21)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 15)),
         "YOTTAMETER": ((0, 1), (10, -33)),
         "ZETTAMETER": ((0, 1), (10, -30)),
@@ -1777,40 +1777,40 @@ Conversions = {
 
     },
     "PARSEC": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (), # Same
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "PETAMETER": {
@@ -1821,29 +1821,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 16)),
         "EXAMETER": ((0, 1), (10, -3)),
         "FEMTOMETER": ((0, 1), (10, 30)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, 6)),
         "HECTOMETER": ((0, 1), (10, 13)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 12)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 15)),
         "MEGAMETER": ((0, 1), (10, 9)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 21)),
         "MILLIMETER": ((0, 1), (10, 18)),
         "NANOMETER": ((0, 1), (10, 24)),
-        "PARSEC": (None,),
-        "PETAMETER": (),
-        "PIXEL": (None,),
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (), # Same
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 27)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, 3)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 39)),
         "YOTTAMETER": ((0, 1), (10, -9)),
         "ZETTAMETER": ((0, 1), (10, -6)),
@@ -1851,40 +1851,40 @@ Conversions = {
 
     },
     "PIXEL": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Impossible
+        "ANGSTROM": (None,),  # Impossible
+        "CENTIMETER": (None,),  # Impossible
+        "DECAMETER": (None,),  # Impossible
+        "DECIMETER": (None,),  # Impossible
+        "EXAMETER": (None,),  # Impossible
+        "FEMTOMETER": (None,),  # Impossible
+        "FT": (None,),  # Impossible
+        "GIGAMETER": (None,),  # Impossible
+        "HECTOMETER": (None,),  # Impossible
+        "IN": (None,),  # Impossible
+        "KILOMETER": (None,),  # Impossible
+        "LI": (None,),  # Impossible
+        "LIGHTYEAR": (None,),  # Impossible
+        "METER": (None,),  # Impossible
+        "MEGAMETER": (None,),  # Impossible
+        "MI": (None,),  # Impossible
+        "MICROMETER": (None,),  # Impossible
+        "MILLIMETER": (None,),  # Impossible
+        "NANOMETER": (None,),  # Impossible
+        "PARSEC": (None,),  # Impossible
+        "PETAMETER": (None,),  # Impossible
+        "PIXEL": (), # Same
+        "PICOMETER": (None,),  # Impossible
+        "PT": (None,),  # Impossible
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Impossible
+        "THOU": (None,),  # Impossible
+        "ASTRONOMICALUNIT": (None,),  # Impossible
+        "YD": (None,),  # Impossible
+        "YOCTOMETER": (None,),  # Impossible
+        "YOTTAMETER": (None,),  # Impossible
+        "ZETTAMETER": (None,),  # Impossible
+        "ZEPTOMETER": (None,),  # Impossible
 
     },
     "PICOMETER": {
@@ -1895,29 +1895,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, -11)),
         "EXAMETER": ((0, 1), (10, -30)),
         "FEMTOMETER": ((0, 1), (10, 3)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -21)),
         "HECTOMETER": ((0, 1), (10, -14)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -15)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -12)),
         "MEGAMETER": ((0, 1), (10, -18)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -6)),
         "MILLIMETER": ((0, 1), (10, -9)),
         "NANOMETER": ((0, 1), (10, -3)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -27)),
-        "PIXEL": (None,),
-        "PICOMETER": (),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (), # Same
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -24)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 12)),
         "YOTTAMETER": ((0, 1), (10, -36)),
         "ZETTAMETER": ((0, 1), (10, -33)),
@@ -1925,77 +1925,77 @@ Conversions = {
 
     },
     "PT": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (), # Same
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "REFERENCEFRAME": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Impossible
+        "ANGSTROM": (None,),  # Impossible
+        "CENTIMETER": (None,),  # Impossible
+        "DECAMETER": (None,),  # Impossible
+        "DECIMETER": (None,),  # Impossible
+        "EXAMETER": (None,),  # Impossible
+        "FEMTOMETER": (None,),  # Impossible
+        "FT": (None,),  # Impossible
+        "GIGAMETER": (None,),  # Impossible
+        "HECTOMETER": (None,),  # Impossible
+        "IN": (None,),  # Impossible
+        "KILOMETER": (None,),  # Impossible
+        "LI": (None,),  # Impossible
+        "LIGHTYEAR": (None,),  # Impossible
+        "METER": (None,),  # Impossible
+        "MEGAMETER": (None,),  # Impossible
+        "MI": (None,),  # Impossible
+        "MICROMETER": (None,),  # Impossible
+        "MILLIMETER": (None,),  # Impossible
+        "NANOMETER": (None,),  # Impossible
+        "PARSEC": (None,),  # Impossible
+        "PETAMETER": (None,),  # Impossible
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Impossible
+        "PT": (None,),  # Impossible
+        "REFERENCEFRAME": (), # Same
+        "TERAMETER": (None,),  # Impossible
+        "THOU": (None,),  # Impossible
+        "ASTRONOMICALUNIT": (None,),  # Impossible
+        "YD": (None,),  # Impossible
+        "YOCTOMETER": (None,),  # Impossible
+        "YOTTAMETER": (None,),  # Impossible
+        "ZETTAMETER": (None,),  # Impossible
+        "ZEPTOMETER": (None,),  # Impossible
 
     },
     "TERAMETER": {
@@ -2006,29 +2006,29 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 13)),
         "EXAMETER": ((0, 1), (10, -6)),
         "FEMTOMETER": ((0, 1), (10, 27)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, 3)),
         "HECTOMETER": ((0, 1), (10, 10)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 9)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 12)),
         "MEGAMETER": ((0, 1), (10, 6)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 18)),
         "MILLIMETER": ((0, 1), (10, 15)),
         "NANOMETER": ((0, 1), (10, 21)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -3)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 24)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (), # Same
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 36)),
         "YOTTAMETER": ((0, 1), (10, -12)),
         "ZETTAMETER": ((0, 1), (10, -9)),
@@ -2036,114 +2036,114 @@ Conversions = {
 
     },
     "THOU": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (), # Same
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "ASTRONOMICALUNIT": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (),
-        "YD": (None,),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (), # Same
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "YD": {
-        "ATTOMETER": (None,),
-        "ANGSTROM": (None,),
-        "CENTIMETER": (None,),
-        "DECAMETER": (None,),
-        "DECIMETER": (None,),
-        "EXAMETER": (None,),
-        "FEMTOMETER": (None,),
-        "FT": (None,),
-        "GIGAMETER": (None,),
-        "HECTOMETER": (None,),
-        "IN": (None,),
-        "KILOMETER": (None,),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
-        "METER": (None,),
-        "MEGAMETER": (None,),
-        "MI": (None,),
-        "MICROMETER": (None,),
-        "MILLIMETER": (None,),
-        "NANOMETER": (None,),
-        "PARSEC": (None,),
-        "PETAMETER": (None,),
-        "PIXEL": (None,),
-        "PICOMETER": (None,),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
-        "TERAMETER": (None,),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (),
-        "YOCTOMETER": (None,),
-        "YOTTAMETER": (None,),
-        "ZETTAMETER": (None,),
-        "ZEPTOMETER": (None,),
+        "ATTOMETER": (None,),  # Undefined
+        "ANGSTROM": (None,),  # Undefined
+        "CENTIMETER": (None,),  # Undefined
+        "DECAMETER": (None,),  # Undefined
+        "DECIMETER": (None,),  # Undefined
+        "EXAMETER": (None,),  # Undefined
+        "FEMTOMETER": (None,),  # Undefined
+        "FT": (None,),  # Undefined
+        "GIGAMETER": (None,),  # Undefined
+        "HECTOMETER": (None,),  # Undefined
+        "IN": (None,),  # Undefined
+        "KILOMETER": (None,),  # Undefined
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
+        "METER": (None,),  # Undefined
+        "MEGAMETER": (None,),  # Undefined
+        "MI": (None,),  # Undefined
+        "MICROMETER": (None,),  # Undefined
+        "MILLIMETER": (None,),  # Undefined
+        "NANOMETER": (None,),  # Undefined
+        "PARSEC": (None,),  # Undefined
+        "PETAMETER": (None,),  # Undefined
+        "PIXEL": (None,),  # Impossible
+        "PICOMETER": (None,),  # Undefined
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
+        "TERAMETER": (None,),  # Undefined
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (), # Same
+        "YOCTOMETER": (None,),  # Undefined
+        "YOTTAMETER": (None,),  # Undefined
+        "ZETTAMETER": (None,),  # Undefined
+        "ZEPTOMETER": (None,),  # Undefined
 
     },
     "YOCTOMETER": {
@@ -2154,30 +2154,30 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, -23)),
         "EXAMETER": ((0, 1), (10, -42)),
         "FEMTOMETER": ((0, 1), (10, -9)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -33)),
         "HECTOMETER": ((0, 1), (10, -26)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -27)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -24)),
         "MEGAMETER": ((0, 1), (10, -30)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -18)),
         "MILLIMETER": ((0, 1), (10, -21)),
         "NANOMETER": ((0, 1), (10, -15)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -39)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, -12)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -36)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
-        "YOCTOMETER": (),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
+        "YOCTOMETER": (), # Same
         "YOTTAMETER": ((0, 1), (10, -48)),
         "ZETTAMETER": ((0, 1), (10, -45)),
         "ZEPTOMETER": ((0, 1), (10, -3)),
@@ -2191,31 +2191,31 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 25)),
         "EXAMETER": ((0, 1), (10, 6)),
         "FEMTOMETER": ((0, 1), (10, 39)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, 15)),
         "HECTOMETER": ((0, 1), (10, 22)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 21)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 24)),
         "MEGAMETER": ((0, 1), (10, 18)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 30)),
         "MILLIMETER": ((0, 1), (10, 27)),
         "NANOMETER": ((0, 1), (10, 33)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, 9)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 36)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, 12)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 48)),
-        "YOTTAMETER": (),
+        "YOTTAMETER": (), # Same
         "ZETTAMETER": ((0, 1), (10, 3)),
         "ZEPTOMETER": ((0, 1), (10, 45)),
 
@@ -2228,32 +2228,32 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, 22)),
         "EXAMETER": ((0, 1), (10, 3)),
         "FEMTOMETER": ((0, 1), (10, 36)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, 12)),
         "HECTOMETER": ((0, 1), (10, 19)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, 18)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, 21)),
         "MEGAMETER": ((0, 1), (10, 15)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, 27)),
         "MILLIMETER": ((0, 1), (10, 24)),
         "NANOMETER": ((0, 1), (10, 30)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, 6)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, 33)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, 9)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 45)),
         "YOTTAMETER": ((0, 1), (10, -3)),
-        "ZETTAMETER": (),
+        "ZETTAMETER": (), # Same
         "ZEPTOMETER": ((0, 1), (10, 42)),
 
     },
@@ -2265,40 +2265,40 @@ Conversions = {
         "DECIMETER": ((0, 1), (10, -20)),
         "EXAMETER": ((0, 1), (10, -39)),
         "FEMTOMETER": ((0, 1), (10, -6)),
-        "FT": (None,),
+        "FT": (None,),  # Undefined
         "GIGAMETER": ((0, 1), (10, -30)),
         "HECTOMETER": ((0, 1), (10, -23)),
-        "IN": (None,),
+        "IN": (None,),  # Undefined
         "KILOMETER": ((0, 1), (10, -24)),
-        "LI": (None,),
-        "LIGHTYEAR": (None,),
+        "LI": (None,),  # Undefined
+        "LIGHTYEAR": (None,),  # Undefined
         "METER": ((0, 1), (10, -21)),
         "MEGAMETER": ((0, 1), (10, -27)),
-        "MI": (None,),
+        "MI": (None,),  # Undefined
         "MICROMETER": ((0, 1), (10, -15)),
         "MILLIMETER": ((0, 1), (10, -18)),
         "NANOMETER": ((0, 1), (10, -12)),
-        "PARSEC": (None,),
+        "PARSEC": (None,),  # Undefined
         "PETAMETER": ((0, 1), (10, -36)),
-        "PIXEL": (None,),
+        "PIXEL": (None,),  # Impossible
         "PICOMETER": ((0, 1), (10, -9)),
-        "PT": (None,),
-        "REFERENCEFRAME": (None,),
+        "PT": (None,),  # Undefined
+        "REFERENCEFRAME": (None,),  # Impossible
         "TERAMETER": ((0, 1), (10, -33)),
-        "THOU": (None,),
-        "ASTRONOMICALUNIT": (None,),
-        "YD": (None,),
+        "THOU": (None,),  # Undefined
+        "ASTRONOMICALUNIT": (None,),  # Undefined
+        "YD": (None,),  # Undefined
         "YOCTOMETER": ((0, 1), (10, 3)),
         "YOTTAMETER": ((0, 1), (10, -45)),
         "ZETTAMETER": ((0, 1), (10, -42)),
-        "ZEPTOMETER": (),
+        "ZEPTOMETER": (), # Same
 
     },
 
   },
   "Power": {
     "ATTOWATT": {
-        "ATTOWATT": (),
+        "ATTOWATT": (), # Same
         "CENTIWATT": ((0, 1), (10, -16)),
         "DECAWATT": ((0, 1), (10, -19)),
         "DECIWATT": ((0, 1), (10, -17)),
@@ -2323,7 +2323,7 @@ Conversions = {
     },
     "CENTIWATT": {
         "ATTOWATT": ((0, 1), (10, 16)),
-        "CENTIWATT": (),
+        "CENTIWATT": (), # Same
         "DECAWATT": ((0, 1), (10, -3)),
         "DECIWATT": ((0, 1), (10, -1)),
         "EXAWATT": ((0, 1), (10, -20)),
@@ -2348,7 +2348,7 @@ Conversions = {
     "DECAWATT": {
         "ATTOWATT": ((0, 1), (10, 19)),
         "CENTIWATT": ((0, 1), (10, 3)),
-        "DECAWATT": (),
+        "DECAWATT": (), # Same
         "DECIWATT": ((0, 1), (10, 2)),
         "EXAWATT": ((0, 1), (10, -17)),
         "FEMTOWATT": ((0, 1), (10, 16)),
@@ -2373,7 +2373,7 @@ Conversions = {
         "ATTOWATT": ((0, 1), (10, 17)),
         "CENTIWATT": ((0, 1), (10, 1)),
         "DECAWATT": ((0, 1), (10, -2)),
-        "DECIWATT": (),
+        "DECIWATT": (), # Same
         "EXAWATT": ((0, 1), (10, -19)),
         "FEMTOWATT": ((0, 1), (10, 14)),
         "GIGAWATT": ((0, 1), (10, -10)),
@@ -2398,7 +2398,7 @@ Conversions = {
         "CENTIWATT": ((0, 1), (10, 20)),
         "DECAWATT": ((0, 1), (10, 17)),
         "DECIWATT": ((0, 1), (10, 19)),
-        "EXAWATT": (),
+        "EXAWATT": (), # Same
         "FEMTOWATT": ((0, 1), (10, 33)),
         "GIGAWATT": ((0, 1), (10, 9)),
         "HECTOWATT": ((0, 1), (10, 16)),
@@ -2423,7 +2423,7 @@ Conversions = {
         "DECAWATT": ((0, 1), (10, -16)),
         "DECIWATT": ((0, 1), (10, -14)),
         "EXAWATT": ((0, 1), (10, -33)),
-        "FEMTOWATT": (),
+        "FEMTOWATT": (), # Same
         "GIGAWATT": ((0, 1), (10, -24)),
         "HECTOWATT": ((0, 1), (10, -17)),
         "KILOWATT": ((0, 1), (10, -18)),
@@ -2448,7 +2448,7 @@ Conversions = {
         "DECIWATT": ((0, 1), (10, 10)),
         "EXAWATT": ((0, 1), (10, -9)),
         "FEMTOWATT": ((0, 1), (10, 24)),
-        "GIGAWATT": (),
+        "GIGAWATT": (), # Same
         "HECTOWATT": ((0, 1), (10, 7)),
         "KILOWATT": ((0, 1), (10, 6)),
         "MEGAWATT": ((0, 1), (10, 3)),
@@ -2473,7 +2473,7 @@ Conversions = {
         "EXAWATT": ((0, 1), (10, -16)),
         "FEMTOWATT": ((0, 1), (10, 17)),
         "GIGAWATT": ((0, 1), (10, -7)),
-        "HECTOWATT": (),
+        "HECTOWATT": (), # Same
         "KILOWATT": ((0, 1), (10, -1)),
         "MEGAWATT": ((0, 1), (10, -4)),
         "MICROWATT": ((0, 1), (10, 8)),
@@ -2498,7 +2498,7 @@ Conversions = {
         "FEMTOWATT": ((0, 1), (10, 18)),
         "GIGAWATT": ((0, 1), (10, -6)),
         "HECTOWATT": ((0, 1), (10, 1)),
-        "KILOWATT": (),
+        "KILOWATT": (), # Same
         "MEGAWATT": ((0, 1), (10, -3)),
         "MICROWATT": ((0, 1), (10, 9)),
         "MILLIWATT": ((0, 1), (10, 6)),
@@ -2523,7 +2523,7 @@ Conversions = {
         "GIGAWATT": ((0, 1), (10, -3)),
         "HECTOWATT": ((0, 1), (10, 4)),
         "KILOWATT": ((0, 1), (10, 3)),
-        "MEGAWATT": (),
+        "MEGAWATT": (), # Same
         "MICROWATT": ((0, 1), (10, 12)),
         "MILLIWATT": ((0, 1), (10, 9)),
         "NANOWATT": ((0, 1), (10, 15)),
@@ -2548,7 +2548,7 @@ Conversions = {
         "HECTOWATT": ((0, 1), (10, -8)),
         "KILOWATT": ((0, 1), (10, -9)),
         "MEGAWATT": ((0, 1), (10, -12)),
-        "MICROWATT": (),
+        "MICROWATT": (), # Same
         "MILLIWATT": ((0, 1), (10, -3)),
         "NANOWATT": ((0, 1), (10, 3)),
         "PETAWATT": ((0, 1), (10, -21)),
@@ -2573,7 +2573,7 @@ Conversions = {
         "KILOWATT": ((0, 1), (10, -6)),
         "MEGAWATT": ((0, 1), (10, -9)),
         "MICROWATT": ((0, 1), (10, 3)),
-        "MILLIWATT": (),
+        "MILLIWATT": (), # Same
         "NANOWATT": ((0, 1), (10, 6)),
         "PETAWATT": ((0, 1), (10, -18)),
         "PICOWATT": ((0, 1), (10, 9)),
@@ -2598,7 +2598,7 @@ Conversions = {
         "MEGAWATT": ((0, 1), (10, -15)),
         "MICROWATT": ((0, 1), (10, -3)),
         "MILLIWATT": ((0, 1), (10, -6)),
-        "NANOWATT": (),
+        "NANOWATT": (), # Same
         "PETAWATT": ((0, 1), (10, -24)),
         "PICOWATT": ((0, 1), (10, 3)),
         "TERAWATT": ((0, 1), (10, -21)),
@@ -2623,7 +2623,7 @@ Conversions = {
         "MICROWATT": ((0, 1), (10, 21)),
         "MILLIWATT": ((0, 1), (10, 18)),
         "NANOWATT": ((0, 1), (10, 24)),
-        "PETAWATT": (),
+        "PETAWATT": (), # Same
         "PICOWATT": ((0, 1), (10, 27)),
         "TERAWATT": ((0, 1), (10, 3)),
         "WATT": ((0, 1), (10, 15)),
@@ -2648,7 +2648,7 @@ Conversions = {
         "MILLIWATT": ((0, 1), (10, -9)),
         "NANOWATT": ((0, 1), (10, -3)),
         "PETAWATT": ((0, 1), (10, -27)),
-        "PICOWATT": (),
+        "PICOWATT": (), # Same
         "TERAWATT": ((0, 1), (10, -24)),
         "WATT": ((0, 1), (10, -12)),
         "YOTTAWATT": ((0, 1), (10, -36)),
@@ -2673,7 +2673,7 @@ Conversions = {
         "NANOWATT": ((0, 1), (10, 21)),
         "PETAWATT": ((0, 1), (10, -3)),
         "PICOWATT": ((0, 1), (10, 24)),
-        "TERAWATT": (),
+        "TERAWATT": (), # Same
         "WATT": ((0, 1), (10, 12)),
         "YOTTAWATT": ((0, 1), (10, -12)),
         "YOCTOWATT": ((0, 1), (10, 36)),
@@ -2698,7 +2698,7 @@ Conversions = {
         "PETAWATT": ((0, 1), (10, -15)),
         "PICOWATT": ((0, 1), (10, 12)),
         "TERAWATT": ((0, 1), (10, -12)),
-        "WATT": (),
+        "WATT": (), # Same
         "YOTTAWATT": ((0, 1), (10, -24)),
         "YOCTOWATT": ((0, 1), (10, 24)),
         "ZETTAWATT": ((0, 1), (10, -21)),
@@ -2723,7 +2723,7 @@ Conversions = {
         "PICOWATT": ((0, 1), (10, 36)),
         "TERAWATT": ((0, 1), (10, 12)),
         "WATT": ((0, 1), (10, 24)),
-        "YOTTAWATT": (),
+        "YOTTAWATT": (), # Same
         "YOCTOWATT": ((0, 1), (10, 48)),
         "ZETTAWATT": ((0, 1), (10, 3)),
         "ZEPTOWATT": ((0, 1), (10, 45)),
@@ -2748,7 +2748,7 @@ Conversions = {
         "TERAWATT": ((0, 1), (10, -36)),
         "WATT": ((0, 1), (10, -24)),
         "YOTTAWATT": ((0, 1), (10, -48)),
-        "YOCTOWATT": (),
+        "YOCTOWATT": (), # Same
         "ZETTAWATT": ((0, 1), (10, -45)),
         "ZEPTOWATT": ((0, 1), (10, -3)),
 
@@ -2773,7 +2773,7 @@ Conversions = {
         "WATT": ((0, 1), (10, 21)),
         "YOTTAWATT": ((0, 1), (10, -3)),
         "YOCTOWATT": ((0, 1), (10, 45)),
-        "ZETTAWATT": (),
+        "ZETTAWATT": (), # Same
         "ZEPTOWATT": ((0, 1), (10, 42)),
 
     },
@@ -2798,41 +2798,41 @@ Conversions = {
         "YOTTAWATT": ((0, 1), (10, -45)),
         "YOCTOWATT": ((0, 1), (10, 3)),
         "ZETTAWATT": ((0, 1), (10, -42)),
-        "ZEPTOWATT": (),
+        "ZEPTOWATT": (), # Same
 
     },
 
   },
   "Pressure": {
     "ATTOPASCAL": {
-        "ATTOPASCAL": (),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATTOPASCAL": (), # Same
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -16)),
         "DECAPASCAL": ((0, 1), (10, -19)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -17)),
         "EXAPASCAL": ((0, 1), (10, -36)),
         "FEMTOPASCAL": ((0, 1), (10, -3)),
         "GIGAPASCAL": ((0, 1), (10, -27)),
         "HECTOPASCAL": ((0, 1), (10, -20)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -21)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -24)),
         "MICROPASCAL": ((0, 1), (10, -12)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -15)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, -9)),
         "Pascal": ((0, 1), (10, -18)),
         "PETAPASCAL": ((0, 1), (10, -33)),
         "PICOPASCAL": ((0, 1), (10, -6)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -30)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -42)),
         "YOCTOPASCAL": ((0, 1), (10, 6)),
         "ZETTAPASCAL": ((0, 1), (10, -39)),
@@ -2840,139 +2840,139 @@ Conversions = {
 
     },
     "ATMOSPHERE": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (), # Same
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "BAR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (), # Same
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "CENTIBAR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (), # Same
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "CENTIPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 16)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (), # Same
         "DECAPASCAL": ((0, 1), (10, -3)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -1)),
         "EXAPASCAL": ((0, 1), (10, -20)),
         "FEMTOPASCAL": ((0, 1), (10, 13)),
         "GIGAPASCAL": ((0, 1), (10, -11)),
         "HECTOPASCAL": ((0, 1), (10, -4)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -5)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -8)),
         "MICROPASCAL": ((0, 1), (10, 4)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 1)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 7)),
         "Pascal": ((0, 1), (10, -2)),
         "PETAPASCAL": ((0, 1), (10, -17)),
         "PICOPASCAL": ((0, 1), (10, 10)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -14)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -26)),
         "YOCTOPASCAL": ((0, 1), (10, 22)),
         "ZETTAPASCAL": ((0, 1), (10, -23)),
@@ -2981,33 +2981,33 @@ Conversions = {
     },
     "DECAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 19)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 3)),
-        "DECAPASCAL": (),
-        "DECIBAR": (None,),
+        "DECAPASCAL": (), # Same
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 2)),
         "EXAPASCAL": ((0, 1), (10, -17)),
         "FEMTOPASCAL": ((0, 1), (10, 16)),
         "GIGAPASCAL": ((0, 1), (10, -8)),
         "HECTOPASCAL": ((0, 1), (10, -1)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -2)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -5)),
         "MICROPASCAL": ((0, 1), (10, 7)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 4)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 10)),
         "Pascal": ((0, 1), (10, 1)),
         "PETAPASCAL": ((0, 1), (10, -14)),
         "PICOPASCAL": ((0, 1), (10, 13)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -11)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -23)),
         "YOCTOPASCAL": ((0, 1), (10, 25)),
         "ZETTAPASCAL": ((0, 1), (10, -20)),
@@ -3015,69 +3015,69 @@ Conversions = {
 
     },
     "DECIBAR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (), # Same
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "DECIPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 17)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 1)),
         "DECAPASCAL": ((0, 1), (10, -2)),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (),
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (), # Same
         "EXAPASCAL": ((0, 1), (10, -19)),
         "FEMTOPASCAL": ((0, 1), (10, 14)),
         "GIGAPASCAL": ((0, 1), (10, -10)),
         "HECTOPASCAL": ((0, 1), (10, -3)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -4)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -7)),
         "MICROPASCAL": ((0, 1), (10, 5)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 2)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 8)),
         "Pascal": ((0, 1), (10, -1)),
         "PETAPASCAL": ((0, 1), (10, -16)),
         "PICOPASCAL": ((0, 1), (10, 11)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -13)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -25)),
         "YOCTOPASCAL": ((0, 1), (10, 23)),
         "ZETTAPASCAL": ((0, 1), (10, -22)),
@@ -3086,33 +3086,33 @@ Conversions = {
     },
     "EXAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 36)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 20)),
         "DECAPASCAL": ((0, 1), (10, 17)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 19)),
-        "EXAPASCAL": (),
+        "EXAPASCAL": (), # Same
         "FEMTOPASCAL": ((0, 1), (10, 33)),
         "GIGAPASCAL": ((0, 1), (10, 9)),
         "HECTOPASCAL": ((0, 1), (10, 16)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 15)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, 12)),
         "MICROPASCAL": ((0, 1), (10, 24)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 21)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 27)),
         "Pascal": ((0, 1), (10, 18)),
         "PETAPASCAL": ((0, 1), (10, 3)),
         "PICOPASCAL": ((0, 1), (10, 30)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, 6)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -6)),
         "YOCTOPASCAL": ((0, 1), (10, 42)),
         "ZETTAPASCAL": ((0, 1), (10, -3)),
@@ -3121,33 +3121,33 @@ Conversions = {
     },
     "FEMTOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 3)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -13)),
         "DECAPASCAL": ((0, 1), (10, -16)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -14)),
         "EXAPASCAL": ((0, 1), (10, -33)),
-        "FEMTOPASCAL": (),
+        "FEMTOPASCAL": (), # Same
         "GIGAPASCAL": ((0, 1), (10, -24)),
         "HECTOPASCAL": ((0, 1), (10, -17)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -18)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -21)),
         "MICROPASCAL": ((0, 1), (10, -9)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -12)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, -6)),
         "Pascal": ((0, 1), (10, -15)),
         "PETAPASCAL": ((0, 1), (10, -30)),
         "PICOPASCAL": ((0, 1), (10, -3)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -27)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -39)),
         "YOCTOPASCAL": ((0, 1), (10, 9)),
         "ZETTAPASCAL": ((0, 1), (10, -36)),
@@ -3156,33 +3156,33 @@ Conversions = {
     },
     "GIGAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 27)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 11)),
         "DECAPASCAL": ((0, 1), (10, 8)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 10)),
         "EXAPASCAL": ((0, 1), (10, -9)),
         "FEMTOPASCAL": ((0, 1), (10, 24)),
-        "GIGAPASCAL": (),
+        "GIGAPASCAL": (), # Same
         "HECTOPASCAL": ((0, 1), (10, 7)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 6)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, 3)),
         "MICROPASCAL": ((0, 1), (10, 15)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 12)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 18)),
         "Pascal": ((0, 1), (10, 9)),
         "PETAPASCAL": ((0, 1), (10, -6)),
         "PICOPASCAL": ((0, 1), (10, 21)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -3)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -15)),
         "YOCTOPASCAL": ((0, 1), (10, 33)),
         "ZETTAPASCAL": ((0, 1), (10, -12)),
@@ -3191,33 +3191,33 @@ Conversions = {
     },
     "HECTOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 20)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 4)),
         "DECAPASCAL": ((0, 1), (10, 1)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 3)),
         "EXAPASCAL": ((0, 1), (10, -16)),
         "FEMTOPASCAL": ((0, 1), (10, 17)),
         "GIGAPASCAL": ((0, 1), (10, -7)),
-        "HECTOPASCAL": (),
-        "KILOBAR": (None,),
+        "HECTOPASCAL": (), # Same
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -1)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -4)),
         "MICROPASCAL": ((0, 1), (10, 8)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 5)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 11)),
         "Pascal": ((0, 1), (10, 2)),
         "PETAPASCAL": ((0, 1), (10, -13)),
         "PICOPASCAL": ((0, 1), (10, 14)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -10)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -22)),
         "YOCTOPASCAL": ((0, 1), (10, 26)),
         "ZETTAPASCAL": ((0, 1), (10, -19)),
@@ -3225,69 +3225,69 @@ Conversions = {
 
     },
     "KILOBAR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (), # Same
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "KILOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 21)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 5)),
         "DECAPASCAL": ((0, 1), (10, 2)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 4)),
         "EXAPASCAL": ((0, 1), (10, -15)),
         "FEMTOPASCAL": ((0, 1), (10, 18)),
         "GIGAPASCAL": ((0, 1), (10, -6)),
         "HECTOPASCAL": ((0, 1), (10, 1)),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (), # Same
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -3)),
         "MICROPASCAL": ((0, 1), (10, 9)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 6)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 12)),
         "Pascal": ((0, 1), (10, 3)),
         "PETAPASCAL": ((0, 1), (10, -12)),
         "PICOPASCAL": ((0, 1), (10, 15)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -9)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -21)),
         "YOCTOPASCAL": ((0, 1), (10, 27)),
         "ZETTAPASCAL": ((0, 1), (10, -18)),
@@ -3295,104 +3295,104 @@ Conversions = {
 
     },
     "MILLIBAR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (), # Same
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "MEGABAR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (), # Same
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "MEGAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 24)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 8)),
         "DECAPASCAL": ((0, 1), (10, 5)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 7)),
         "EXAPASCAL": ((0, 1), (10, -12)),
         "FEMTOPASCAL": ((0, 1), (10, 21)),
         "GIGAPASCAL": ((0, 1), (10, -3)),
         "HECTOPASCAL": ((0, 1), (10, 4)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 3)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (), # Same
         "MICROPASCAL": ((0, 1), (10, 12)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 9)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 15)),
         "Pascal": ((0, 1), (10, 6)),
         "PETAPASCAL": ((0, 1), (10, -9)),
         "PICOPASCAL": ((0, 1), (10, 18)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -6)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -18)),
         "YOCTOPASCAL": ((0, 1), (10, 30)),
         "ZETTAPASCAL": ((0, 1), (10, -15)),
@@ -3401,33 +3401,33 @@ Conversions = {
     },
     "MICROPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 12)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -4)),
         "DECAPASCAL": ((0, 1), (10, -7)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -5)),
         "EXAPASCAL": ((0, 1), (10, -24)),
         "FEMTOPASCAL": ((0, 1), (10, 9)),
         "GIGAPASCAL": ((0, 1), (10, -15)),
         "HECTOPASCAL": ((0, 1), (10, -8)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -9)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -12)),
-        "MICROPASCAL": (),
-        "MMHG": (None,),
+        "MICROPASCAL": (), # Same
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -3)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 3)),
         "Pascal": ((0, 1), (10, -6)),
         "PETAPASCAL": ((0, 1), (10, -21)),
         "PICOPASCAL": ((0, 1), (10, 6)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -18)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -30)),
         "YOCTOPASCAL": ((0, 1), (10, 18)),
         "ZETTAPASCAL": ((0, 1), (10, -27)),
@@ -3435,69 +3435,69 @@ Conversions = {
 
     },
     "MMHG": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (), # Same
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "MILLIPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 15)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -1)),
         "DECAPASCAL": ((0, 1), (10, -4)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -2)),
         "EXAPASCAL": ((0, 1), (10, -21)),
         "FEMTOPASCAL": ((0, 1), (10, 12)),
         "GIGAPASCAL": ((0, 1), (10, -12)),
         "HECTOPASCAL": ((0, 1), (10, -5)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -6)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -9)),
         "MICROPASCAL": ((0, 1), (10, 3)),
-        "MMHG": (None,),
-        "MILLIPASCAL": (),
-        "MILLITORR": (None,),
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (), # Same
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 6)),
         "Pascal": ((0, 1), (10, -3)),
         "PETAPASCAL": ((0, 1), (10, -18)),
         "PICOPASCAL": ((0, 1), (10, 9)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -15)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -27)),
         "YOCTOPASCAL": ((0, 1), (10, 21)),
         "ZETTAPASCAL": ((0, 1), (10, -24)),
@@ -3505,69 +3505,69 @@ Conversions = {
 
     },
     "MILLITORR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (), # Same
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "NANOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 9)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -7)),
         "DECAPASCAL": ((0, 1), (10, -10)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -8)),
         "EXAPASCAL": ((0, 1), (10, -27)),
         "FEMTOPASCAL": ((0, 1), (10, 6)),
         "GIGAPASCAL": ((0, 1), (10, -18)),
         "HECTOPASCAL": ((0, 1), (10, -11)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -12)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -15)),
         "MICROPASCAL": ((0, 1), (10, -3)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -6)),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (),
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (), # Same
         "Pascal": ((0, 1), (10, -9)),
         "PETAPASCAL": ((0, 1), (10, -24)),
         "PICOPASCAL": ((0, 1), (10, 3)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -21)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -33)),
         "YOCTOPASCAL": ((0, 1), (10, 15)),
         "ZETTAPASCAL": ((0, 1), (10, -30)),
@@ -3576,33 +3576,33 @@ Conversions = {
     },
     "Pascal": {
         "ATTOPASCAL": ((0, 1), (10, 18)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 2)),
         "DECAPASCAL": ((0, 1), (10, -1)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 1)),
         "EXAPASCAL": ((0, 1), (10, -18)),
         "FEMTOPASCAL": ((0, 1), (10, 15)),
         "GIGAPASCAL": ((0, 1), (10, -9)),
         "HECTOPASCAL": ((0, 1), (10, -2)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -3)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -6)),
         "MICROPASCAL": ((0, 1), (10, 6)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 3)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 9)),
-        "Pascal": (),
+        "Pascal": (), # Same
         "PETAPASCAL": ((0, 1), (10, -15)),
         "PICOPASCAL": ((0, 1), (10, 12)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -12)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -24)),
         "YOCTOPASCAL": ((0, 1), (10, 24)),
         "ZETTAPASCAL": ((0, 1), (10, -21)),
@@ -3611,33 +3611,33 @@ Conversions = {
     },
     "PETAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 33)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 17)),
         "DECAPASCAL": ((0, 1), (10, 14)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 16)),
         "EXAPASCAL": ((0, 1), (10, -3)),
         "FEMTOPASCAL": ((0, 1), (10, 30)),
         "GIGAPASCAL": ((0, 1), (10, 6)),
         "HECTOPASCAL": ((0, 1), (10, 13)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 12)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, 9)),
         "MICROPASCAL": ((0, 1), (10, 21)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 18)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 24)),
         "Pascal": ((0, 1), (10, 15)),
-        "PETAPASCAL": (),
+        "PETAPASCAL": (), # Same
         "PICOPASCAL": ((0, 1), (10, 27)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, 3)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -9)),
         "YOCTOPASCAL": ((0, 1), (10, 39)),
         "ZETTAPASCAL": ((0, 1), (10, -6)),
@@ -3646,33 +3646,33 @@ Conversions = {
     },
     "PICOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 6)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -10)),
         "DECAPASCAL": ((0, 1), (10, -13)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -11)),
         "EXAPASCAL": ((0, 1), (10, -30)),
         "FEMTOPASCAL": ((0, 1), (10, 3)),
         "GIGAPASCAL": ((0, 1), (10, -21)),
         "HECTOPASCAL": ((0, 1), (10, -14)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -15)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -18)),
         "MICROPASCAL": ((0, 1), (10, -6)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -9)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, -3)),
         "Pascal": ((0, 1), (10, -12)),
         "PETAPASCAL": ((0, 1), (10, -27)),
-        "PICOPASCAL": (),
-        "PSI": (None,),
+        "PICOPASCAL": (), # Same
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -24)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -36)),
         "YOCTOPASCAL": ((0, 1), (10, 12)),
         "ZETTAPASCAL": ((0, 1), (10, -33)),
@@ -3680,69 +3680,69 @@ Conversions = {
 
     },
     "PSI": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (),
-        "TERAPASCAL": (None,),
-        "TORR": (None,),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (), # Same
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "TERAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 30)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 14)),
         "DECAPASCAL": ((0, 1), (10, 11)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 13)),
         "EXAPASCAL": ((0, 1), (10, -6)),
         "FEMTOPASCAL": ((0, 1), (10, 27)),
         "GIGAPASCAL": ((0, 1), (10, 3)),
         "HECTOPASCAL": ((0, 1), (10, 10)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 9)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, 6)),
         "MICROPASCAL": ((0, 1), (10, 18)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 15)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 21)),
         "Pascal": ((0, 1), (10, 12)),
         "PETAPASCAL": ((0, 1), (10, -3)),
         "PICOPASCAL": ((0, 1), (10, 24)),
-        "PSI": (None,),
-        "TERAPASCAL": (),
-        "TORR": (None,),
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (), # Same
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -12)),
         "YOCTOPASCAL": ((0, 1), (10, 36)),
         "ZETTAPASCAL": ((0, 1), (10, -9)),
@@ -3750,70 +3750,70 @@ Conversions = {
 
     },
     "TORR": {
-        "ATTOPASCAL": (None,),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
-        "CENTIPASCAL": (None,),
-        "DECAPASCAL": (None,),
-        "DECIBAR": (None,),
-        "DECIPASCAL": (None,),
-        "EXAPASCAL": (None,),
-        "FEMTOPASCAL": (None,),
-        "GIGAPASCAL": (None,),
-        "HECTOPASCAL": (None,),
-        "KILOBAR": (None,),
-        "KILOPASCAL": (None,),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
-        "MEGAPASCAL": (None,),
-        "MICROPASCAL": (None,),
-        "MMHG": (None,),
-        "MILLIPASCAL": (None,),
-        "MILLITORR": (None,),
-        "NANOPASCAL": (None,),
-        "Pascal": (None,),
-        "PETAPASCAL": (None,),
-        "PICOPASCAL": (None,),
-        "PSI": (None,),
-        "TERAPASCAL": (None,),
-        "TORR": (),
-        "YOTTAPASCAL": (None,),
-        "YOCTOPASCAL": (None,),
-        "ZETTAPASCAL": (None,),
-        "ZEPTOPASCAL": (None,),
+        "ATTOPASCAL": (None,),  # Undefined
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
+        "CENTIPASCAL": (None,),  # Undefined
+        "DECAPASCAL": (None,),  # Undefined
+        "DECIBAR": (None,),  # Undefined
+        "DECIPASCAL": (None,),  # Undefined
+        "EXAPASCAL": (None,),  # Undefined
+        "FEMTOPASCAL": (None,),  # Undefined
+        "GIGAPASCAL": (None,),  # Undefined
+        "HECTOPASCAL": (None,),  # Undefined
+        "KILOBAR": (None,),  # Undefined
+        "KILOPASCAL": (None,),  # Undefined
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
+        "MEGAPASCAL": (None,),  # Undefined
+        "MICROPASCAL": (None,),  # Undefined
+        "MMHG": (None,),  # Undefined
+        "MILLIPASCAL": (None,),  # Undefined
+        "MILLITORR": (None,),  # Undefined
+        "NANOPASCAL": (None,),  # Undefined
+        "Pascal": (None,),  # Undefined
+        "PETAPASCAL": (None,),  # Undefined
+        "PICOPASCAL": (None,),  # Undefined
+        "PSI": (None,),  # Undefined
+        "TERAPASCAL": (None,),  # Undefined
+        "TORR": (), # Same
+        "YOTTAPASCAL": (None,),  # Undefined
+        "YOCTOPASCAL": (None,),  # Undefined
+        "ZETTAPASCAL": (None,),  # Undefined
+        "ZEPTOPASCAL": (None,),  # Undefined
 
     },
     "YOTTAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 42)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 26)),
         "DECAPASCAL": ((0, 1), (10, 23)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 25)),
         "EXAPASCAL": ((0, 1), (10, 6)),
         "FEMTOPASCAL": ((0, 1), (10, 39)),
         "GIGAPASCAL": ((0, 1), (10, 15)),
         "HECTOPASCAL": ((0, 1), (10, 22)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 21)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, 18)),
         "MICROPASCAL": ((0, 1), (10, 30)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 27)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 33)),
         "Pascal": ((0, 1), (10, 24)),
         "PETAPASCAL": ((0, 1), (10, 9)),
         "PICOPASCAL": ((0, 1), (10, 36)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, 12)),
-        "TORR": (None,),
-        "YOTTAPASCAL": (),
+        "TORR": (None,),  # Undefined
+        "YOTTAPASCAL": (), # Same
         "YOCTOPASCAL": ((0, 1), (10, 48)),
         "ZETTAPASCAL": ((0, 1), (10, 3)),
         "ZEPTOPASCAL": ((0, 1), (10, 45)),
@@ -3821,158 +3821,158 @@ Conversions = {
     },
     "YOCTOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, -6)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -22)),
         "DECAPASCAL": ((0, 1), (10, -25)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -23)),
         "EXAPASCAL": ((0, 1), (10, -42)),
         "FEMTOPASCAL": ((0, 1), (10, -9)),
         "GIGAPASCAL": ((0, 1), (10, -33)),
         "HECTOPASCAL": ((0, 1), (10, -26)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -27)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -30)),
         "MICROPASCAL": ((0, 1), (10, -18)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -21)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, -15)),
         "Pascal": ((0, 1), (10, -24)),
         "PETAPASCAL": ((0, 1), (10, -39)),
         "PICOPASCAL": ((0, 1), (10, -12)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -36)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -48)),
-        "YOCTOPASCAL": (),
+        "YOCTOPASCAL": (), # Same
         "ZETTAPASCAL": ((0, 1), (10, -45)),
         "ZEPTOPASCAL": ((0, 1), (10, -3)),
 
     },
     "ZETTAPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, 39)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, 23)),
         "DECAPASCAL": ((0, 1), (10, 20)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, 22)),
         "EXAPASCAL": ((0, 1), (10, 3)),
         "FEMTOPASCAL": ((0, 1), (10, 36)),
         "GIGAPASCAL": ((0, 1), (10, 12)),
         "HECTOPASCAL": ((0, 1), (10, 19)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, 18)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, 15)),
         "MICROPASCAL": ((0, 1), (10, 27)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, 24)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, 30)),
         "Pascal": ((0, 1), (10, 21)),
         "PETAPASCAL": ((0, 1), (10, 6)),
         "PICOPASCAL": ((0, 1), (10, 33)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, 9)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -3)),
         "YOCTOPASCAL": ((0, 1), (10, 45)),
-        "ZETTAPASCAL": (),
+        "ZETTAPASCAL": (), # Same
         "ZEPTOPASCAL": ((0, 1), (10, 42)),
 
     },
     "ZEPTOPASCAL": {
         "ATTOPASCAL": ((0, 1), (10, -3)),
-        "ATMOSPHERE": (None,),
-        "BAR": (None,),
-        "CENTIBAR": (None,),
+        "ATMOSPHERE": (None,),  # Undefined
+        "BAR": (None,),  # Undefined
+        "CENTIBAR": (None,),  # Undefined
         "CENTIPASCAL": ((0, 1), (10, -19)),
         "DECAPASCAL": ((0, 1), (10, -22)),
-        "DECIBAR": (None,),
+        "DECIBAR": (None,),  # Undefined
         "DECIPASCAL": ((0, 1), (10, -20)),
         "EXAPASCAL": ((0, 1), (10, -39)),
         "FEMTOPASCAL": ((0, 1), (10, -6)),
         "GIGAPASCAL": ((0, 1), (10, -30)),
         "HECTOPASCAL": ((0, 1), (10, -23)),
-        "KILOBAR": (None,),
+        "KILOBAR": (None,),  # Undefined
         "KILOPASCAL": ((0, 1), (10, -24)),
-        "MILLIBAR": (None,),
-        "MEGABAR": (None,),
+        "MILLIBAR": (None,),  # Undefined
+        "MEGABAR": (None,),  # Undefined
         "MEGAPASCAL": ((0, 1), (10, -27)),
         "MICROPASCAL": ((0, 1), (10, -15)),
-        "MMHG": (None,),
+        "MMHG": (None,),  # Undefined
         "MILLIPASCAL": ((0, 1), (10, -18)),
-        "MILLITORR": (None,),
+        "MILLITORR": (None,),  # Undefined
         "NANOPASCAL": ((0, 1), (10, -12)),
         "Pascal": ((0, 1), (10, -21)),
         "PETAPASCAL": ((0, 1), (10, -36)),
         "PICOPASCAL": ((0, 1), (10, -9)),
-        "PSI": (None,),
+        "PSI": (None,),  # Undefined
         "TERAPASCAL": ((0, 1), (10, -33)),
-        "TORR": (None,),
+        "TORR": (None,),  # Undefined
         "YOTTAPASCAL": ((0, 1), (10, -45)),
         "YOCTOPASCAL": ((0, 1), (10, 3)),
         "ZETTAPASCAL": ((0, 1), (10, -42)),
-        "ZEPTOPASCAL": (),
+        "ZEPTOPASCAL": (), # Same
 
     },
 
   },
   "Temperature": {
     "CELSIUS": {
-        "CELSIUS": (),
+        "CELSIUS": (), # Same
         "FAHRENHEIT": ((32, 1), (1.8, 1)),
-        "RANKINE": (None,),
+        "RANKINE": (None,),  # Undefined
         "KELVIN": ((273.15, 1), (0, 1)),
 
     },
     "FAHRENHEIT": {
         "CELSIUS": ((-17.777777777, 1), (0.55555555555, 1)),
-        "FAHRENHEIT": (),
-        "RANKINE": (None,),
-        "KELVIN": (None,),
+        "FAHRENHEIT": (), # Same
+        "RANKINE": (None,),  # Undefined
+        "KELVIN": (None,),  # Undefined
 
     },
     "RANKINE": {
-        "CELSIUS": (None,),
-        "FAHRENHEIT": (None,),
-        "RANKINE": (),
-        "KELVIN": (None,),
+        "CELSIUS": (None,),  # Undefined
+        "FAHRENHEIT": (None,),  # Undefined
+        "RANKINE": (), # Same
+        "KELVIN": (None,),  # Undefined
 
     },
     "KELVIN": {
         "CELSIUS": ((-273.15, 1), (0, 1)),
-        "FAHRENHEIT": (None,),
-        "RANKINE": (None,),
-        "KELVIN": (),
+        "FAHRENHEIT": (None,),  # Undefined
+        "RANKINE": (None,),  # Undefined
+        "KELVIN": (), # Same
 
     },
 
   },
   "Time": {
     "ATOOSECOND": {
-        "ATOOSECOND": (),
+        "ATOOSECOND": (), # Same
         "CENTISECOND": ((0, 1), (10, -16)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -19)),
         "DECISECOND": ((0, 1), (10, -17)),
         "EXASECOND": ((0, 1), (10, -36)),
         "FEMTOSECOND": ((0, 1), (10, -3)),
         "GIGASECOND": ((0, 1), (10, -27)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -20)),
         "KILOSECOND": ((0, 1), (10, -21)),
         "MEGASECOND": ((0, 1), (10, -24)),
         "MICROSECOND": ((0, 1), (10, -12)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -15)),
         "NANOSECOND": ((0, 1), (10, -9)),
         "PETASECOND": ((0, 1), (10, -33)),
@@ -3987,19 +3987,19 @@ Conversions = {
     },
     "CENTISECOND": {
         "ATOOSECOND": ((0, 1), (10, 16)),
-        "CENTISECOND": (),
-        "DAY": (None,),
+        "CENTISECOND": (), # Same
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -3)),
         "DECISECOND": ((0, 1), (10, -1)),
         "EXASECOND": ((0, 1), (10, -20)),
         "FEMTOSECOND": ((0, 1), (10, 13)),
         "GIGASECOND": ((0, 1), (10, -11)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -4)),
         "KILOSECOND": ((0, 1), (10, -5)),
         "MEGASECOND": ((0, 1), (10, -8)),
         "MICROSECOND": ((0, 1), (10, 4)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 1)),
         "NANOSECOND": ((0, 1), (10, 7)),
         "PETASECOND": ((0, 1), (10, -17)),
@@ -4013,47 +4013,47 @@ Conversions = {
 
     },
     "DAY": {
-        "ATOOSECOND": (None,),
-        "CENTISECOND": (None,),
-        "DAY": (),
-        "DECASECOND": (None,),
-        "DECISECOND": (None,),
-        "EXASECOND": (None,),
-        "FEMTOSECOND": (None,),
-        "GIGASECOND": (None,),
-        "HOUR": (None,),
-        "HECTOSECOND": (None,),
-        "KILOSECOND": (None,),
-        "MEGASECOND": (None,),
-        "MICROSECOND": (None,),
-        "MINUTE": (None,),
-        "MILLISECOND": (None,),
-        "NANOSECOND": (None,),
-        "PETASECOND": (None,),
-        "PICOSECOND": (None,),
-        "SECOND": (None,),
-        "TERASECOND": (None,),
-        "YOTTASECOND": (None,),
-        "YOCTOSECOND": (None,),
-        "ZETTASECOND": (None,),
-        "ZEPTOSECOND": (None,),
+        "ATOOSECOND": (None,),  # Undefined
+        "CENTISECOND": (None,),  # Undefined
+        "DAY": (), # Same
+        "DECASECOND": (None,),  # Undefined
+        "DECISECOND": (None,),  # Undefined
+        "EXASECOND": (None,),  # Undefined
+        "FEMTOSECOND": (None,),  # Undefined
+        "GIGASECOND": (None,),  # Undefined
+        "HOUR": (None,),  # Undefined
+        "HECTOSECOND": (None,),  # Undefined
+        "KILOSECOND": (None,),  # Undefined
+        "MEGASECOND": (None,),  # Undefined
+        "MICROSECOND": (None,),  # Undefined
+        "MINUTE": (None,),  # Undefined
+        "MILLISECOND": (None,),  # Undefined
+        "NANOSECOND": (None,),  # Undefined
+        "PETASECOND": (None,),  # Undefined
+        "PICOSECOND": (None,),  # Undefined
+        "SECOND": (None,),  # Undefined
+        "TERASECOND": (None,),  # Undefined
+        "YOTTASECOND": (None,),  # Undefined
+        "YOCTOSECOND": (None,),  # Undefined
+        "ZETTASECOND": (None,),  # Undefined
+        "ZEPTOSECOND": (None,),  # Undefined
 
     },
     "DECASECOND": {
         "ATOOSECOND": ((0, 1), (10, 19)),
         "CENTISECOND": ((0, 1), (10, 3)),
-        "DAY": (None,),
-        "DECASECOND": (),
+        "DAY": (None,),  # Undefined
+        "DECASECOND": (), # Same
         "DECISECOND": ((0, 1), (10, 2)),
         "EXASECOND": ((0, 1), (10, -17)),
         "FEMTOSECOND": ((0, 1), (10, 16)),
         "GIGASECOND": ((0, 1), (10, -8)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -1)),
         "KILOSECOND": ((0, 1), (10, -2)),
         "MEGASECOND": ((0, 1), (10, -5)),
         "MICROSECOND": ((0, 1), (10, 7)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 4)),
         "NANOSECOND": ((0, 1), (10, 10)),
         "PETASECOND": ((0, 1), (10, -14)),
@@ -4069,18 +4069,18 @@ Conversions = {
     "DECISECOND": {
         "ATOOSECOND": ((0, 1), (10, 17)),
         "CENTISECOND": ((0, 1), (10, 1)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -2)),
-        "DECISECOND": (),
+        "DECISECOND": (), # Same
         "EXASECOND": ((0, 1), (10, -19)),
         "FEMTOSECOND": ((0, 1), (10, 14)),
         "GIGASECOND": ((0, 1), (10, -10)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -3)),
         "KILOSECOND": ((0, 1), (10, -4)),
         "MEGASECOND": ((0, 1), (10, -7)),
         "MICROSECOND": ((0, 1), (10, 5)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 2)),
         "NANOSECOND": ((0, 1), (10, 8)),
         "PETASECOND": ((0, 1), (10, -16)),
@@ -4096,18 +4096,18 @@ Conversions = {
     "EXASECOND": {
         "ATOOSECOND": ((0, 1), (10, 36)),
         "CENTISECOND": ((0, 1), (10, 20)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 17)),
         "DECISECOND": ((0, 1), (10, 19)),
-        "EXASECOND": (),
+        "EXASECOND": (), # Same
         "FEMTOSECOND": ((0, 1), (10, 33)),
         "GIGASECOND": ((0, 1), (10, 9)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 16)),
         "KILOSECOND": ((0, 1), (10, 15)),
         "MEGASECOND": ((0, 1), (10, 12)),
         "MICROSECOND": ((0, 1), (10, 24)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 21)),
         "NANOSECOND": ((0, 1), (10, 27)),
         "PETASECOND": ((0, 1), (10, 3)),
@@ -4123,18 +4123,18 @@ Conversions = {
     "FEMTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 3)),
         "CENTISECOND": ((0, 1), (10, -13)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -16)),
         "DECISECOND": ((0, 1), (10, -14)),
         "EXASECOND": ((0, 1), (10, -33)),
-        "FEMTOSECOND": (),
+        "FEMTOSECOND": (), # Same
         "GIGASECOND": ((0, 1), (10, -24)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -17)),
         "KILOSECOND": ((0, 1), (10, -18)),
         "MEGASECOND": ((0, 1), (10, -21)),
         "MICROSECOND": ((0, 1), (10, -9)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -12)),
         "NANOSECOND": ((0, 1), (10, -6)),
         "PETASECOND": ((0, 1), (10, -30)),
@@ -4150,18 +4150,18 @@ Conversions = {
     "GIGASECOND": {
         "ATOOSECOND": ((0, 1), (10, 27)),
         "CENTISECOND": ((0, 1), (10, 11)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 8)),
         "DECISECOND": ((0, 1), (10, 10)),
         "EXASECOND": ((0, 1), (10, -9)),
         "FEMTOSECOND": ((0, 1), (10, 24)),
-        "GIGASECOND": (),
-        "HOUR": (None,),
+        "GIGASECOND": (), # Same
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 7)),
         "KILOSECOND": ((0, 1), (10, 6)),
         "MEGASECOND": ((0, 1), (10, 3)),
         "MICROSECOND": ((0, 1), (10, 15)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 12)),
         "NANOSECOND": ((0, 1), (10, 18)),
         "PETASECOND": ((0, 1), (10, -6)),
@@ -4175,47 +4175,47 @@ Conversions = {
 
     },
     "HOUR": {
-        "ATOOSECOND": (None,),
-        "CENTISECOND": (None,),
-        "DAY": (None,),
-        "DECASECOND": (None,),
-        "DECISECOND": (None,),
-        "EXASECOND": (None,),
-        "FEMTOSECOND": (None,),
-        "GIGASECOND": (None,),
-        "HOUR": (),
-        "HECTOSECOND": (None,),
-        "KILOSECOND": (None,),
-        "MEGASECOND": (None,),
-        "MICROSECOND": (None,),
-        "MINUTE": (None,),
-        "MILLISECOND": (None,),
-        "NANOSECOND": (None,),
-        "PETASECOND": (None,),
-        "PICOSECOND": (None,),
-        "SECOND": (None,),
-        "TERASECOND": (None,),
-        "YOTTASECOND": (None,),
-        "YOCTOSECOND": (None,),
-        "ZETTASECOND": (None,),
-        "ZEPTOSECOND": (None,),
+        "ATOOSECOND": (None,),  # Undefined
+        "CENTISECOND": (None,),  # Undefined
+        "DAY": (None,),  # Undefined
+        "DECASECOND": (None,),  # Undefined
+        "DECISECOND": (None,),  # Undefined
+        "EXASECOND": (None,),  # Undefined
+        "FEMTOSECOND": (None,),  # Undefined
+        "GIGASECOND": (None,),  # Undefined
+        "HOUR": (), # Same
+        "HECTOSECOND": (None,),  # Undefined
+        "KILOSECOND": (None,),  # Undefined
+        "MEGASECOND": (None,),  # Undefined
+        "MICROSECOND": (None,),  # Undefined
+        "MINUTE": (None,),  # Undefined
+        "MILLISECOND": (None,),  # Undefined
+        "NANOSECOND": (None,),  # Undefined
+        "PETASECOND": (None,),  # Undefined
+        "PICOSECOND": (None,),  # Undefined
+        "SECOND": (None,),  # Undefined
+        "TERASECOND": (None,),  # Undefined
+        "YOTTASECOND": (None,),  # Undefined
+        "YOCTOSECOND": (None,),  # Undefined
+        "ZETTASECOND": (None,),  # Undefined
+        "ZEPTOSECOND": (None,),  # Undefined
 
     },
     "HECTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 20)),
         "CENTISECOND": ((0, 1), (10, 4)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 1)),
         "DECISECOND": ((0, 1), (10, 3)),
         "EXASECOND": ((0, 1), (10, -16)),
         "FEMTOSECOND": ((0, 1), (10, 17)),
         "GIGASECOND": ((0, 1), (10, -7)),
-        "HOUR": (None,),
-        "HECTOSECOND": (),
+        "HOUR": (None,),  # Undefined
+        "HECTOSECOND": (), # Same
         "KILOSECOND": ((0, 1), (10, -1)),
         "MEGASECOND": ((0, 1), (10, -4)),
         "MICROSECOND": ((0, 1), (10, 8)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 5)),
         "NANOSECOND": ((0, 1), (10, 11)),
         "PETASECOND": ((0, 1), (10, -13)),
@@ -4231,18 +4231,18 @@ Conversions = {
     "KILOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 21)),
         "CENTISECOND": ((0, 1), (10, 5)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 2)),
         "DECISECOND": ((0, 1), (10, 4)),
         "EXASECOND": ((0, 1), (10, -15)),
         "FEMTOSECOND": ((0, 1), (10, 18)),
         "GIGASECOND": ((0, 1), (10, -6)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 1)),
-        "KILOSECOND": (),
+        "KILOSECOND": (), # Same
         "MEGASECOND": ((0, 1), (10, -3)),
         "MICROSECOND": ((0, 1), (10, 9)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 6)),
         "NANOSECOND": ((0, 1), (10, 12)),
         "PETASECOND": ((0, 1), (10, -12)),
@@ -4258,18 +4258,18 @@ Conversions = {
     "MEGASECOND": {
         "ATOOSECOND": ((0, 1), (10, 24)),
         "CENTISECOND": ((0, 1), (10, 8)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 5)),
         "DECISECOND": ((0, 1), (10, 7)),
         "EXASECOND": ((0, 1), (10, -12)),
         "FEMTOSECOND": ((0, 1), (10, 21)),
         "GIGASECOND": ((0, 1), (10, -3)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 4)),
         "KILOSECOND": ((0, 1), (10, 3)),
-        "MEGASECOND": (),
+        "MEGASECOND": (), # Same
         "MICROSECOND": ((0, 1), (10, 12)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 9)),
         "NANOSECOND": ((0, 1), (10, 15)),
         "PETASECOND": ((0, 1), (10, -9)),
@@ -4285,18 +4285,18 @@ Conversions = {
     "MICROSECOND": {
         "ATOOSECOND": ((0, 1), (10, 12)),
         "CENTISECOND": ((0, 1), (10, -4)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -7)),
         "DECISECOND": ((0, 1), (10, -5)),
         "EXASECOND": ((0, 1), (10, -24)),
         "FEMTOSECOND": ((0, 1), (10, 9)),
         "GIGASECOND": ((0, 1), (10, -15)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -8)),
         "KILOSECOND": ((0, 1), (10, -9)),
         "MEGASECOND": ((0, 1), (10, -12)),
-        "MICROSECOND": (),
-        "MINUTE": (None,),
+        "MICROSECOND": (), # Same
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -3)),
         "NANOSECOND": ((0, 1), (10, 3)),
         "PETASECOND": ((0, 1), (10, -21)),
@@ -4310,48 +4310,48 @@ Conversions = {
 
     },
     "MINUTE": {
-        "ATOOSECOND": (None,),
-        "CENTISECOND": (None,),
-        "DAY": (None,),
-        "DECASECOND": (None,),
-        "DECISECOND": (None,),
-        "EXASECOND": (None,),
-        "FEMTOSECOND": (None,),
-        "GIGASECOND": (None,),
-        "HOUR": (None,),
-        "HECTOSECOND": (None,),
-        "KILOSECOND": (None,),
-        "MEGASECOND": (None,),
-        "MICROSECOND": (None,),
-        "MINUTE": (),
-        "MILLISECOND": (None,),
-        "NANOSECOND": (None,),
-        "PETASECOND": (None,),
-        "PICOSECOND": (None,),
-        "SECOND": (None,),
-        "TERASECOND": (None,),
-        "YOTTASECOND": (None,),
-        "YOCTOSECOND": (None,),
-        "ZETTASECOND": (None,),
-        "ZEPTOSECOND": (None,),
+        "ATOOSECOND": (None,),  # Undefined
+        "CENTISECOND": (None,),  # Undefined
+        "DAY": (None,),  # Undefined
+        "DECASECOND": (None,),  # Undefined
+        "DECISECOND": (None,),  # Undefined
+        "EXASECOND": (None,),  # Undefined
+        "FEMTOSECOND": (None,),  # Undefined
+        "GIGASECOND": (None,),  # Undefined
+        "HOUR": (None,),  # Undefined
+        "HECTOSECOND": (None,),  # Undefined
+        "KILOSECOND": (None,),  # Undefined
+        "MEGASECOND": (None,),  # Undefined
+        "MICROSECOND": (None,),  # Undefined
+        "MINUTE": (), # Same
+        "MILLISECOND": (None,),  # Undefined
+        "NANOSECOND": (None,),  # Undefined
+        "PETASECOND": (None,),  # Undefined
+        "PICOSECOND": (None,),  # Undefined
+        "SECOND": (None,),  # Undefined
+        "TERASECOND": (None,),  # Undefined
+        "YOTTASECOND": (None,),  # Undefined
+        "YOCTOSECOND": (None,),  # Undefined
+        "ZETTASECOND": (None,),  # Undefined
+        "ZEPTOSECOND": (None,),  # Undefined
 
     },
     "MILLISECOND": {
         "ATOOSECOND": ((0, 1), (10, 15)),
         "CENTISECOND": ((0, 1), (10, -1)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -4)),
         "DECISECOND": ((0, 1), (10, -2)),
         "EXASECOND": ((0, 1), (10, -21)),
         "FEMTOSECOND": ((0, 1), (10, 12)),
         "GIGASECOND": ((0, 1), (10, -12)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -5)),
         "KILOSECOND": ((0, 1), (10, -6)),
         "MEGASECOND": ((0, 1), (10, -9)),
         "MICROSECOND": ((0, 1), (10, 3)),
-        "MINUTE": (None,),
-        "MILLISECOND": (),
+        "MINUTE": (None,),  # Undefined
+        "MILLISECOND": (), # Same
         "NANOSECOND": ((0, 1), (10, 6)),
         "PETASECOND": ((0, 1), (10, -18)),
         "PICOSECOND": ((0, 1), (10, 9)),
@@ -4366,20 +4366,20 @@ Conversions = {
     "NANOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 9)),
         "CENTISECOND": ((0, 1), (10, -7)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -10)),
         "DECISECOND": ((0, 1), (10, -8)),
         "EXASECOND": ((0, 1), (10, -27)),
         "FEMTOSECOND": ((0, 1), (10, 6)),
         "GIGASECOND": ((0, 1), (10, -18)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -11)),
         "KILOSECOND": ((0, 1), (10, -12)),
         "MEGASECOND": ((0, 1), (10, -15)),
         "MICROSECOND": ((0, 1), (10, -3)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -6)),
-        "NANOSECOND": (),
+        "NANOSECOND": (), # Same
         "PETASECOND": ((0, 1), (10, -24)),
         "PICOSECOND": ((0, 1), (10, 3)),
         "SECOND": ((0, 1), (10, -9)),
@@ -4393,21 +4393,21 @@ Conversions = {
     "PETASECOND": {
         "ATOOSECOND": ((0, 1), (10, 33)),
         "CENTISECOND": ((0, 1), (10, 17)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 14)),
         "DECISECOND": ((0, 1), (10, 16)),
         "EXASECOND": ((0, 1), (10, -3)),
         "FEMTOSECOND": ((0, 1), (10, 30)),
         "GIGASECOND": ((0, 1), (10, 6)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 13)),
         "KILOSECOND": ((0, 1), (10, 12)),
         "MEGASECOND": ((0, 1), (10, 9)),
         "MICROSECOND": ((0, 1), (10, 21)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 18)),
         "NANOSECOND": ((0, 1), (10, 24)),
-        "PETASECOND": (),
+        "PETASECOND": (), # Same
         "PICOSECOND": ((0, 1), (10, 27)),
         "SECOND": ((0, 1), (10, 15)),
         "TERASECOND": ((0, 1), (10, 3)),
@@ -4420,22 +4420,22 @@ Conversions = {
     "PICOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 6)),
         "CENTISECOND": ((0, 1), (10, -10)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -13)),
         "DECISECOND": ((0, 1), (10, -11)),
         "EXASECOND": ((0, 1), (10, -30)),
         "FEMTOSECOND": ((0, 1), (10, 3)),
         "GIGASECOND": ((0, 1), (10, -21)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -14)),
         "KILOSECOND": ((0, 1), (10, -15)),
         "MEGASECOND": ((0, 1), (10, -18)),
         "MICROSECOND": ((0, 1), (10, -6)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -9)),
         "NANOSECOND": ((0, 1), (10, -3)),
         "PETASECOND": ((0, 1), (10, -27)),
-        "PICOSECOND": (),
+        "PICOSECOND": (), # Same
         "SECOND": ((0, 1), (10, -12)),
         "TERASECOND": ((0, 1), (10, -24)),
         "YOTTASECOND": ((0, 1), (10, -36)),
@@ -4447,23 +4447,23 @@ Conversions = {
     "SECOND": {
         "ATOOSECOND": ((0, 1), (10, 18)),
         "CENTISECOND": ((0, 1), (10, 2)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -1)),
         "DECISECOND": ((0, 1), (10, 1)),
         "EXASECOND": ((0, 1), (10, -18)),
         "FEMTOSECOND": ((0, 1), (10, 15)),
         "GIGASECOND": ((0, 1), (10, -9)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -2)),
         "KILOSECOND": ((0, 1), (10, -3)),
         "MEGASECOND": ((0, 1), (10, -6)),
         "MICROSECOND": ((0, 1), (10, 6)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 3)),
         "NANOSECOND": ((0, 1), (10, 9)),
         "PETASECOND": ((0, 1), (10, -15)),
         "PICOSECOND": ((0, 1), (10, 12)),
-        "SECOND": (),
+        "SECOND": (), # Same
         "TERASECOND": ((0, 1), (10, -12)),
         "YOTTASECOND": ((0, 1), (10, -24)),
         "YOCTOSECOND": ((0, 1), (10, 24)),
@@ -4474,24 +4474,24 @@ Conversions = {
     "TERASECOND": {
         "ATOOSECOND": ((0, 1), (10, 30)),
         "CENTISECOND": ((0, 1), (10, 14)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 11)),
         "DECISECOND": ((0, 1), (10, 13)),
         "EXASECOND": ((0, 1), (10, -6)),
         "FEMTOSECOND": ((0, 1), (10, 27)),
         "GIGASECOND": ((0, 1), (10, 3)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 10)),
         "KILOSECOND": ((0, 1), (10, 9)),
         "MEGASECOND": ((0, 1), (10, 6)),
         "MICROSECOND": ((0, 1), (10, 18)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 15)),
         "NANOSECOND": ((0, 1), (10, 21)),
         "PETASECOND": ((0, 1), (10, -3)),
         "PICOSECOND": ((0, 1), (10, 24)),
         "SECOND": ((0, 1), (10, 12)),
-        "TERASECOND": (),
+        "TERASECOND": (), # Same
         "YOTTASECOND": ((0, 1), (10, -12)),
         "YOCTOSECOND": ((0, 1), (10, 36)),
         "ZETTASECOND": ((0, 1), (10, -9)),
@@ -4501,25 +4501,25 @@ Conversions = {
     "YOTTASECOND": {
         "ATOOSECOND": ((0, 1), (10, 42)),
         "CENTISECOND": ((0, 1), (10, 26)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 23)),
         "DECISECOND": ((0, 1), (10, 25)),
         "EXASECOND": ((0, 1), (10, 6)),
         "FEMTOSECOND": ((0, 1), (10, 39)),
         "GIGASECOND": ((0, 1), (10, 15)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 22)),
         "KILOSECOND": ((0, 1), (10, 21)),
         "MEGASECOND": ((0, 1), (10, 18)),
         "MICROSECOND": ((0, 1), (10, 30)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 27)),
         "NANOSECOND": ((0, 1), (10, 33)),
         "PETASECOND": ((0, 1), (10, 9)),
         "PICOSECOND": ((0, 1), (10, 36)),
         "SECOND": ((0, 1), (10, 24)),
         "TERASECOND": ((0, 1), (10, 12)),
-        "YOTTASECOND": (),
+        "YOTTASECOND": (), # Same
         "YOCTOSECOND": ((0, 1), (10, 48)),
         "ZETTASECOND": ((0, 1), (10, 3)),
         "ZEPTOSECOND": ((0, 1), (10, 45)),
@@ -4528,18 +4528,18 @@ Conversions = {
     "YOCTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, -6)),
         "CENTISECOND": ((0, 1), (10, -22)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -25)),
         "DECISECOND": ((0, 1), (10, -23)),
         "EXASECOND": ((0, 1), (10, -42)),
         "FEMTOSECOND": ((0, 1), (10, -9)),
         "GIGASECOND": ((0, 1), (10, -33)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -26)),
         "KILOSECOND": ((0, 1), (10, -27)),
         "MEGASECOND": ((0, 1), (10, -30)),
         "MICROSECOND": ((0, 1), (10, -18)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -21)),
         "NANOSECOND": ((0, 1), (10, -15)),
         "PETASECOND": ((0, 1), (10, -39)),
@@ -4547,7 +4547,7 @@ Conversions = {
         "SECOND": ((0, 1), (10, -24)),
         "TERASECOND": ((0, 1), (10, -36)),
         "YOTTASECOND": ((0, 1), (10, -48)),
-        "YOCTOSECOND": (),
+        "YOCTOSECOND": (), # Same
         "ZETTASECOND": ((0, 1), (10, -45)),
         "ZEPTOSECOND": ((0, 1), (10, -3)),
 
@@ -4555,18 +4555,18 @@ Conversions = {
     "ZETTASECOND": {
         "ATOOSECOND": ((0, 1), (10, 39)),
         "CENTISECOND": ((0, 1), (10, 23)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 20)),
         "DECISECOND": ((0, 1), (10, 22)),
         "EXASECOND": ((0, 1), (10, 3)),
         "FEMTOSECOND": ((0, 1), (10, 36)),
         "GIGASECOND": ((0, 1), (10, 12)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 19)),
         "KILOSECOND": ((0, 1), (10, 18)),
         "MEGASECOND": ((0, 1), (10, 15)),
         "MICROSECOND": ((0, 1), (10, 27)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 24)),
         "NANOSECOND": ((0, 1), (10, 30)),
         "PETASECOND": ((0, 1), (10, 6)),
@@ -4575,25 +4575,25 @@ Conversions = {
         "TERASECOND": ((0, 1), (10, 9)),
         "YOTTASECOND": ((0, 1), (10, -3)),
         "YOCTOSECOND": ((0, 1), (10, 45)),
-        "ZETTASECOND": (),
+        "ZETTASECOND": (), # Same
         "ZEPTOSECOND": ((0, 1), (10, 42)),
 
     },
     "ZEPTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, -3)),
         "CENTISECOND": ((0, 1), (10, -19)),
-        "DAY": (None,),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -22)),
         "DECISECOND": ((0, 1), (10, -20)),
         "EXASECOND": ((0, 1), (10, -39)),
         "FEMTOSECOND": ((0, 1), (10, -6)),
         "GIGASECOND": ((0, 1), (10, -30)),
-        "HOUR": (None,),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -23)),
         "KILOSECOND": ((0, 1), (10, -24)),
         "MEGASECOND": ((0, 1), (10, -27)),
         "MICROSECOND": ((0, 1), (10, -15)),
-        "MINUTE": (None,),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -18)),
         "NANOSECOND": ((0, 1), (10, -12)),
         "PETASECOND": ((0, 1), (10, -36)),
@@ -4603,7 +4603,7 @@ Conversions = {
         "YOTTASECOND": ((0, 1), (10, -45)),
         "YOCTOSECOND": ((0, 1), (10, 3)),
         "ZETTASECOND": ((0, 1), (10, -42)),
-        "ZEPTOSECOND": (),
+        "ZEPTOSECOND": (), # Same
 
     },
 
