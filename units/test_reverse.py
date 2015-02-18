@@ -33,9 +33,21 @@ def get_reverse_transform(transform):
     if not transform[0]:
         return (None, )
 
-    return (
-        (-transform[0][0], transform[0][1]),
-        (transform[1][0], -transform[1][1]))
+    rv = []
+    term = list(transform[0])
+    toadd = []
+    while term:
+        toadd.append(-term.pop(0))
+        toadd.append(term.pop(0))
+    rv.append(tuple(toadd))
+
+    term = list(transform[1])
+    toadd = []
+    while term:
+        toadd.append(term.pop(0))
+        toadd.append(-term.pop(0))
+    rv.append(tuple(toadd))
+    return tuple(rv)
 
 
 converted_units = list_converted_units()
@@ -59,4 +71,5 @@ class TestReverse(object):
         forward_transform = Conversions[category][from_unit][to_unit]
         reverse_transform = Conversions[category][to_unit][from_unit]
 
-        assert reverse_transform == get_reverse_transform(forward_transform)
+        assert reverse_transform == get_reverse_transform(forward_transform), \
+            "%s v. %s" % (forward_transform, reverse_transform)
