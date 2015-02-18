@@ -14,20 +14,20 @@ def list_converted_units():
 
 
 def list_conversions():
-    """List all conversions as (category, from_unit, to_unit) tuples"""
+    """
+    List all non self-transform conversions as (category, from_unit, to_unit)
+    tuples
+    """
     keys = []
     for category, to_unit in list_converted_units():
         for from_unit in Conversions[category][to_unit].keys():
-            keys.append((category, to_unit, from_unit))
+            if to_unit != from_unit:
+                keys.append((category, to_unit, from_unit))
     return keys
 
 
 def get_reverse_transform(transform):
     """Compute reverse transform"""
-
-    # Handle self-transforms
-    if not transform:
-        return ()
 
     # Temporararily handle undefined transforms
     if not transform[0]:
