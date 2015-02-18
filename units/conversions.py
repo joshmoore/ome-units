@@ -3948,7 +3948,7 @@ Conversions = {
         "CELSIUS": (), # Same
         "FAHRENHEIT": ((32, 1), (1.8, 1)),
         "RANKINE": (None,),  # Undefined
-        "KELVIN": ((273.15, 1), (0, 1)),
+        "KELVIN": ((273.15, 1), (1, 0)),
 
     },
     "FAHRENHEIT": {
@@ -3966,7 +3966,7 @@ Conversions = {
 
     },
     "KELVIN": {
-        "CELSIUS": ((-273.15, 1), (0, 1)),
+        "CELSIUS": ((-273.15, 1), (1, 0)),
         "FAHRENHEIT": (None,),  # Undefined
         "RANKINE": (None,),  # Undefined
         "KELVIN": (), # Same
