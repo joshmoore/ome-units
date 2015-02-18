@@ -38,13 +38,20 @@ def get_reverse_transform(transform):
         (transform[1][0], -transform[1][1]))
 
 
-conversion_keys = list_conversions()
-conversion_ids = ["-".join(x) for x in conversion_keys]
+converted_units = list_converted_units()
+converted_units_ids = ["-".join(x) for x in converted_units]
+conversions = list_conversions()
+conversion_ids = ["-".join(x) for x in conversions]
 
 
 class TestReverse(object):
 
-    @pytest.mark.parametrize('key', conversion_keys, ids=conversion_ids)
+    @pytest.mark.parametrize('key', converted_units, ids=converted_units_ids)
+    def test_self_transform(self, key):
+        category, to_unit = key
+        assert Conversions[category][to_unit][to_unit] == ()
+
+    @pytest.mark.parametrize('key', conversions, ids=conversion_ids)
     def test_reverse_transform(self, key):
         category, from_unit, to_unit = key
         assert from_unit in Conversions[category][to_unit]
