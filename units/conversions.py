@@ -15,24 +15,26 @@
 # allow a late-rounding way to divide, such as:
 # (10**18 * 60**-1)
 
+from math import pi
+
 Conversions = {
   "Angle": {
     "DEGREE": {
-        "DEGREE": (), # Same
-        "GRADIAN": (None,),  # Undefined
-        "RADIAN": (None,),  # Undefined
+        "DEGREE": (),  # Same
+        "GRADIAN": ((0, 1), (9/10, 1)),
+        "RADIAN": ((0, 1), (180/pi, 1)),
 
     },
     "GRADIAN": {
-        "DEGREE": (None,),  # Undefined
-        "GRADIAN": (), # Same
-        "RADIAN": (None,),  # Undefined
+        "DEGREE": ((0, 1), (10/9, 1)),
+        "GRADIAN": (),  # Same
+        "RADIAN": ((0, 1), (200/pi, 1)),
 
     },
     "RADIAN": {
-        "DEGREE": (None,),  # Undefined
-        "GRADIAN": (None,),  # Undefined
-        "RADIAN": (), # Same
+        "DEGREE": ((0, 1), (pi/180, 1)),
+        "GRADIAN": ((0, 1), (pi/200, 1)),
+        "RADIAN": (),  # Same
 
     },
 
