@@ -13,11 +13,12 @@ def find_all_conversions():
     return keys
 
 conversion_keys = find_all_conversions()
+conversion_ids = ["-".join(x) for x in conversion_keys]
 
 
 class TestReverse(object):
 
-    @pytest.mark.parametrize('key', conversion_keys)
+    @pytest.mark.parametrize('key', conversion_keys, ids=conversion_ids)
     def test_reverse_transform_exists(self, key):
         category, from_unit, to_unit = key
         assert from_unit in Conversions[category][to_unit]
