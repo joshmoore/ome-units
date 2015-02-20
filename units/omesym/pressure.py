@@ -39,6 +39,17 @@ equations = [
 
 units = {
     pa: "PASCAL",
+    bar: "BAR",
+    megabar: "MEGABAR",
+    kbar: "KILOBAR",
+    dbar: "DECIBAR",
+    cbar: "CENTIBAR",
+    mbar: "MILLIBAR",
+    atm: "ATHMOSPHERE",
+    psi: "PSI",
+    torr: "TORR",
+    mtorr: "MILLITORR",
+    mmhg: "MMHG",
 }
 
 add_si(pa, "PASCAL", units, equations)
