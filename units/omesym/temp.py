@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
-from base import print_table
 from sympy import symbols as symbols
 from sympy import Eq
+
+NAME = "TEMPERATURE"
 
 k, c, f, r = symbols("k c f r")
 
@@ -13,10 +14,8 @@ equations = (
 )
 
 units = {
-    k: "K",
-    c: "C",
-    f: "F",
-    r: "R",
+    k: "KELVIN",
+    c: "CELSIUS",
+    f: "FAHRENHEIT",
+    r: "RANKINE",
 }
-
-print_table(units, equations)

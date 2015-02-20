@@ -1,23 +1,25 @@
 #!/usr/bin/env python
 
-from base import print_table
+from base import add_si
+
 from sympy import symbols as symbols
 from sympy import Eq
-from sympy import pi
+
+NAME = "TIME"
 
 s, m, h, d = symbols("s m h d")
 
-equations = (
+equations = [
     Eq(m, s * 60),
     Eq(h, m * 60),
     Eq(d, h * 24),
-)
+]
 
 units = {
-    s: "S",
-    m: "m",
-    h: "h",
-    d: "d",
+    s: "SECOND",
+    m: "MINUTE",
+    h: "HOUR",
+    d: "DAY",
 }
 
-print_table(units, equations)
+add_si(s, "SECOND", units, equations)

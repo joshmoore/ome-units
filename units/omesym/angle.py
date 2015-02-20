@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-from base import print_table
 from sympy import symbols as symbols
 from sympy import Eq
 from sympy import pi
+
+NAME = "ANGLE"
 
 r, d, g = symbols("r d g")
 
@@ -13,9 +14,7 @@ equations = (
 )
 
 units = {
-    r: "R",
-    d: "D",
-    g: "G",
+    r: "RADIAN",
+    d: "DEGREE",
+    g: "GRADIAN",
 }
-
-print_table(units, equations)
