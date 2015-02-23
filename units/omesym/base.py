@@ -4,6 +4,12 @@ from sympy import Eq
 from sympy import solve
 from sympy import Symbol
 
+from sympy.core.expr import Expr
+from sympy.core.numbers import Integer
+from sympy.core.numbers import Pi
+from sympy.core.numbers import Rational
+from sympy.core.symbol import Symbol
+
 import sympy.physics.unitsystems.prefixes as sp
 
 
@@ -55,13 +61,38 @@ def print_table(units, equations):
 
 def gen_conv(units, equations):
     for source in units.keys():
+        if units[source] in ("REFERENCEFRAME", "PIXEL"):
+            # HACK: to do this properly it's
+            # likely necessary to check the
+            # resulting equations for the
+            # source variable.
+            continue
         x = solve_for(equations, source)
         for target in units.keys():
             if source == target:
                 continue
             elif target not in x:
                 continue
-            yield units[source], units[target], x[target]
+            eqn = x[target]
+            to_check = [eqn.args]
+            for chk in to_check:
+                for arg in chk:
+                    # Assume top-level is Add or Mul
+                    if isinstance(arg, (Integer, Pi, Rational)):
+                        continue
+                    elif isinstance(arg, Symbol):
+                        if source == arg:
+                            continue
+                    elif isinstance(arg, Expr):
+                        to_check.append(arg.args)
+                        continue
+                    raise Exception(
+                        "%s:%s -> %s Found %s (%s)\n%s" % (
+                            source, target, eqn, arg, type(arg),
+                            "\n".join([str(x) for x in x.items()])
+                        )
+                    )
+            yield units[source], units[target], eqn
 
 
 def module_conversions(module):
