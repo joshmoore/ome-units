@@ -1,40 +1,23 @@
-# Each of the tuples below is of the form:
-#
-# x = ((A0, B0, A1, B1, ...), (C0, D0, C1, D1, ...))
-#
-# where each tuple represents a degree of a polynomial.
-# The tuple itself can be used to determine the coefficients.
-#
-# E.g.:
-#
-#   A0, B0, A1, B1 = x[0]
-#   C0, D0, C1, D1 = x[1]
-#   f = (A0**B0 * A1**B1) + (C0**D0 * C1**D1) * X**1
-#
-# The reason for the multiple multipled terms is to
-# allow a late-rounding way to divide, such as:
-# (10**18 * 60**-1)
 
-from math import pi
 
 Conversions = {
   "Angle": {
     "DEGREE": {
-        "DEGREE": (),  # Same
-        "GRADIAN": ((0, 1), (9/10, 1)),
-        "RADIAN": ((0, 1), (180/pi, 1)),
+        "DEGREE": (), # Same
+        "GRADIAN": (None,),  # Undefined
+        "RADIAN": (None,),  # Undefined
 
     },
     "GRADIAN": {
-        "DEGREE": ((0, 1), (10/9, 1)),
-        "GRADIAN": (),  # Same
-        "RADIAN": ((0, 1), (200/pi, 1)),
+        "DEGREE": (None,),  # Undefined
+        "GRADIAN": (), # Same
+        "RADIAN": (None,),  # Undefined
 
     },
     "RADIAN": {
-        "DEGREE": ((0, 1), (pi/180, 1)),
-        "GRADIAN": ((0, 1), (pi/200, 1)),
-        "RADIAN": (),  # Same
+        "DEGREE": (None,),  # Undefined
+        "GRADIAN": (None,),  # Undefined
+        "RADIAN": (), # Same
 
     },
 
@@ -3948,11 +3931,11 @@ Conversions = {
         "CELSIUS": (), # Same
         "FAHRENHEIT": ((32, 1), (1.8, 1)),
         "RANKINE": (None,),  # Undefined
-        "KELVIN": ((273.15, 1), (1, 0)),
+        "KELVIN": ((273.15, 1), (0, 1)),
 
     },
     "FAHRENHEIT": {
-        "CELSIUS": ((-32 * 5, 1, 9, -1), (5, 1, 9, -1)),
+        "CELSIUS": ((-17.777777777, 1), (0.55555555555, 1)),
         "FAHRENHEIT": (), # Same
         "RANKINE": (None,),  # Undefined
         "KELVIN": (None,),  # Undefined
@@ -3966,7 +3949,7 @@ Conversions = {
 
     },
     "KELVIN": {
-        "CELSIUS": ((-273.15, 1), (1, 0)),
+        "CELSIUS": ((-273.15, 1), (0, 1)),
         "FAHRENHEIT": (None,),  # Undefined
         "RANKINE": (None,),  # Undefined
         "KELVIN": (), # Same
@@ -3978,18 +3961,18 @@ Conversions = {
     "ATOOSECOND": {
         "ATOOSECOND": (), # Same
         "CENTISECOND": ((0, 1), (10, -16)),
-        "DAY": ((0, 1), (10, -18, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -19)),
         "DECISECOND": ((0, 1), (10, -17)),
         "EXASECOND": ((0, 1), (10, -36)),
         "FEMTOSECOND": ((0, 1), (10, -3)),
         "GIGASECOND": ((0, 1), (10, -27)),
-        "HOUR": ((0, 1), (10, -18, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -20)),
         "KILOSECOND": ((0, 1), (10, -21)),
         "MEGASECOND": ((0, 1), (10, -24)),
         "MICROSECOND": ((0, 1), (10, -12)),
-        "MINUTE": ((0, 1), (10, -18, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -15)),
         "NANOSECOND": ((0, 1), (10, -9)),
         "PETASECOND": ((0, 1), (10, -33)),
@@ -4005,18 +3988,18 @@ Conversions = {
     "CENTISECOND": {
         "ATOOSECOND": ((0, 1), (10, 16)),
         "CENTISECOND": (), # Same
-        "DAY": ((0, 1), (10, -2, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -3)),
         "DECISECOND": ((0, 1), (10, -1)),
         "EXASECOND": ((0, 1), (10, -20)),
         "FEMTOSECOND": ((0, 1), (10, 13)),
         "GIGASECOND": ((0, 1), (10, -11)),
-        "HOUR": ((0, 1), (10, -2, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -4)),
         "KILOSECOND": ((0, 1), (10, -5)),
         "MEGASECOND": ((0, 1), (10, -8)),
         "MICROSECOND": ((0, 1), (10, 4)),
-        "MINUTE": ((0, 1), (10, -2, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 1)),
         "NANOSECOND": ((0, 1), (10, 7)),
         "PETASECOND": ((0, 1), (10, -17)),
@@ -4030,47 +4013,47 @@ Conversions = {
 
     },
     "DAY": {
-        "ATOOSECOND": ((0, 1), (10, 18, 24*60*60, 1)),
-        "CENTISECOND": ((0, 1), (10, 2, 24*60*60, 1)),
+        "ATOOSECOND": (None,),  # Undefined
+        "CENTISECOND": (None,),  # Undefined
         "DAY": (), # Same
-        "DECASECOND": ((0, 1), (10, -1, 24*60*60, 1)),
-        "DECISECOND": ((0, 1), (10, 1, 24*60*60, 1)),
-        "EXASECOND": ((0, 1), (10, -18, 24*60*60, 1)),
-        "FEMTOSECOND": ((0, 1), (10, 15, 24*60*60, 1)),
-        "GIGASECOND": ((0, 1), (10, -9, 24*60*60, 1)),
-        "HOUR": ((0, 1), (24, 1)),
-        "HECTOSECOND": ((0, 1), (10, -2, 24*60*60, 1)),
-        "KILOSECOND": ((0, 1), (10, -3, 24*60*60, 1)),
-        "MEGASECOND": ((0, 1), (10, -6, 24*60*60, 1)),
-        "MICROSECOND": ((0, 1), (10, 6, 24*60*60, 1)),
-        "MINUTE": ((0, 1), (24*60, 1)),
-        "MILLISECOND": ((0, 1), (10, 3, 24*60*60, 1)),
-        "NANOSECOND": ((0, 1), (10, 9, 24*60*60, 1)),
-        "PETASECOND": ((0, 1), (10, -15, 24*60*60, 1)),
-        "PICOSECOND": ((0, 1), (10, 12, 24*60*60, 1)),
-        "SECOND": ((0, 1), (24*60*60, 1)),
-        "TERASECOND": ((0, 1), (10, -12, 24*60*60, 1)),
-        "YOTTASECOND": ((0, 1), (10, -24, 24*60*60, 1)),
-        "YOCTOSECOND": ((0, 1), (10, 24, 24*60*60, 1)),
-        "ZETTASECOND": ((0, 1), (10, -21, 24*60*60, 1)),
-        "ZEPTOSECOND": ((0, 1), (10, 21, 24*60*60, 1)),
+        "DECASECOND": (None,),  # Undefined
+        "DECISECOND": (None,),  # Undefined
+        "EXASECOND": (None,),  # Undefined
+        "FEMTOSECOND": (None,),  # Undefined
+        "GIGASECOND": (None,),  # Undefined
+        "HOUR": (None,),  # Undefined
+        "HECTOSECOND": (None,),  # Undefined
+        "KILOSECOND": (None,),  # Undefined
+        "MEGASECOND": (None,),  # Undefined
+        "MICROSECOND": (None,),  # Undefined
+        "MINUTE": (None,),  # Undefined
+        "MILLISECOND": (None,),  # Undefined
+        "NANOSECOND": (None,),  # Undefined
+        "PETASECOND": (None,),  # Undefined
+        "PICOSECOND": (None,),  # Undefined
+        "SECOND": (None,),  # Undefined
+        "TERASECOND": (None,),  # Undefined
+        "YOTTASECOND": (None,),  # Undefined
+        "YOCTOSECOND": (None,),  # Undefined
+        "ZETTASECOND": (None,),  # Undefined
+        "ZEPTOSECOND": (None,),  # Undefined
 
     },
     "DECASECOND": {
         "ATOOSECOND": ((0, 1), (10, 19)),
         "CENTISECOND": ((0, 1), (10, 3)),
-        "DAY": ((0, 1), (10, 1, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": (), # Same
         "DECISECOND": ((0, 1), (10, 2)),
         "EXASECOND": ((0, 1), (10, -17)),
         "FEMTOSECOND": ((0, 1), (10, 16)),
         "GIGASECOND": ((0, 1), (10, -8)),
-        "HOUR": ((0, 1), (10, 1, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -1)),
         "KILOSECOND": ((0, 1), (10, -2)),
         "MEGASECOND": ((0, 1), (10, -5)),
         "MICROSECOND": ((0, 1), (10, 7)),
-        "MINUTE": ((0, 1), (10, 1, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 4)),
         "NANOSECOND": ((0, 1), (10, 10)),
         "PETASECOND": ((0, 1), (10, -14)),
@@ -4086,18 +4069,18 @@ Conversions = {
     "DECISECOND": {
         "ATOOSECOND": ((0, 1), (10, 17)),
         "CENTISECOND": ((0, 1), (10, 1)),
-        "DAY": ((0, 1), (10, -1, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -2)),
         "DECISECOND": (), # Same
         "EXASECOND": ((0, 1), (10, -19)),
         "FEMTOSECOND": ((0, 1), (10, 14)),
         "GIGASECOND": ((0, 1), (10, -10)),
-        "HOUR": ((0, 1), (10, -1, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -3)),
         "KILOSECOND": ((0, 1), (10, -4)),
         "MEGASECOND": ((0, 1), (10, -7)),
         "MICROSECOND": ((0, 1), (10, 5)),
-        "MINUTE": ((0, 1), (10, -1, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 2)),
         "NANOSECOND": ((0, 1), (10, 8)),
         "PETASECOND": ((0, 1), (10, -16)),
@@ -4113,18 +4096,18 @@ Conversions = {
     "EXASECOND": {
         "ATOOSECOND": ((0, 1), (10, 36)),
         "CENTISECOND": ((0, 1), (10, 20)),
-        "DAY": ((0, 1), (10, 18, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 17)),
         "DECISECOND": ((0, 1), (10, 19)),
         "EXASECOND": (), # Same
         "FEMTOSECOND": ((0, 1), (10, 33)),
         "GIGASECOND": ((0, 1), (10, 9)),
-        "HOUR": ((0, 1), (10, 18, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 16)),
         "KILOSECOND": ((0, 1), (10, 15)),
         "MEGASECOND": ((0, 1), (10, 12)),
         "MICROSECOND": ((0, 1), (10, 24)),
-        "MINUTE": ((0, 1), (10, 18, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 21)),
         "NANOSECOND": ((0, 1), (10, 27)),
         "PETASECOND": ((0, 1), (10, 3)),
@@ -4140,18 +4123,18 @@ Conversions = {
     "FEMTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 3)),
         "CENTISECOND": ((0, 1), (10, -13)),
-        "DAY": ((0, 1), (10, -15, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -16)),
         "DECISECOND": ((0, 1), (10, -14)),
         "EXASECOND": ((0, 1), (10, -33)),
         "FEMTOSECOND": (), # Same
         "GIGASECOND": ((0, 1), (10, -24)),
-        "HOUR": ((0, 1), (10, -15, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -17)),
         "KILOSECOND": ((0, 1), (10, -18)),
         "MEGASECOND": ((0, 1), (10, -21)),
         "MICROSECOND": ((0, 1), (10, -9)),
-        "MINUTE": ((0, 1), (10, -15, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -12)),
         "NANOSECOND": ((0, 1), (10, -6)),
         "PETASECOND": ((0, 1), (10, -30)),
@@ -4167,18 +4150,18 @@ Conversions = {
     "GIGASECOND": {
         "ATOOSECOND": ((0, 1), (10, 27)),
         "CENTISECOND": ((0, 1), (10, 11)),
-        "DAY": ((0, 1), (10, 9, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 8)),
         "DECISECOND": ((0, 1), (10, 10)),
         "EXASECOND": ((0, 1), (10, -9)),
         "FEMTOSECOND": ((0, 1), (10, 24)),
         "GIGASECOND": (), # Same
-        "HOUR": ((0, 1), (10, 9, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 7)),
         "KILOSECOND": ((0, 1), (10, 6)),
         "MEGASECOND": ((0, 1), (10, 3)),
         "MICROSECOND": ((0, 1), (10, 15)),
-        "MINUTE": ((0, 1), (10, 9, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 12)),
         "NANOSECOND": ((0, 1), (10, 18)),
         "PETASECOND": ((0, 1), (10, -6)),
@@ -4192,47 +4175,47 @@ Conversions = {
 
     },
     "HOUR": {
-        "ATOOSECOND": ((0, 1), (10, 18, 60*60, 1)),
-        "CENTISECOND": ((0, 1), (10, 2, 60*60, 1)),
-        "DAY": ((0, 1), (24, -1)),
-        "DECASECOND": ((0, 1), (10, -1, 60*60, 1)),
-        "DECISECOND": ((0, 1), (10, 1, 60*60, 1)),
-        "EXASECOND": ((0, 1), (10, -18, 60*60, 1)),
-        "FEMTOSECOND": ((0, 1), (10, 15, 60*60, 1)),
-        "GIGASECOND": ((0, 1), (10, -9, 60*60, 1)),
+        "ATOOSECOND": (None,),  # Undefined
+        "CENTISECOND": (None,),  # Undefined
+        "DAY": (None,),  # Undefined
+        "DECASECOND": (None,),  # Undefined
+        "DECISECOND": (None,),  # Undefined
+        "EXASECOND": (None,),  # Undefined
+        "FEMTOSECOND": (None,),  # Undefined
+        "GIGASECOND": (None,),  # Undefined
         "HOUR": (), # Same
-        "HECTOSECOND": ((0, 1), (10, -2, 60*60, 1)),
-        "KILOSECOND": ((0, 1), (10, -3, 60*60, 1)),
-        "MEGASECOND": ((0, 1), (10, -6, 60*60, 1)),
-        "MICROSECOND": ((0, 1), (10, 6, 60*60, 1)),
-        "MINUTE": ((0, 1), (60, 1)),
-        "MILLISECOND": ((0, 1), (10, 3, 60*60, 1)),
-        "NANOSECOND": ((0, 1), (10, 9, 60*60, 1)),
-        "PETASECOND": ((0, 1), (10, -15, 60*60, 1)),
-        "PICOSECOND": ((0, 1), (10, 12, 60*60, 1)),
-        "SECOND": ((0, 1), (60*60, 1)),
-        "TERASECOND": ((0, 1), (10, -12, 60*60, 1)),
-        "YOTTASECOND": ((0, 1), (10, -24, 60*60, 1)),
-        "YOCTOSECOND": ((0, 1), (10, 24, 60*60, 1)),
-        "ZETTASECOND": ((0, 1), (10, -21, 60*60, 1)),
-        "ZEPTOSECOND": ((0, 1), (10, 21, 60*60, 1)),
+        "HECTOSECOND": (None,),  # Undefined
+        "KILOSECOND": (None,),  # Undefined
+        "MEGASECOND": (None,),  # Undefined
+        "MICROSECOND": (None,),  # Undefined
+        "MINUTE": (None,),  # Undefined
+        "MILLISECOND": (None,),  # Undefined
+        "NANOSECOND": (None,),  # Undefined
+        "PETASECOND": (None,),  # Undefined
+        "PICOSECOND": (None,),  # Undefined
+        "SECOND": (None,),  # Undefined
+        "TERASECOND": (None,),  # Undefined
+        "YOTTASECOND": (None,),  # Undefined
+        "YOCTOSECOND": (None,),  # Undefined
+        "ZETTASECOND": (None,),  # Undefined
+        "ZEPTOSECOND": (None,),  # Undefined
 
     },
     "HECTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 20)),
         "CENTISECOND": ((0, 1), (10, 4)),
-        "DAY": ((0, 1), (10, 2, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 1)),
         "DECISECOND": ((0, 1), (10, 3)),
         "EXASECOND": ((0, 1), (10, -16)),
         "FEMTOSECOND": ((0, 1), (10, 17)),
         "GIGASECOND": ((0, 1), (10, -7)),
-        "HOUR": ((0, 1), (10, 2, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": (), # Same
         "KILOSECOND": ((0, 1), (10, -1)),
         "MEGASECOND": ((0, 1), (10, -4)),
         "MICROSECOND": ((0, 1), (10, 8)),
-        "MINUTE": ((0, 1), (10, 2, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 5)),
         "NANOSECOND": ((0, 1), (10, 11)),
         "PETASECOND": ((0, 1), (10, -13)),
@@ -4248,18 +4231,18 @@ Conversions = {
     "KILOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 21)),
         "CENTISECOND": ((0, 1), (10, 5)),
-        "DAY": ((0, 1), (10, 3, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 2)),
         "DECISECOND": ((0, 1), (10, 4)),
         "EXASECOND": ((0, 1), (10, -15)),
         "FEMTOSECOND": ((0, 1), (10, 18)),
         "GIGASECOND": ((0, 1), (10, -6)),
-        "HOUR": ((0, 1), (10, 3, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 1)),
         "KILOSECOND": (), # Same
         "MEGASECOND": ((0, 1), (10, -3)),
         "MICROSECOND": ((0, 1), (10, 9)),
-        "MINUTE": ((0, 1), (10, 3, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 6)),
         "NANOSECOND": ((0, 1), (10, 12)),
         "PETASECOND": ((0, 1), (10, -12)),
@@ -4275,18 +4258,18 @@ Conversions = {
     "MEGASECOND": {
         "ATOOSECOND": ((0, 1), (10, 24)),
         "CENTISECOND": ((0, 1), (10, 8)),
-        "DAY": ((0, 1), (10, 6, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 5)),
         "DECISECOND": ((0, 1), (10, 7)),
         "EXASECOND": ((0, 1), (10, -12)),
         "FEMTOSECOND": ((0, 1), (10, 21)),
         "GIGASECOND": ((0, 1), (10, -3)),
-        "HOUR": ((0, 1), (10, 6, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 4)),
         "KILOSECOND": ((0, 1), (10, 3)),
         "MEGASECOND": (), # Same
         "MICROSECOND": ((0, 1), (10, 12)),
-        "MINUTE": ((0, 1), (10, 6, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 9)),
         "NANOSECOND": ((0, 1), (10, 15)),
         "PETASECOND": ((0, 1), (10, -9)),
@@ -4302,18 +4285,18 @@ Conversions = {
     "MICROSECOND": {
         "ATOOSECOND": ((0, 1), (10, 12)),
         "CENTISECOND": ((0, 1), (10, -4)),
-        "DAY": ((0, 1), (10, -6, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -7)),
         "DECISECOND": ((0, 1), (10, -5)),
         "EXASECOND": ((0, 1), (10, -24)),
         "FEMTOSECOND": ((0, 1), (10, 9)),
         "GIGASECOND": ((0, 1), (10, -15)),
-        "HOUR": ((0, 1), (10, -6, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -8)),
         "KILOSECOND": ((0, 1), (10, -9)),
         "MEGASECOND": ((0, 1), (10, -12)),
         "MICROSECOND": (), # Same
-        "MINUTE": ((0, 1), (10, -6, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -3)),
         "NANOSECOND": ((0, 1), (10, 3)),
         "PETASECOND": ((0, 1), (10, -21)),
@@ -4327,47 +4310,47 @@ Conversions = {
 
     },
     "MINUTE": {
-        "ATOOSECOND": ((0, 1), (10, 18, 60, 1)),
-        "CENTISECOND": ((0, 1), (10, 2, 60, 1)),
-        "DAY": ((0, 1), (24*60, -1)),
-        "DECASECOND": ((0, 1), (10, -1, 60, 1)),
-        "DECISECOND": ((0, 1), (10, 1, 60, 1)),
-        "EXASECOND": ((0, 1), (10, -18, 60, 1)),
-        "FEMTOSECOND": ((0, 1), (10, 15, 60, 1)),
-        "GIGASECOND": ((0, 1), (10, -9, 60, 1)),
-        "HOUR": ((0, 1), (60, -1)),
-        "HECTOSECOND": ((0, 1), (10, -2, 60, 1)),
-        "KILOSECOND": ((0, 1), (10, -3, 60, 1)),
-        "MEGASECOND": ((0, 1), (10, -6, 60, 1)),
-        "MICROSECOND": ((0, 1), (10, 6, 60, 1)),
+        "ATOOSECOND": (None,),  # Undefined
+        "CENTISECOND": (None,),  # Undefined
+        "DAY": (None,),  # Undefined
+        "DECASECOND": (None,),  # Undefined
+        "DECISECOND": (None,),  # Undefined
+        "EXASECOND": (None,),  # Undefined
+        "FEMTOSECOND": (None,),  # Undefined
+        "GIGASECOND": (None,),  # Undefined
+        "HOUR": (None,),  # Undefined
+        "HECTOSECOND": (None,),  # Undefined
+        "KILOSECOND": (None,),  # Undefined
+        "MEGASECOND": (None,),  # Undefined
+        "MICROSECOND": (None,),  # Undefined
         "MINUTE": (), # Same
-        "MILLISECOND": ((0, 1), (10, 3, 60, 1)),
-        "NANOSECOND": ((0, 1), (10, 9, 60, 1)),
-        "PETASECOND": ((0, 1), (10, -15, 60, 1)),
-        "PICOSECOND": ((0, 1), (10, 12, 60, 1)),
-        "SECOND": ((0, 1), (60, 1)),
-        "TERASECOND": ((0, 1), (10, -12, 60, 1)),
-        "YOTTASECOND": ((0, 1), (10, -24, 60, 1)),
-        "YOCTOSECOND": ((0, 1), (10, 24, 60, 1)),
-        "ZETTASECOND": ((0, 1), (10, -21, 60, 1)),
-        "ZEPTOSECOND": ((0, 1), (10, 21, 60, 1)),
+        "MILLISECOND": (None,),  # Undefined
+        "NANOSECOND": (None,),  # Undefined
+        "PETASECOND": (None,),  # Undefined
+        "PICOSECOND": (None,),  # Undefined
+        "SECOND": (None,),  # Undefined
+        "TERASECOND": (None,),  # Undefined
+        "YOTTASECOND": (None,),  # Undefined
+        "YOCTOSECOND": (None,),  # Undefined
+        "ZETTASECOND": (None,),  # Undefined
+        "ZEPTOSECOND": (None,),  # Undefined
 
     },
     "MILLISECOND": {
         "ATOOSECOND": ((0, 1), (10, 15)),
         "CENTISECOND": ((0, 1), (10, -1)),
-        "DAY": ((0, 1), (10, -3, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -4)),
         "DECISECOND": ((0, 1), (10, -2)),
         "EXASECOND": ((0, 1), (10, -21)),
         "FEMTOSECOND": ((0, 1), (10, 12)),
         "GIGASECOND": ((0, 1), (10, -12)),
-        "HOUR": ((0, 1), (10, -3, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -5)),
         "KILOSECOND": ((0, 1), (10, -6)),
         "MEGASECOND": ((0, 1), (10, -9)),
         "MICROSECOND": ((0, 1), (10, 3)),
-        "MINUTE": ((0, 1), (10, -3, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": (), # Same
         "NANOSECOND": ((0, 1), (10, 6)),
         "PETASECOND": ((0, 1), (10, -18)),
@@ -4383,18 +4366,18 @@ Conversions = {
     "NANOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 9)),
         "CENTISECOND": ((0, 1), (10, -7)),
-        "DAY": ((0, 1), (10, -9, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -10)),
         "DECISECOND": ((0, 1), (10, -8)),
         "EXASECOND": ((0, 1), (10, -27)),
         "FEMTOSECOND": ((0, 1), (10, 6)),
         "GIGASECOND": ((0, 1), (10, -18)),
-        "HOUR": ((0, 1), (10, -9, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -11)),
         "KILOSECOND": ((0, 1), (10, -12)),
         "MEGASECOND": ((0, 1), (10, -15)),
         "MICROSECOND": ((0, 1), (10, -3)),
-        "MINUTE": ((0, 1), (10, -9, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -6)),
         "NANOSECOND": (), # Same
         "PETASECOND": ((0, 1), (10, -24)),
@@ -4410,18 +4393,18 @@ Conversions = {
     "PETASECOND": {
         "ATOOSECOND": ((0, 1), (10, 33)),
         "CENTISECOND": ((0, 1), (10, 17)),
-        "DAY": ((0, 1), (10, 15, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 14)),
         "DECISECOND": ((0, 1), (10, 16)),
         "EXASECOND": ((0, 1), (10, -3)),
         "FEMTOSECOND": ((0, 1), (10, 30)),
         "GIGASECOND": ((0, 1), (10, 6)),
-        "HOUR": ((0, 1), (10, 15, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 13)),
         "KILOSECOND": ((0, 1), (10, 12)),
         "MEGASECOND": ((0, 1), (10, 9)),
         "MICROSECOND": ((0, 1), (10, 21)),
-        "MINUTE": ((0, 1), (10, 15, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 18)),
         "NANOSECOND": ((0, 1), (10, 24)),
         "PETASECOND": (), # Same
@@ -4437,18 +4420,18 @@ Conversions = {
     "PICOSECOND": {
         "ATOOSECOND": ((0, 1), (10, 6)),
         "CENTISECOND": ((0, 1), (10, -10)),
-        "DAY": ((0, 1), (10, -12, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -13)),
         "DECISECOND": ((0, 1), (10, -11)),
         "EXASECOND": ((0, 1), (10, -30)),
         "FEMTOSECOND": ((0, 1), (10, 3)),
         "GIGASECOND": ((0, 1), (10, -21)),
-        "HOUR": ((0, 1), (10, -12, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -14)),
         "KILOSECOND": ((0, 1), (10, -15)),
         "MEGASECOND": ((0, 1), (10, -18)),
         "MICROSECOND": ((0, 1), (10, -6)),
-        "MINUTE": ((0, 1), (10, -12, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -9)),
         "NANOSECOND": ((0, 1), (10, -3)),
         "PETASECOND": ((0, 1), (10, -27)),
@@ -4464,18 +4447,18 @@ Conversions = {
     "SECOND": {
         "ATOOSECOND": ((0, 1), (10, 18)),
         "CENTISECOND": ((0, 1), (10, 2)),
-        "DAY": ((0, 1), (86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -1)),
         "DECISECOND": ((0, 1), (10, 1)),
         "EXASECOND": ((0, 1), (10, -18)),
         "FEMTOSECOND": ((0, 1), (10, 15)),
         "GIGASECOND": ((0, 1), (10, -9)),
-        "HOUR": ((0, 1), (3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -2)),
         "KILOSECOND": ((0, 1), (10, -3)),
         "MEGASECOND": ((0, 1), (10, -6)),
         "MICROSECOND": ((0, 1), (10, 6)),
-        "MINUTE": ((0, 1), (60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 3)),
         "NANOSECOND": ((0, 1), (10, 9)),
         "PETASECOND": ((0, 1), (10, -15)),
@@ -4491,18 +4474,18 @@ Conversions = {
     "TERASECOND": {
         "ATOOSECOND": ((0, 1), (10, 30)),
         "CENTISECOND": ((0, 1), (10, 14)),
-        "DAY": ((0, 1), (10, 12, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 11)),
         "DECISECOND": ((0, 1), (10, 13)),
         "EXASECOND": ((0, 1), (10, -6)),
         "FEMTOSECOND": ((0, 1), (10, 27)),
         "GIGASECOND": ((0, 1), (10, 3)),
-        "HOUR": ((0, 1), (10, 12, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 10)),
         "KILOSECOND": ((0, 1), (10, 9)),
         "MEGASECOND": ((0, 1), (10, 6)),
         "MICROSECOND": ((0, 1), (10, 18)),
-        "MINUTE": ((0, 1), (10, 12, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 15)),
         "NANOSECOND": ((0, 1), (10, 21)),
         "PETASECOND": ((0, 1), (10, -3)),
@@ -4518,18 +4501,18 @@ Conversions = {
     "YOTTASECOND": {
         "ATOOSECOND": ((0, 1), (10, 42)),
         "CENTISECOND": ((0, 1), (10, 26)),
-        "DAY": ((0, 1), (10, 24, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 23)),
         "DECISECOND": ((0, 1), (10, 25)),
         "EXASECOND": ((0, 1), (10, 6)),
         "FEMTOSECOND": ((0, 1), (10, 39)),
         "GIGASECOND": ((0, 1), (10, 15)),
-        "HOUR": ((0, 1), (10, 24, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 22)),
         "KILOSECOND": ((0, 1), (10, 21)),
         "MEGASECOND": ((0, 1), (10, 18)),
         "MICROSECOND": ((0, 1), (10, 30)),
-        "MINUTE": ((0, 1), (10, 24, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 27)),
         "NANOSECOND": ((0, 1), (10, 33)),
         "PETASECOND": ((0, 1), (10, 9)),
@@ -4545,18 +4528,18 @@ Conversions = {
     "YOCTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, -6)),
         "CENTISECOND": ((0, 1), (10, -22)),
-        "DAY": ((0, 1), (10, -24, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -25)),
         "DECISECOND": ((0, 1), (10, -23)),
         "EXASECOND": ((0, 1), (10, -42)),
         "FEMTOSECOND": ((0, 1), (10, -9)),
         "GIGASECOND": ((0, 1), (10, -33)),
-        "HOUR": ((0, 1), (10, -24, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -26)),
         "KILOSECOND": ((0, 1), (10, -27)),
         "MEGASECOND": ((0, 1), (10, -30)),
         "MICROSECOND": ((0, 1), (10, -18)),
-        "MINUTE": ((0, 1), (10, -24, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -21)),
         "NANOSECOND": ((0, 1), (10, -15)),
         "PETASECOND": ((0, 1), (10, -39)),
@@ -4572,18 +4555,18 @@ Conversions = {
     "ZETTASECOND": {
         "ATOOSECOND": ((0, 1), (10, 39)),
         "CENTISECOND": ((0, 1), (10, 23)),
-        "DAY": ((0, 1), (10, 21, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, 20)),
         "DECISECOND": ((0, 1), (10, 22)),
         "EXASECOND": ((0, 1), (10, 3)),
         "FEMTOSECOND": ((0, 1), (10, 36)),
         "GIGASECOND": ((0, 1), (10, 12)),
-        "HOUR": ((0, 1), (10, 21, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, 19)),
         "KILOSECOND": ((0, 1), (10, 18)),
         "MEGASECOND": ((0, 1), (10, 15)),
         "MICROSECOND": ((0, 1), (10, 27)),
-        "MINUTE": ((0, 1), (10, 21, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, 24)),
         "NANOSECOND": ((0, 1), (10, 30)),
         "PETASECOND": ((0, 1), (10, 6)),
@@ -4599,18 +4582,18 @@ Conversions = {
     "ZEPTOSECOND": {
         "ATOOSECOND": ((0, 1), (10, -3)),
         "CENTISECOND": ((0, 1), (10, -19)),
-        "DAY": ((0, 1), (10, -21, 86400, -1)),
+        "DAY": (None,),  # Undefined
         "DECASECOND": ((0, 1), (10, -22)),
         "DECISECOND": ((0, 1), (10, -20)),
         "EXASECOND": ((0, 1), (10, -39)),
         "FEMTOSECOND": ((0, 1), (10, -6)),
         "GIGASECOND": ((0, 1), (10, -30)),
-        "HOUR": ((0, 1), (10, -21, 3600, -1)),
+        "HOUR": (None,),  # Undefined
         "HECTOSECOND": ((0, 1), (10, -23)),
         "KILOSECOND": ((0, 1), (10, -24)),
         "MEGASECOND": ((0, 1), (10, -27)),
         "MICROSECOND": ((0, 1), (10, -15)),
-        "MINUTE": ((0, 1), (10, -21, 60, -1)),
+        "MINUTE": (None,),  # Undefined
         "MILLISECOND": ((0, 1), (10, -18)),
         "NANOSECOND": ((0, 1), (10, -12)),
         "PETASECOND": ((0, 1), (10, -36)),
