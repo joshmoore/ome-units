@@ -6,3 +6,5 @@ model2/
 sql/
 xsd/
 .ropeproject
+*.pyc
+.DS_Store
