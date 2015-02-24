@@ -50,7 +50,7 @@ class ${name}I(_omero_model.${name}, UnitBase):
 {% for cto, equation in sorted(equations.get(cfrom, {}).items()) %}\
 {% if cfrom != cto %}\
     CONVERSIONS["${cfrom}:${cto}"] = \\
-        ${equation}
+        ${equation}  # nopep8
 {% end %}\
 {% end %}\
 {% end %}\
