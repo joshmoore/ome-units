@@ -1,35 +1,3 @@
-{% python
-
-def calculate(cfrom, cto, equations):
-    if not coefficients:
-        return "lambda: value"
-    elif coefficients == (None,):
-        return 'lambda: noconversion("%s", "%s")' % (cfrom, cto)
-
-    sb = []
-    for idx, coeffs in enumerate(coefficients):
-
-        k, p = coeffs
-
-        if k == 0:
-            continue
-
-        if p == 1:
-            lhs = k
-        else:
-            lhs = "(%s ** %s)" % (k, p)
-
-        if idx == 0:
-            rhs = ""
-        elif idx <= 1:
-            rhs = " * value"
-        else:
-            rhs = " * (value ** %s)" % idx
-
-        sb += ["%s%s" % (lhs, rhs)]
-    return "lambda value: %s" % "+".join(sb)
-
-%}\
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -67,10 +35,12 @@ __name__ = "omero.model"
 from omero_model_UnitBase import UnitBase
 from omero.model.enums import Units${name}
 
-
-def noconversion(cfrom, cto):
-    raise Exception(("Unsupported conversion: "
-                     "%s:%s") % cfrom, cto)
+from omero.model.conversions import Add
+from omero.model.conversions import Int
+from omero.model.conversions import Mul
+from omero.model.conversions import Pow
+from omero.model.conversions import Rat
+from omero.model.conversions import Sym
 
 
 class ${name}I(_omero_model.${name}, UnitBase):
