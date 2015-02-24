@@ -95,40 +95,44 @@
 			<xsl:when test="$$theNewUnit = $$theCurrentUnit"><xsl:value-of select="$$theValue"/></xsl:when>
 			<!-- codegen begin - convert -->
 <?python
-def conversion(cfrom, cto, coefficients):
-    import math
-    if cfrom == cto or len(coefficients) == 0:
+def conversion(cfrom, cto, equation):
+    if cfrom == cto:
         return "$theValue"
-    elif len(coefficients) == 2:
-        k0 = coefficients[0][0]
-        p0 = coefficients[0][1]
-        k1 = coefficients[1][0]
-        p1 = coefficients[1][1]
-        if k0 == 0:
-            a0 = 0
-        else:
-            a0 = "math:power(%s, %s)" % (k0, p0)
 
-        if k1 == 0:
-            a1 = 0
-        else:
-            a1 = "math:power(%s, %s)" % (k1, p1)
-        return "$theValue * %s + %s" % (a1, a0)
-    else:
-        raise Exception("coefficients of unknown length: %s",
-            coefficients)
+    def Add(*c):
+        sb = "+".join([str(x) for x in c])
+        return "(%s)" % sb
 
+    def Int(i):
+        return str(i)
+
+    def Mul(*c):
+        sb = "*".join([str(x) for x in c])
+        return "(%s)" % sb
+
+    def Pow(base, exp):
+        return "math:power(%s, %s)" % (base, exp)
+
+    def Rat(n, d):
+        return "(%s div %s)" % (n, d)
+
+    def Sym(x):
+        return "$theValue"
+
+    from math import pi
+    return str(eval(equation))
 ?>
 <py:for each="name, unit in sorted(items.items())">
 <py:for each="cfrom in unit">
 <!--! Same block as in templates/blitz.java -->
 			<xsl:when test="$$theCurrentUnit = '$cfrom.SYMBOL'">
 				<xsl:choose>
+					<xsl:when test="$$theNewUnit = 'UNKNOWN%SYMBOL'"><xsl:value-of select="ERROR"/></xsl:when>
 <py:for each="cto in unit">
 <py:if test="cfrom != cto">
-<py:with vars="coefficients = conversions.get(name, {}).get(cfrom.CODE, {}).get(cto.CODE, {})">
-<py:if test="coefficients != None and coefficients != (None,)">
-					<xsl:when test="$$theNewUnit = '$cto.SYMBOL'"><xsl:value-of select="${conversion(cfrom, cto, coefficients)}"/></xsl:when>
+<py:with vars="equation = equations.get(name.upper(), {}).get(cfrom.CODE, {}).get(cto.CODE, {})">
+<py:if test="equation">
+					<xsl:when test="$$theNewUnit = '$cto.SYMBOL'"><xsl:value-of select="${conversion(cfrom, cto, equation)}"/></xsl:when>
 </py:if>
 </py:with>
 </py:if>

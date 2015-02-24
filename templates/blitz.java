@@ -19,11 +19,22 @@
 
 package omero.model;
 
+import static ome.model.units.Conversion.Mul;
+import static ome.model.units.Conversion.Add;
+import static ome.model.units.Conversion.Int;
+import static ome.model.units.Conversion.Pow;
+import static ome.model.units.Conversion.Rat;
+import static ome.model.units.Conversion.Sym;
+
+import java.math.BigDecimal;
+
 import java.util.Collections;
 import java.util.Map;
 import java.util.HashMap;
 
 import ome.model.ModelBased;
+import ome.model.units.BigResult;
+import ome.model.units.Conversion;
 import ome.units.unit.Unit;
 import ome.util.Filterable;
 import ome.util.ModelMapper;
@@ -44,31 +55,17 @@ public class ${name}I extends ${name} implements ModelBased {
 
     private static final long serialVersionUID = 1L;
 
-    private static final Map<String, double[][]> conversions;
+    private static final Map<String, Conversion> conversions;
     static {
-        Map<String, double[][]> c = new HashMap<String, double[][]>();
+        Map<String, Conversion> c = new HashMap<String, Conversion>();
 {% python
-def asarray(cfrom, cto, coefficients):
-    if coefficients is None or coefficients == (None,):
-        return ""
-
-    terms = []
-    sb = "new double[][]{"
-    for term in coefficients:
-        if term is None:
-            terms.append("null")
-        else:
-            sb2 = "new double[]{"
-            sb2 += ", ".join(map(str, term))
-            sb2 += "}"
-            terms.append(sb2)
-    sb += ", ".join(terms)
-    sb += "}"
-    return """        c.put("%s:%s", %s);\n""" % (cfrom, cto, sb)
+def asarray(cfrom, cto, equation):
+    return """        c.put("%s:%s", %s);\n""" % (
+        cfrom, cto, equation)
 %}
-{% for cfrom in sorted(conversions) %}\
-{% for cto, coefficients in sorted(conversions.get(cfrom, {}).items()) %}\
-{% if cfrom != cto %}${asarray(cfrom, cto, coefficients)}{% end %}\
+{% for cfrom in sorted(equations) %}\
+{% for cto, equation in sorted(equations.get(cfrom, {}).items()) %}\
+{% if cfrom != cto %}${asarray(cfrom, cto, equation)}{% end %}\
 {% end %}\
 {% end %}\
         conversions = Collections.unmodifiableMap(c);
@@ -175,7 +172,7 @@ def asarray(cfrom, cto, coefficients):
     * Copy constructor that converts the given {@link omero.model.${name}}
     * based on the given ome-xml enum
     */
-   public ${name}I(${name} value, Unit<ome.units.quantity.${name}> ul) {
+   public ${name}I(${name} value, Unit<ome.units.quantity.${name}> ul) throws BigResult {
        this(value,
             ome.model.enums.Units${name}.bySymbol(ul.getSymbol()).toString());
    }
@@ -194,35 +191,28 @@ def asarray(cfrom, cto, coefficients):
     *
     * @param target String representation of the CODE enum
     */
-    public ${name}I(${name} value, String target) {
+    public ${name}I(${name} value, String target) throws BigResult {
        String source = value.getUnit().toString();
        if (target.equals(source)) {
            setValue(value.getValue());
            setUnit(value.getUnit());
         } else {
-            double[][] coeffs = conversions.get(source + ":" + target);
-            if (coeffs == null) {
+            Conversion conversion = conversions.get(source + ":" + target);
+            if (conversion == null) {
                 throw new RuntimeException(String.format(
                     "%f %s cannot be converted to %s",
                         value.getValue(), value.getUnit(), target));
             }
             double orig = value.getValue();
-            double k, p, v;
-            if (coeffs.length == 0) {
-                v = orig;
-            } else if (coeffs.length == 2){
-                k = coeffs[0][0];
-                p = coeffs[0][1];
-                v = Math.pow(k, p);
-
-                k = coeffs[1][0];
-                p = coeffs[1][1];
-                v += Math.pow(k, p) * orig;
-            } else {
-                throw new RuntimeException("coefficients of unknown length: " +  coeffs.length);
+            BigDecimal big = conversion.convert(orig);
+            double converted = big.doubleValue();
+            if (converted == Double.NEGATIVE_INFINITY ||
+                    converted == Double.POSITIVE_INFINITY) {
+                throw new BigResult(big,
+                        "Failed to convert " + source + ":" + target);
             }
 
-            setValue(v);
+            setValue(converted);
             setUnit(Units${name}.valueOf(target));
        }
     }
@@ -232,7 +222,7 @@ def asarray(cfrom, cto, coefficients):
     *
     * @param target unit that is desired. non-null.
     */
-    public ${name}I(${name} value, Units${name} target) {
+    public ${name}I(${name} value, Units${name} target) throws BigResult {
         this(value, target.toString());
     }
 

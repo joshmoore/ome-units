@@ -31,13 +31,13 @@ from genshi.template import MarkupTemplate
 from genshi.template import NewTextTemplate
 from argparse import ArgumentParser
 
-conversion_file = "units/conversions.py"
-if os.path.exists(conversion_file):
-    execfile("units/conversions.py")  # Sets "Conversions"
+equations_file = "units/equations.py"
+if os.path.exists(equations_file):
+    execfile(equations_file)  # Sets EQUATIONS
 try:
-    Conversions.get("test")
+    EQUATIONS.get("test")
 except:
-    Conversions = {}
+    EQUATIONS = {}
 Unit = namedtuple('Unit', ['CODE', 'SYMBOL', 'SYSTEM'])
 Field = namedtuple('Field', ['CLASS', 'NAME', 'TYPE', 'DEFAULT'])
 
@@ -89,14 +89,16 @@ class Engine(object):
             items[basename] = data
         self.render(markup=self.markup,
                     items=items, fields=self.fields,
-                    conversions=Conversions)
+                    equations=EQUATIONS)
 
     def individual_templates(self, data_filename):
         basename = self.basename(data_filename)
         data = self.parse(data_filename)
+        key = basename.upper()
+        val = EQUATIONS[key]
         self.render(markup=self.markup,
                     name=basename, items=data, fields=self.fields,
-                    conversions=Conversions.get(basename))
+                    equations=val)
 
 
 if __name__ == "__main__":

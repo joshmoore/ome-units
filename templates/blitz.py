@@ -1,6 +1,6 @@
 {% python
 
-def calculate(cfrom, cto, coffecients):
+def calculate(cfrom, cto, equations):
     if not coefficients:
         return "lambda: value"
     elif coefficients == (None,):
@@ -76,11 +76,11 @@ def noconversion(cfrom, cto):
 class ${name}I(_omero_model.${name}, UnitBase):
 
     CONVERSIONS = dict()
-{% for cfrom in sorted(conversions) %}\
-{% for cto, coefficients in sorted(conversions.get(cfrom, {}).items()) %}\
+{% for cfrom in sorted(equations) %}\
+{% for cto, equation in sorted(equations.get(cfrom, {}).items()) %}\
 {% if cfrom != cto %}\
     CONVERSIONS["${cfrom}:${cto}"] = \\
-        ${calculate(cfrom, cto, coefficients)}
+        ${equation}
 {% end %}\
 {% end %}\
 {% end %}\

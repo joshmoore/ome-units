@@ -19,3 +19,8 @@ units = {
     f: "FAHRENHEIT",
     r: "RANKINE",
 }
+
+if __name__ == "__main__":
+    import sys
+    from base import print_conversions
+    print_conversions(sys.modules[__name__])

@@ -3,6 +3,7 @@
 from sympy import Eq
 from sympy import solve
 from sympy import Symbol
+from sympy import srepr
 
 from sympy.core.expr import Expr
 from sympy.core.numbers import Integer
@@ -10,7 +11,48 @@ from sympy.core.numbers import Pi
 from sympy.core.numbers import Rational
 from sympy.core.symbol import Symbol
 
-import sympy.physics.unitsystems.prefixes as sp
+from sympy.physics.unitsystems import prefixes as sp
+from sympy.printing.repr import ReprPrinter
+
+from collections import defaultdict
+from pprint import pprint
+
+
+class Printer(ReprPrinter):
+
+    MAX_INT = 2**31 -1
+
+    def pow10(self, p):
+        s = str(p)
+        for x in range(60, 3, -1):
+            if s.endswith("0" * x):
+                front = s[0:-x]
+                if front == "1":
+                    front = None
+                return front, x
+        return (None, None)
+
+    def _print_Integer(self, expr):
+        f, p = self.pow10(expr.p)
+        if p:
+            p = "Pow(10, %s)" % p
+            if not f:
+                return p
+            f = self._print_Integer(Integer(int(f)))
+            return "Mul(%s, %s)" % (f, p)
+        if expr.p > self.MAX_INT:
+            return 'Int("%s")' % expr.p
+        else:
+            return 'Int(%i)' % expr.p
+
+    def _print_Rational(self, expr):
+        p = self._print_Integer(Integer(expr.p))
+        q = self._print_Integer(Integer(expr.q))
+        return 'Rat(%s, %s)' % (p, q)
+
+    def _print_Symbol(self, expr):
+        return '%s("%s")' % (
+            expr.__class__.__name__[0:3], expr.name)
 
 
 def for_each():
@@ -99,7 +141,23 @@ def module_conversions(module):
     for x in gen_conv(module.units, module.equations):
         yield x
 
+
 def print_conversions(*modules):
     for mod in modules:
         for x in module_conversions(mod):
-            print mod.NAME + ":%s:%s:%s" % x
+            print '("' + mod.NAME + '", "%s", "%s"): "%s"' % (
+                x[0], x[1], srepr(x[2]))
+
+
+def print_python(*modules):
+    printer = Printer()
+    mods = defaultdict(lambda: defaultdict(dict))
+    for mod in modules:
+        for x in module_conversions(mod):
+            s = printer.doprint(x[2])
+            mods[mod.NAME][x[0]][x[1]] = s
+    mods = mods.items()
+    mods = [(k, dict(v)) for k, v in mods]
+    mods = dict(mods)
+
+    print "EQUATIONS = %s" % mods

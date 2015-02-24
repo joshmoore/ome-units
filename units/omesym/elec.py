@@ -14,7 +14,7 @@ from sympy import Eq
 from sympy import tan
 
 
-NAME = "ELETRICPOTENTIAL"
+NAME = "ELECTRICPOTENTIAL"
 
 v = symbols("v")
 
