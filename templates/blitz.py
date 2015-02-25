@@ -45,11 +45,20 @@ from omero.model.conversions import Sym  # nopep8
 
 class ${name}I(_omero_model.${name}, UnitBase):
 
+    try:
+        UNIT_VALUES = sorted(Units${name}._enumerators.values())
+    except:
+        # TODO: this occurs on Ice 3.4 and can be removed
+        # once it has been dropped.
+        UNIT_VALUES = [x for x in sorted(Units${name}._names)]
+        UNIT_VALUES = [getattr(Units${name}, x) for x in UNIT_VALUES]
     CONVERSIONS = dict()
+    for val in UNIT_VALUES:
+        CONVERSIONS[val] = dict()
 {% for cfrom in sorted(equations) %}\
 {% for cto, equation in sorted(equations.get(cfrom, {}).items()) %}\
 {% if cfrom != cto %}\
-    CONVERSIONS["${cfrom}:${cto}"] = \\
+    CONVERSIONS[Units${name}.${cfrom}][Units${name}.${cto}] = \\
         ${equation}  # nopep8
 {% end %}\
 {% end %}\
@@ -65,18 +74,19 @@ class ${name}I(_omero_model.${name}, UnitBase):
         if isinstance(value, _omero_model.${name}I):
             # This is a copy-constructor call.
             target = str(unit)
+            targetUnit = getattr(Units${name}, str(target))
             source = str(value.getUnit())
             if target == source:
                 self.setValue(value.getValue())
                 self.setUnit(value.getUnit())
             else:
-                c = self.CONVERSIONS.get("%s:%s" % (source, target))
+                c = self.CONVERSIONS.get(value.getUnit()).get(targetUnit)
                 if c is None:
                     t = (value.getValue(), value.getUnit(), target)
                     msg = "%s %s cannot be converted to %s" % t
                     raise Exception(msg)
                 self.setValue(c(value.getValue()))
-                self.setUnit(getattr(Units${name}, str(target)))
+                self.setUnit(targetUnit)
         else:
             self.setValue(value)
             self.setUnit(unit)

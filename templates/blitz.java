@@ -30,6 +30,7 @@ import java.math.BigDecimal;
 
 import java.util.Collections;
 import java.util.Map;
+import java.util.EnumMap;
 import java.util.HashMap;
 
 import ome.model.ModelBased;
@@ -55,18 +56,27 @@ public class ${name}I extends ${name} implements ModelBased {
 
     private static final long serialVersionUID = 1L;
 
-    private static final Map<String, Conversion> conversions;
-    static {
-        Map<String, Conversion> c = new HashMap<String, Conversion>();
-{% python
-def asarray(cfrom, cto, equation):
-    return """        c.put("%s:%s", %s);\n""" % (
-        cfrom, cto, equation)
-%}
 {% for cfrom in sorted(equations) %}\
+    private static Map<Units${name}, Conversion> createMap${cfrom}() {
+        EnumMap<Units${name}, Conversion> c =
+            new EnumMap<Units${name}, Conversion>(Units${name}.class);
 {% for cto, equation in sorted(equations.get(cfrom, {}).items()) %}\
-{% if cfrom != cto %}${asarray(cfrom, cto, equation)}{% end %}\
+{% if cfrom != cto %}\
+        c.put(Units${name}.${cto}, ${equation});
 {% end %}\
+{% end %}\
+        return Collections.unmodifiableMap(c);
+    }
+
+{% end %}\
+    private static final Map<Units${name}, Map<Units${name}, Conversion>> conversions;
+    static {
+
+        Map<Units${name}, Map<Units${name}, Conversion>> c
+            = new EnumMap<Units${name}, Map<Units${name}, Conversion>>(Units${name}.class);
+
+{% for cfrom in sorted(equations) %}\
+        c.put(Units${name}.${cfrom}, createMap${cfrom}());
 {% end %}\
         conversions = Collections.unmodifiableMap(c);
     }
@@ -197,7 +207,8 @@ def asarray(cfrom, cto, equation):
            setValue(value.getValue());
            setUnit(value.getUnit());
         } else {
-            Conversion conversion = conversions.get(source + ":" + target);
+            Units${name} targetUnit = Units${name}.valueOf(target);
+            Conversion conversion = conversions.get(value.getUnit()).get(targetUnit);
             if (conversion == null) {
                 throw new RuntimeException(String.format(
                     "%f %s cannot be converted to %s",
@@ -213,7 +224,7 @@ def asarray(cfrom, cto, equation):
             }
 
             setValue(converted);
-            setUnit(Units${name}.valueOf(target));
+            setUnit(targetUnit);
        }
     }
 
