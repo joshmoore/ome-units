@@ -38,20 +38,21 @@ equations = [
 ]
 
 units = {
-    pa: "PASCAL",
+    pa: "Pascal",
     bar: "BAR",
     megabar: "MEGABAR",
     kbar: "KILOBAR",
     dbar: "DECIBAR",
     cbar: "CENTIBAR",
     mbar: "MILLIBAR",
-    atm: "ATHMOSPHERE",
+    atm: "ATMOSPHERE",
     psi: "PSI",
     torr: "TORR",
     mtorr: "MILLITORR",
     mmhg: "MMHG",
 }
 
+# Only the non-prefixed "Pascal" is not uppercase
 add_si(pa, "PASCAL", units, equations)
 
 if __name__ == "__main__":
