@@ -31,7 +31,7 @@ from genshi.template import MarkupTemplate
 from genshi.template import NewTextTemplate
 from argparse import ArgumentParser
 
-equations_file = "units/equations.py"
+equations_file = "omesym/equations.py"
 if os.path.exists(equations_file):
     execfile(equations_file)  # Sets EQUATIONS
 try:
