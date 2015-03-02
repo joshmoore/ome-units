@@ -18,6 +18,10 @@ from collections import defaultdict
 from pprint import pprint
 
 
+def STR_SORT(lhs, rhs):
+    return cmp(str(lhs), str(rhs))
+
+
 class Printer(ReprPrinter):
 
     MAX_INT = 2**31 -1
@@ -56,7 +60,7 @@ class Printer(ReprPrinter):
 
 
 def for_each():
-    for name, prefix in sp.PREFIXES.items():
+    for name, prefix in sorted(sp.PREFIXES.items()):
         yield name, prefix.name, prefix.factor
 
 
@@ -102,7 +106,7 @@ def print_table(units, equations):
 
 
 def gen_conv(units, equations):
-    for source in units.keys():
+    for source in sorted(units.keys(), STR_SORT):
         if units[source] in ("REFERENCEFRAME", "PIXEL"):
             # HACK: to do this properly it's
             # likely necessary to check the
@@ -110,7 +114,7 @@ def gen_conv(units, equations):
             # source variable.
             continue
         x = solve_for(equations, source)
-        for target in units.keys():
+        for target in sorted(units.keys(), STR_SORT):
             if source == target:
                 continue
             elif target not in x:
