@@ -130,7 +130,7 @@ def conversion(cfrom, cto, equation):
 					<xsl:when test="$$theNewUnit = 'UNKNOWN%SYMBOL'"><xsl:value-of select="ERROR"/></xsl:when>
 <py:for each="cto in unit">
 <py:if test="cfrom != cto">
-<py:with vars="equation = equations.get(name.upper(), {}).get(cfrom.CODE, {}).get(cto.CODE, {})">
+<py:with vars="equation = equations.get(name.upper(), {}).get(cto.CODE, {}).get(cfrom.CODE, {})">
 <py:if test="equation">
 					<xsl:when test="$$theNewUnit = '$cto.SYMBOL'"><xsl:value-of select="${conversion(cfrom, cto, equation)}"/></xsl:when>
 </py:if>
