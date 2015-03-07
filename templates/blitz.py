@@ -72,7 +72,9 @@ class ${name}I(_omero_model.${name}, UnitBase):
     def __init__(self, value=None, unit=None):
         _omero_model.${name}.__init__(self)
 
-        if isinstance(unit, Units${name}):
+        if unit is None:
+            target = None
+        elif isinstance(unit, Units${name}):
             target = unit
         elif isinstance(unit, (str, unicode)):
             target = getattr(Units${name}, unit)
@@ -86,6 +88,8 @@ class ${name}I(_omero_model.${name}, UnitBase):
 
             source = value.getUnit()
 
+            if target is None:
+                raise Exception("Null target unit")
             if source is None:
                 raise Exception("Null source unit")
 
