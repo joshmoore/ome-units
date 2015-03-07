@@ -18,27 +18,77 @@
  */
 
 #include <omero/model/${name}I.h>
+#include <omero/ClientErrors.h>
 
 ::Ice::Object* IceInternal::upCast(::omero::model::${name}I* t) { return t; }
+
+using namespace omero::conversions;
+
+typedef omero::conversion_types::ConversionPtr ConversionPtr;
+typedef omero::model::enums::Units${name} Units${name};
 
 namespace omero {
 
     namespace model {
 
+{% for cfrom in sorted(equations) %}\
+        static std::map<Units${name}, ConversionPtr> createMap${cfrom}() {
+            std::map<Units${name}, ConversionPtr> c;
+{% for cto, equation in sorted(equations.get(cfrom, {}).items()) %}\
+{% if cfrom != cto %}\
+            c[enums::${cto}] = ${equation};
+{% end %}\
+{% end %}\
+            return c;
+        }
 
-        static std::map<omero::model::enums::Units${name}, std::string> makeSymbols(){
-            std::map<omero::model::enums::Units${name}, std::string> s;
+{% end %}\
+        static std::map<Units${name},
+            std::map<Units${name}, ConversionPtr> > makeConversions() {
+            std::map<Units${name}, std::map<Units${name}, ConversionPtr> > c;
+{% for cfrom in sorted(equations) %}\
+            c[enums::${cfrom}] = createMap${cfrom}();
+{% end %}\
+            return c;
+        }
+
+        static std::map<Units${name}, std::string> makeSymbols(){
+            std::map<Units${name}, std::string> s;
 {% for x in sorted(items) %}\
-            s[omero::model::enums::${x.CODE}] = "${x.SYMBOL}";
+            s[enums::${x.CODE}] = "${x.SYMBOL}";
 {% end %}\
             return s;
-        };
+        }
 
-        std::map<omero::model::enums::Units${name}, std::string> ${name}I::SYMBOLS = makeSymbols();
+        std::map<Units${name},
+            std::map<Units${name}, ConversionPtr> > ${name}I::CONVERSIONS = makeConversions();
+
+        std::map<Units${name}, std::string> ${name}I::SYMBOLS = makeSymbols();
 
         ${name}I::~${name}I() {}
 
         ${name}I::${name}I() : ${name}() {
+        }
+
+        ${name}I::${name}I(const ${name}Ptr& value, const Units${name}& target) : ${name}() {
+            double orig = value->getValue();
+            Units${name} source = value->getUnit();
+            if (target == source) {
+                // No conversion needed
+                setValue(orig);
+                setUnit(target);
+            } else {
+                ConversionPtr conversion = CONVERSIONS[target][source];
+                if (!conversion) {
+                    std::stringstream ss;
+                    ss << orig << " " << source;
+                    ss << "cannot be converted to " << target;
+                    throw omero::ClientError(__FILE__, __LINE__, ss.str().c_str());
+                }
+                double converted = conversion->convert(orig);
+                setValue(converted);
+                setUnit(target);
+            }
         }
 
         Ice::Double ${name}I::getValue(const Ice::Current& /* current */) {
@@ -49,11 +99,11 @@ namespace omero {
             value = _value;
         }
 
-        omero::model::enums::Units${name} ${name}I::getUnit(const Ice::Current& /* current */) {
+        Units${name} ${name}I::getUnit(const Ice::Current& /* current */) {
             return unit;
         }
 
-        void ${name}I::setUnit(omero::model::enums::Units${name} _unit, const Ice::Current& /* current */) {
+        void ${name}I::setUnit(Units${name} _unit, const Ice::Current& /* current */) {
             unit = _unit;
         }
 
