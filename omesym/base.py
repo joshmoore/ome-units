@@ -69,7 +69,7 @@ def add_si(key, value, units, equations):
         x = "%s%s" % (sym, key)
         s = Symbol(x)
         units[s] = sym.upper() + value
-        eq = Eq(s, factor * key)
+        eq = Eq(key, factor * s)
         equations.append(eq)
 
 

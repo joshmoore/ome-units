@@ -10,9 +10,9 @@ NAME = "TIME"
 s, m, h, d = symbols("s m h d")
 
 equations = [
-    Eq(m, s * 60),
-    Eq(h, m * 60),
-    Eq(d, h * 24),
+    Eq(s, m * 60),
+    Eq(m, h * 60),
+    Eq(h, d * 24),
 ]
 
 units = {

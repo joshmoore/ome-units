@@ -67,6 +67,9 @@ namespace omero {
 
         ${name}I();
 
+        ${name}I(const double& value, const enums::Units${name}& unit);
+
+        // Conversion constructor
         ${name}I(const ${name}Ptr& value, const enums::Units${name}& target);
 
         virtual Ice::Double getValue(

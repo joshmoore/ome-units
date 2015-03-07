@@ -24,17 +24,17 @@ bar, megabar, kbar, dbar, cbar, mbar = symbols(
 torr, mtorr = symbols("torr mtorr")
 
 equations = [
-    Eq(bar, pa * 100000),
-    Eq(megabar, mega * bar),
-    Eq(kbar, kilo * bar),
-    Eq(dbar, deci * bar),
-    Eq(cbar, centi * bar),
-    Eq(mbar, milli * bar),
-    Eq(atm, pa * 101325),
-    Eq(torr, atm / 760),
-    Eq(mtorr, milli * torr),
-    Eq(mmhg, pa * 133.322387415),
-    Eq(psi, pa * 6894.75729316836142),  # Approx.
+    Eq(bar, pa / 100000),
+    Eq(megabar, bar / 10**6),
+    Eq(kbar, bar / 10**3),
+    Eq(dbar, bar * 10),
+    Eq(cbar, bar * 100),
+    Eq(mbar, bar * 1000),
+    Eq(pa, atm * 101325),
+    Eq(torr, atm * 760),
+    Eq(mtorr, torr / 1000),
+    Eq(pa, mmhg * 133.322387415),
+    Eq(pa, psi * 6894.75729316836142),  # Approx.
 ]
 
 units = {

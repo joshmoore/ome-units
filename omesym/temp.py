@@ -8,9 +8,9 @@ NAME = "TEMPERATURE"
 k, c, f, r = symbols("k c f r")
 
 equations = (
-    Eq(c, k - 273.15),
-    Eq(r, k * 9 / 5),
+    Eq(f, 9 * c / 5 + 32),
     Eq(f, r - 459.67),
+    Eq(c, k - 273.15),
 )
 
 units = {

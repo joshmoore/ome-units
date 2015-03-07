@@ -70,6 +70,11 @@ namespace omero {
         ${name}I::${name}I() : ${name}() {
         }
 
+        ${name}I::${name}I(const double& value, const Units${name}& unit) : ${name}() {
+            setValue(value);
+            setUnit(unit);
+        }
+
         ${name}I::${name}I(const ${name}Ptr& value, const Units${name}& target) : ${name}() {
             double orig = value->getValue();
             Units${name} source = value->getUnit();
@@ -78,7 +83,7 @@ namespace omero {
                 setValue(orig);
                 setUnit(target);
             } else {
-                ConversionPtr conversion = CONVERSIONS[target][source];
+                ConversionPtr conversion = CONVERSIONS[source][target];
                 if (!conversion) {
                     std::stringstream ss;
                     ss << orig << " " << source;

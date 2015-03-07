@@ -21,20 +21,22 @@ m, ang, ua, ly, pc, thou, li, inch, ft, yd, mi, pt, pixel, frame = \
 degree = symbols("degree")
 
 equations = [
-    Eq(ang, 0.1 * nano * m),
-    Eq(ua, 149.597870700 * giga * m),
-    Eq(ly, 9.4607304725808 * peta * m),
 
-    Eq(pc, 30856776 * giga * m),  # approx
+    Eq(ang, 10**10 * m),
+
+    Eq(m, 149597870700 * ua),
+    Eq(m, 9460730472580800 * ly),
+    Eq(m, 3.0856776 * 10**16 * pc),  # approx
+
     Eq(pc, ua / (tan(degree/3600))),
 
-    Eq(inch, 0.0254 * m),
-    Eq(thou, milli * inch),
-    Eq(li, inch / 12),
-    Eq(ft, inch * 12),
-    Eq(yd, ft * 3),
-    Eq(mi, yd * 1760),
-    Eq(pt, inch / 72),
+    Eq(inch, 39.3701 * m),
+    Eq(thou, inch / 1000),
+    Eq(li, inch * 12),
+    Eq(ft, inch / 12),
+    Eq(yd, ft / 3),
+    Eq(mi, yd / 1760),
+    Eq(pt, inch * 72),
 ]
 
 units = {
