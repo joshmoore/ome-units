@@ -36,7 +36,7 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:math="http://exslt.org/math"
 	exclude-result-prefixes="xs"
-	version="2.0"
+	version="1.0"
 	xmlns:py="http://genshi.edgewall.org/">
 
 	<!-- getDefault function (AttributeName, NodeName, ParentNodeName?) -->

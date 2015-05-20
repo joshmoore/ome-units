@@ -24,10 +24,12 @@ def java(items):
 %}
 package ome.model.enums;
 
+import ome.model.units.UnitEnum;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public enum Units$name {
+public enum Units$name implements UnitEnum {
 
     ${java(items)};
 
