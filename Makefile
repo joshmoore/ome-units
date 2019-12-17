@@ -1,4 +1,4 @@
-DIR ?= /tmp/
+DIR ?= /tmp/omero-build
 
 all: blitz/Units.ice blitz2 blitz3 blitz4 blitz5 formats/UnitsFactory.java model model2 sql xsd
 
@@ -68,14 +68,15 @@ xsd/units-conversion.xsl: $(units)
 	./gen.py --markup --combine templates/xsd $(units) > $@
 
 move:
-	/bin/mv $(model_enums) $(DIR)/components/model/src/ome/model/enums
-	/bin/mv $(model_objs) $(DIR)/components/model/src/ome/model/units
-	/bin/mv $(blitz_ice) $(DIR)/components/blitz/resources/omero/model/
-	/bin/mv $(blitz_java) $(DIR)/components/blitz/src/omero/model/
-	/bin/mv blitz/Units.ice $(DIR)/components/blitz/resources/omero/model
-	/bin/mv $(blitz_py) $(DIR)/components/tools/OmeroPy/src
-	/bin/mv $(blitz_cpp) $(DIR)/components/tools/OmeroCpp/src/omero/model
-	/bin/mv $(blitz_h) $(DIR)/components/tools/OmeroCpp/src/omero/model
+	/bin/mv $(model_enums) $(DIR)/omero-model/src/main/java/ome/model/enums
+	/bin/mv $(model_objs) $(DIR)/omero-model/src/main/java/ome/model/units
+	/bin/mv $(blitz_ice) $(DIR)/omero-blitz/src/main/slice/omero/model/
+	/bin/mv $(blitz_java) $(DIR)/omero-blitz/src/main/java/omero/model/
+	/bin/mv blitz/Units.ice $(DIR)/omero-blitz/src/main/slice/omero/model
+echo Following disabled:
+	echo /bin/mv $(blitz_py) $(DIR)/components/tools/OmeroPy/src
+	echo /bin/mv $(blitz_cpp) $(DIR)/components/tools/OmeroCpp/src/omero/model
+	echo /bin/mv $(blitz_h) $(DIR)/components/tools/OmeroCpp/src/omero/model
 
 bfmove:
 	/bin/mv xsd/units-conversion.xsl $(BFDIR)/components/specification/transforms
