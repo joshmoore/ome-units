@@ -68,7 +68,7 @@ def add_si(key, value, units, equations):
     for viz, sym, factor in for_each():
         x = "%s%s" % (sym, key)
         s = Symbol(x)
-        units[s] = sym.upper() + value
+        units[s] = str(sym).upper() + value
         eq = Eq(key, factor * s)
         equations.append(eq)
 

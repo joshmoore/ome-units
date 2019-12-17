@@ -5,5 +5,4 @@ from the 5.1 OME schema.
 Steps
 -----
 - conda env create -f environment.yml
-- make
-- make DIR=/opt/omero-build move
+- make DIR=/opt/omero-build all move
