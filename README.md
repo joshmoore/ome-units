@@ -4,5 +4,6 @@ from the 5.1 OME schema.
 
 Steps
 -----
-- conda env create -f environment.yml
-- make DIR=/opt/omero-build all move
+- `conda env create -f environment.yml`
+- If necessary, `python omesym/run.py --python > equations.py`
+- `make DIR=/opt/omero-build all move`
