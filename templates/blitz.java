@@ -208,20 +208,24 @@ public class ${name}I extends ${name} implements ModelBased {
            setUnit(value.getUnit());
         } else {
             Units${name} targetUnit = Units${name}.valueOf(target);
-            Conversion conversion = conversions.get(value.getUnit()).get(target);
+            Conversion conversion = conversions.get(value.getUnit()).get(targetUnit);
             if (conversion == null) {
                 throw new RuntimeException(String.format(
                     "%f %s cannot be converted to %s",
                         value.getValue(), value.getUnit(), target));
             }
             double orig = value.getValue();
-            BigDecimal big = conversion.convert(orig);
-            double converted = big.doubleValue();
-            if (Double.isInfinite(converted)) {
-                throw new BigResult(big,
-                        "Failed to convert " + source + ":" + target);
+            double converted = orig;
+            if (Double.isInfinite(orig)) {
+                // Do nothing. Use orig
+            } else {
+                BigDecimal big = conversion.convert(orig);
+                converted = big.doubleValue();
+                if (Double.isInfinite(converted)) {
+                    throw new BigResult(big,
+                            "Failed to convert " + source + ":" + target);
+                }
             }
-
             setValue(converted);
             setUnit(targetUnit);
        }
