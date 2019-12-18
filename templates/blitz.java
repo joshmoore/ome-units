@@ -216,12 +216,13 @@ public class ${name}I extends ${name} implements ModelBased {
             }
             double orig = value.getValue();
             double converted = orig;
-            if (Double.isInfinite(orig)) {
+            if (!Double.isFinite(orig)) {
+                // Infinite or NaN
                 // Do nothing. Use orig
             } else {
                 BigDecimal big = conversion.convert(orig);
                 converted = big.doubleValue();
-                if (Double.isInfinite(converted)) {
+                if (!Double.isFinite(converted)) {
                     throw new BigResult(big,
                             "Failed to convert " + source + ":" + target);
                 }
